@@ -1,0 +1,97 @@
+
+**** 10/25/20 20:28:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ ** Profile: "SCHEMATIC1-uebung1"  [ C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrisc
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulation-SCHEMATIC1-uebung1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of pspiceev.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.PROBE 
+.INC "simulation-SCHEMATIC1.net" 
+
+
+**** INCLUDING simulation-SCHEMATIC1.net ****
+* source SIMULATION
+R_R3         N00279 N00051  4  
+R_R4         0 N00051  3  
+R_R5         N00045 N00051  6  
+R_R2         N00051 N00091  1  
+R_R1         N00024 N00091  2  
+V_V2         N00024 N00051 3.5Vdc
+H_H1         N00024 N00045 VH_H1 4
+VH_H1        N00279 0 0V
+I_I1         0 N00091 DC 1Adc  
+
+**** RESUMING simulation-SCHEMATIC1-uebung1.sim.cir ****
+.INC "simulation-SCHEMATIC1.als"
+
+
+
+**** INCLUDING simulation-SCHEMATIC1.als ****
+.ALIASES
+R_R3            R3(1=N00279 2=N00051 )
+R_R4            R4(1=0 2=N00051 )
+R_R5            R5(1=N00045 2=N00051 )
+R_R2            R2(1=N00051 2=N00091 )
+R_R1            R1(1=N00024 2=N00091 )
+V_V2            V2(+=N00024 -=N00051 )
+H_H1            H1(3=N00024 4=N00045 )
+VH_H1           H1(1=N00279 2=0 )
+I_I1            I1(+=0 -=N00091 )
+.ENDALIASES
+
+**** RESUMING simulation-SCHEMATIC1-uebung1.sim.cir ****
+.END
+
+**** 10/25/20 20:28:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ ** Profile: "SCHEMATIC1-uebung1"  [ C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrisc
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00024)    5.2143 (N00045)    3.5000 (N00051)    1.7143 (N00091)    3.5476     
+
+(N00279)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.131E+00
+    VH_H1        4.286E-01
+
+    TOTAL POWER DISSIPATION   3.96E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .08
+

@@ -1,0 +1,10 @@
+* source SIMULATION
+R_R3         N00279 N00051  4  
+R_R4         0 N00051  3  
+R_R5         N00045 N00051  6  
+R_R2         N00051 N00091  1  
+R_R1         N00024 N00091  2  
+V_V2         N00024 N00051 3.5Vdc
+H_H1         N00024 N00045 VH_H1 4
+VH_H1        N00279 0 0V
+I_I1         0 N00091 DC 1Adc  
