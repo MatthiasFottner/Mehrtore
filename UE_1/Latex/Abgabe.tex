@@ -16,6 +16,7 @@
 \usepackage{MnSymbol}
 \usepackage{mathtools}
 \usepackage{setspace}
+\usepackage{nicematrix}
 \usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
 \author{David Keller, Moritz Woltron, Matthias Fottner}
 \date{}
@@ -82,14 +83,30 @@ K4: \(\displaystyle \quad - \frac{U_{R5}}{R_5} - I_{S3}^? = 0\)
 \end{itemize}
 \begin{align}
   U_{S2} &= U_{n1} - U_{n3} \\
-  U_{S3} &= U_{n1} - U_{n4} = \alpha \cdot I_{R3} = \alpha \frac{U_{R3}}{R_3} = \alpha \frac{U_{n3}}{R_3} \nonumber \\
-  \Longrightarrow 0 &= U_{n1} - U_{n4} - \alpha \frac{U_{n3}}{R_3}
+  U_{S3} &= U_{n1} - U_{n4} = \alpha \cdot I_{R3} = \alpha \cdot \frac{U_{R3}}{R_3} = \alpha \cdot \frac{U_{n3}}{R_3} \nonumber \\
+  \Longrightarrow 0 &= U_{n1} - U_{n4} - \alpha \cdot \frac{U_{n3}}{R_3}
 \end{align}
 
 
 \section{Gleichungssystem in Matrixform}
+Definition Leitwerte: $\quad G_n := \frac{1}{R_n}$
 
 
+\begin{equation*}
+  \left[\begin{NiceArray}{c:c:c:c:c:c}
+    G_1 & -G_1 & 0 & 0 & 1 & 1 \\
+    \hdottedline
+    -G_1 & G_1 - G_2 & -G_2 & 0 & 0 & 0 \\
+    \hdottedline
+    0 & -G_2 & G_2 + G_3 + G_4 + G_5 & -G_5 & -1 & 0 \\
+    \hdottedline
+    0 & 0 & -G_5 & G_5 & 0 & -1 \\
+    \hdottedline
+    1 & 0 & -1 & 0 & 0 & 0 \\
+    1 & 0 & -\alpha \cdot G_3 & -1 & 0 & 0 
+
+    \end{NiceArray}\right]
+\end{equation*}
 
 
 \end{document}
