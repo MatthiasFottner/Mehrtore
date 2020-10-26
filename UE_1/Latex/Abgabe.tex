@@ -94,7 +94,7 @@ Definition Leitwerte: \(\displaystyle \quad G_n := \frac{1}{R_n}\)
 
 \begin{equation*}
   \renewcommand{\arraystretch}{2}
-    \left[\begin{NiceArray}{c:c:c:c:c:c}
+    \underbrace{\left[\begin{NiceArray}{c:c:c:c:c:c}
     G_1 & -G_1 & 0 & 0 & 1 & 1 \\
     \hdottedline
     -G_1 & G_1 - G_2 & -G_2 & 0 & 0 & 0 \\
@@ -106,9 +106,8 @@ Definition Leitwerte: \(\displaystyle \quad G_n := \frac{1}{R_n}\)
     1 & 0 & -1 & 0 & 0 & 0 \\
     \hdottedline
     1 & 0 & -\alpha \cdot G_3 & -1 & 0 & 0
-
-  \end{NiceArray}\right] \ \cdot \
-\left\{ \begin{NiceArray}{c}
+  \end{NiceArray}\right]}_{\text{A}} \ \cdot \
+\underbrace{\left\{ \begin{NiceArray}{c}
     U_{n1} \\
     \hdottedline
     U_{n2} \\
@@ -120,8 +119,8 @@ Definition Leitwerte: \(\displaystyle \quad G_n := \frac{1}{R_n}\)
     I_{S2}^? \\
     \hdottedline
     I_{S3}^?
-  \end{NiceArray}\right\} \ = \
-\left\{ \begin{NiceArray}{c}
+  \end{NiceArray}\right\}}_{\text{x}} \ = \
+\underbrace{\left\{ \begin{NiceArray}{c}
     0 \\
     \hdottedline
     I_{S1} \\
@@ -134,11 +133,27 @@ Definition Leitwerte: \(\displaystyle \quad G_n := \frac{1}{R_n}\)
     \hdottedline
     0
   \end{NiceArray}
-\right\}
+\right\}}_{\text{b}}
+\end{equation*} \\
 
+Nach x auflösen: \(\displaystyle \quad x = A^{-1} b \) \\
+
+Mithilfe von Matlab erhält man:
+\begin{equation*}
+  x = \left\{\begin{array}{c}
+      U_{n1} \\
+      U_{n2} \\
+      U_{n3} \\
+      U_{n4} \\
+      I_{S2}^? \\
+      I_{S3}^? \end{array}\right\} =
+  \left\{ \begin{array}{c}
+            5,2143 \\
+    3,5476 \\
+    1,7143 \\
+    3,5000 \\
+    -1,1310 \\
+    0,2976 \end{array}\right\}
 \end{equation*}
-
-\begin{}
-
 
 \end{document}
