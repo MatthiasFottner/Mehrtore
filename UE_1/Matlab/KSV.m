@@ -39,4 +39,5 @@ u = [un(1)-un(2);un(2)-un(3);un(3);un(3);un(3)-un(4)]
 i = u./[r1;r2;r3;r4;r5]
 is2 = un(5)
 is3 = un(6)
+us3 = un(1) - un(4)
 

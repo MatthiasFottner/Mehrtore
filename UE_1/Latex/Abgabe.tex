@@ -59,7 +59,7 @@ K3: \(\displaystyle \quad \frac{U_{R5}}{R_5} + \frac{U_{R3}}{R_3} + \frac{U_{R4}
 K4: \(\displaystyle \quad - \frac{U_{R5}}{R_5} - I_{S3}^? = 0\)
 \end{spacing}
 
-\subsection{Knotenspannungen}
+\subsection{Knotenspannungen}\label{sec:knotenspannungen}
 \begin{doublespace}
 \(\displaystyle U_{R3} = U_{R4} = U_{n3}\) \\
 \(\displaystyle U_{R2} = U_{n2}- U_{n3}\) \\
@@ -140,6 +140,7 @@ Nach x auflösen: \(\displaystyle \quad x = A^{-1} b \) \\
 
 Mithilfe von Matlab erhält man:
 \begin{equation*}
+  \renewcommand{\arraystretch}{1.25}
   x = \left\{\begin{array}{c}
       U_{n1} \\
       U_{n2} \\
@@ -148,12 +149,70 @@ Mithilfe von Matlab erhält man:
       I_{S2}^? \\
       I_{S3}^? \end{array}\right\} =
   \left\{ \begin{array}{c}
-            5,2143 \\
-    3,5476 \\
-    1,7143 \\
-    3,5000 \\
-    -1,1310 \\
-    0,2976 \end{array}\right\}
+            5,2143 V\\
+    3,5476 V\\
+    1,7143 V\\
+    3,5000 V\\
+    -1,1310 A\\
+    0,2976 A \end{array}\right\}
 \end{equation*}
 
+Mit diesen Werten und mithilfe der Knotenspannungsgleichungen aus \ref{sec:knotenspannungen} lassen sich die
+Spannungen $U_{R1} - U_{R5}$ und die Ströme $I_{R1} - I_{R5}$ ermitteln:
+
+\begin{equation*}
+  \renewcommand{\arraystretch}{1.25}
+  U = \left\{ \begin{array}{c}
+                U_{R1} \\
+                U_{R2} \\
+                U_{R3} \\
+                U_{R4} \\
+                U_{R5} \\
+                \end{array}
+  \right\} =
+  \left\{ \begin{array}{c}
+                U_{n1} - U_{n2}\\
+                U_{n2} - U_{n3} \\
+                U_{n3} \\
+                U_{n3} \\
+                U_{n3} - U_{n4}
+          \end{array}\right\} =
+        \left\{ \begin{array}{c}
+                  1,6667 V \\
+                  1,8333 V \\
+                  1,7143 V \\
+                  1,7143 V \\
+                  -1.7857 V
+                \end{array}\right\}
+            \end{equation*}
+
+            \begin{equation*}
+              \renewcommand{\arraystretch}{1.25}
+              I = \left\{ \begin{array}{c}
+                            I_{R1} \\
+                            I_{R2} \\
+                            I_{R3} \\
+                            I_{R4} \\
+                            I_{R5}
+                          \end{array}\right\} =
+                        \left\{ \begin{array}{c}
+                                  U_{R1} / R_1 \\
+                                  U_{R2} / R_2 \\
+                                  U_{R3} / R_3 \\
+                                  U_{R4} / R_4 \\
+                                  U_{R5} / R_5
+                                \end{array}\right\} =
+                              \left\{ \begin{array}{c}
+                                        0.8333 A \\
+                                        1.8333 A \\
+                                        0.4286 A \\
+                                        0.5714 A \\
+                                        -0.2976 A
+                                      \end{array}\right\}
+                                  \end{equation*} 
+
+                                  Die Quellspannung der stromgesteuerten Quelle $U_{S3}$ erhält man aus der Lösung der Knotenspannungen:
+                                  \begin{equation*}
+                                    U_{S3} = U_{n1} - U_{n4} = 1,7143 V
+                                  \end{equation*}
 \end{document}
