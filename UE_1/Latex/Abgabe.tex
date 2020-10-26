@@ -15,6 +15,7 @@
 \usepackage{capt-of}
 \usepackage{MnSymbol}
 \usepackage{mathtools}
+\usepackage{setspace}
 \usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
 \author{David Keller, Moritz Woltron, Matthias Fottner}
 \date{}
@@ -38,4 +39,26 @@
         \draw (6.5,0) to[short] (0,0);
         \draw (0,0) node[rground]{};
 \end{circuitikz}
+
+\newpage
+\section{Kirchhoff'schen Knotengleichungen}
+
+\begin{doublespace}
+K1: \(\displaystyle \quad I_{R1} + I_{S2}^? + I_{S3}^? = 0\) \\
+K2: \(\displaystyle \quad I_{R2} - I_{S1} - I_{R1} = 0\)\\
+K1: \(\displaystyle \quad I_{R5} + I_{R3} + I_{R4} - I_{R2} - I_{S2}^? = 0\) \\
+K1: \(\displaystyle \quad -I_{R5} - I_{S3}^? = 0\)
+\end{doublespace}
+
+\subsection{Ohm'sches Gesetz}
+\begin{spacing}{2.5}
+K1: \(\displaystyle \quad \frac{U_{R1}}{R_1} + I_{S2}^? + I_{S3}^? = 0\) \\
+K2: \(\displaystyle \quad \frac{U_{R2}}{R_2} - \frac{U_{R1}}{R_1} = I_{S1}\) \\
+K3: \(\displaystyle \quad \frac{U_{R5}}{R_5} + \frac{U_{R3}}{R_3} + \frac{U_{R4}}{R_4} - \frac{U_{R2}}{R_2} - I_{S2}^? = 0\) \\
+K4: \(\displaystyle \quad - \frac{U_{R5}}{R_5} - I_{S3}^? = 0\)
+\end{spacing}
+
+\subsection{Knotenspannungen}
+
+
 \end{document}
