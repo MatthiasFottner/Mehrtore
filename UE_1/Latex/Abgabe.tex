@@ -59,6 +59,36 @@ K4: \(\displaystyle \quad - \frac{U_{R5}}{R_5} - I_{S3}^? = 0\)
 \end{spacing}
 
 \subsection{Knotenspannungen}
+\begin{doublespace}
+\(\displaystyle U_{R3} = U_{R4} = U_{n3}\) \\
+\(\displaystyle U_{R2} = U_{n2}- U_{n3}\) \\
+\(\displaystyle U_{R1} = U_{n1}- U_{n2}\) \\
+\(\displaystyle U_{R5} = U_{n3}- U_{n4}\)
+\end{doublespace}
+
+\subsection{Knotengleichungen mit Knotenspannungen}
+\begin{spacing}{2.5}
+  K1: \(\displaystyle \quad \frac{U_{n1} - U_{n2}}{R_1} + I_{S2}^? + I_{S3}^? = 0\) \\
+  K2: \(\displaystyle \quad \frac{U_{n2} - U_{n3}}{R_2} - \frac{U_{n1} - U_{n2}}{R_1} = I_{S1}\) \\
+  K3: \(\displaystyle \quad \frac{U_{n3} - U_{n4}}{R_5} + \frac{U_{n3}}{R_3} + \frac{U_{n3}}{R_4} - \frac{U_{n2} - U_{n3}}{R_2} - I_{S2}^?= 0\) \\
+  K4: \(\displaystyle \quad - \frac{U_{n3} - U_{n4}}{R_5} - I_{S3}^? = 0\)
+\end{spacing}
+\subsection{zusätzliche Bedingungen}
+\begin{itemize}
+\item 6 Unbekannte: $U_{n1}, U_{n2}, U_{n3}, U_{n4}, I_{S2}^?, I_{S3}^?$
+\item nur 4 Gleichungen: unbestimmtes Gleichungssystem
+\item 2 weitere Gleichungen
+\end{itemize}
+\begin{align}
+  U_{S2} &= U_{n1} - U_{n3} \\
+  U_{S3} &= U_{n1} - U_{n4} = \alpha \cdot I_{R3} = \alpha \frac{U_{R3}}{R_3} = \alpha \frac{U_{n3}}{R_3} \nonumber \\
+  \Longrightarrow 0 &= U_{n1} - U_{n4} - \alpha \frac{U_{n3}}{R_3}
+\end{align}
+
+
+\section{Gleichungssystem in Matrixform}
+
+
 
 
 \end{document}
