@@ -41,3 +41,7 @@ is2 = un(5)
 is3 = un(6)
 us3 = un(1) - un(4)
 
+%% Aufstellen der Leistungsbilanz
+pn = is1*-un(2) + us2*is2 
+pp = sum(u.*i) + us3 * is3
+pa = pq + pr
