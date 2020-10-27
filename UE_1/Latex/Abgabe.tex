@@ -21,10 +21,13 @@
 \author{David Keller, Moritz Woltron, Matthias Fottner}
 \date{}
 \title{Protokoll Übung 1}
+
+
+
 \begin{document}
 
 \maketitle
-
+\newcommand{\unit}[1]{\,\text{#1}}
 \section{Schaltplan mit allen Strömen und Spannungen}
 \begin{circuitikz}[scale=1.2]
         \draw (0,0) node(qqqn0){};
@@ -39,6 +42,12 @@
         \draw (n30) to[short] ++ (2.5,0) to[R=$R_4$, i=$I_{R4}$, v=$U_{R4}$] (6.5,0);
         \draw (6.5,0) to[short] (0,0);
         \draw (0,0) node[rground]{};
+
+        % node voltages
+        \draw[european voltages, color=green!50!black] (-0.8,8) to[open, v=$U_{n1}$] (-0.8,0);
+        \draw[european voltages, color=green!50!black] (0.2 ,4) to[open, v^=$U_{n2}$] (0.2 ,0);
+        \draw[european voltages, color=green!50!black] (n4) to[open, v^=$U_{n4}$] (7,0);
+        \draw[european voltages, color=green!50!black] (n3) to[open, v=$U_{n3}$] (2,0);
 \end{circuitikz}
 
 \newpage
@@ -149,12 +158,12 @@ Mithilfe von Matlab erhält man:
       I_{S2}^? \\
       I_{S3}^? \end{array}\right\} =
   \left\{ \begin{array}{c}
-            5,2143 V\\
-    3,5476 V\\
-    1,7143 V\\
-    3,5000 V\\
-    -1,1310 A\\
-    0,2976 A \end{array}\right\}
+            5,2143 \unit{V}\\
+    3,5476 \unit{V}\\
+    1,7143 \unit{V}\\
+    3,5000 \unit{V}\\
+    -1,1310 \unit{A}\\
+    0,2976 \unit{A} \end{array}\right\}
 \end{equation*}
 
 Mit diesen Werten und mithilfe der Knotenspannungsgleichungen aus \ref{sec:knotenspannungen} lassen sich die
@@ -178,11 +187,11 @@ Spannungen $U_{R1} - U_{R5}$ und die Ströme $I_{R1} - I_{R5}$ ermitteln:
                 U_{n3} - U_{n4}
           \end{array}\right\} =
         \left\{ \begin{array}{c}
-                  1,6667 V \\
-                  1,8333 V \\
-                  1,7143 V \\
-                  1,7143 V \\
-                  -1.7857 V
+                  1,6667 \unit{V} \\
+                  1,8333 \unit{V} \\
+                  1,7143 \unit{V} \\
+                  1,7143 \unit{V} \\
+                  -1.7857 \unit{V}
                 \end{array}\right\}
             \end{equation*}
 
@@ -203,16 +212,50 @@ Spannungen $U_{R1} - U_{R5}$ und die Ströme $I_{R1} - I_{R5}$ ermitteln:
                                   U_{R5} / R_5
                                 \end{array}\right\} =
                               \left\{ \begin{array}{c}
-                                        0.8333 A \\
-                                        1.8333 A \\
-                                        0.4286 A \\
-                                        0.5714 A \\
-                                        -0.2976 A
+                                        0.8333 \unit{A} \\
+                                        1.8333 \unit{A} \\
+                                        0.4286 \unit{A} \\
+                                        0.5714 \unit{A} \\
+                                        -0.2976 \unit{A}
                                       \end{array}\right\}
-                                  \end{equation*} 
+                                  \end{equation*}
 
                                   Die Quellspannung der stromgesteuerten Quelle $U_{S3}$ erhält man aus der Lösung der Knotenspannungen:
                                   \begin{equation*}
-                                    U_{S3} = U_{n1} - U_{n4} = 1,7143 V
+                                    U_{S3} = U_{n1} - U_{n4} = 1,7143 \unit{V}
                                   \end{equation*}
+
+\section{Leistungsbilanz}
+Für das Aufstellen der Leistungsbilanz ist wichtig, welche Vorzeichen die Spannungen und Ströme am jeweiligen Bauteil haben.
+Zeigen Spannungs- und Stromzählpfeil in dieselbe Richtung, und sind auch die Vorzeichen gleich, so geht die Leistung an
+diesem Bauteil positiv in die Bilanz ein.
+Zeigen die Pfeile in die gleiche Richtung, aber die Vorzeichen sind unterschiedlich, so handelt es sich um eine negative Leistungsbilanz.
+Bei unterschiedlicher Zählpfeilrichtung entspricht ein unterschiedliches Vorzeichen einer positiven Leistung, ansonsten einer negativen.
+Alle Leistungsanteile im Netzwerk müssen entsprechend der Energieerhaltung 0 ergeben. \\
+Man erkennt, dass alle Leistungsanteile an den Widerständen positiv zu bewerten sind.
+Außerdem muss der Leistungsanteil der stromgesteuerten Spannungsquelle $S3$ positiv gewertet werden, da sowohl
+Spannung als auch Strom positiv ist und die Zählpfeile die gleiche Richtung haben.
+Man erhält für alle positiven Leistungen $P_p$:
+\begin{align*}
+  P_p &= U_{R1} \cdot I_{R1} +
+        U_{R2} \cdot I_{R2} +
+        U_{R3} \cdot I_{R3} +
+        U_{R4} \cdot I_{R4} +
+        U_{R5} \cdot I_{R5} +
+        U_{S3} \cdot I_{S3}^? \\
+      &= 7,5060 \unit{W}
+      \end{align*}
+
+und für alle negativen Leistungen an den Quellen $S1$ und $S2$:
+\begin{align*}
+  P_n &= -(I_{S1} \cdot U_{n2}) + U_{S2} \cdot I_{S2}^? \\
+      &= -7,5060 \unit{W}
+\end{align*}
+
+Die Summe aller Leistungen ergibt so $P_p + P_n = 0 \unit{W}$.
+
+
+
+
+
 \end{document}

@@ -1,5 +1,5 @@
 
-**** 10/25/20 20:28:26 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/27/20 13:03:58 *********** Evaluation PSpice (Nov 1999) **************
 
  ** Profile: "SCHEMATIC1-uebung1"  [ C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrisc
 
@@ -12,7 +12,7 @@
 
 
 
-** Creating circuit file "simulation-SCHEMATIC1-uebung1.sim.cir" 
+** Creating circuit file "simulation-schematic1-uebung1.sim.cir" 
 ** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
 
 *Libraries: 
@@ -38,7 +38,7 @@ H_H1         N00024 N00045 VH_H1 4
 VH_H1        N00279 0 0V
 I_I1         0 N00091 DC 1Adc  
 
-**** RESUMING simulation-SCHEMATIC1-uebung1.sim.cir ****
+**** RESUMING simulation-schematic1-uebung1.sim.cir ****
 .INC "simulation-SCHEMATIC1.als"
 
 
@@ -56,10 +56,10 @@ VH_H1           H1(1=N00279 2=0 )
 I_I1            I1(+=0 -=N00091 )
 .ENDALIASES
 
-**** RESUMING simulation-SCHEMATIC1-uebung1.sim.cir ****
+**** RESUMING simulation-schematic1-uebung1.sim.cir ****
 .END
 
-**** 10/25/20 20:28:26 *********** Evaluation PSpice (Nov 1999) **************
+**** 10/27/20 13:03:58 *********** Evaluation PSpice (Nov 1999) **************
 
  ** Profile: "SCHEMATIC1-uebung1"  [ C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrisc
 
@@ -93,5 +93,5 @@ I_I1            I1(+=0 -=N00091 )
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .08
+          TOTAL JOB TIME             .06
 
