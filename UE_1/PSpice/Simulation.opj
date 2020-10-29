@@ -8,7 +8,7 @@
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
     (CompileFileAddedOrDeleted "x")
-    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+    (PSPICE_Regenerate_Netlist_Flag ".\false"))
   (Folder "Outputs"
     (File ".\simulation-schematic1.net"
       (Type "Report")))
@@ -63,16 +63,13 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE\UE_1\PSpice\erweitertes_KSV\simulation.dsn")
+         "C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\UE_1\PSpice\simulation.dsn")
       (Path "Design Resources"
-         "C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE\UE_1\PSpice\erweitertes_KSV\simulation.dsn"
+         "C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\UE_1\PSpice\simulation.dsn"
          "SCHEMATIC1")
       (Path "Outputs")
       (Path "PSpice Resources")
-      (Path "PSpice Resources" "Simulation Profiles")
-      (Select "Design Resources"
-         "C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE\UE_1\PSpice\erweitertes_KSV\simulation.dsn"
-         "SCHEMATIC1" "PAGE1"))
+      (Path "PSpice Resources" "Simulation Profiles"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -82,11 +79,11 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -27 52 1682 52 676")
-        (Scroll "303 62")
-        (Zoom "172")
+        (Placement "44 2 3 -1 -1 -4 -27 104 1734 104 728")
+        (Scroll "139 266")
+        (Zoom "240")
         (Occurrence "/"))
       (Path
-         "C:\USERS\MATTH\ONEDRIVE - TECHNISCHE UNIVERSITÄT GRAZ\DOKUMENTE\STUDIUM\GRAZ\SEMESTER_3\ELEKTRISCHE_NETZWERKE_UND_MEHRTORE\UE\UE_1\PSPICE\ERWEITERTES_KSV\SIMULATION.DSN")
+         "C:\USERS\MATTH\ONEDRIVE - TECHNISCHE UNIVERSITÄT GRAZ\DOKUMENTE\STUDIUM\GRAZ\SEMESTER_3\ELEKTRISCHE_NETZWERKE_UND_MEHRTORE\UE_GIT\UE_1\PSPICE\SIMULATION.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1"))))
