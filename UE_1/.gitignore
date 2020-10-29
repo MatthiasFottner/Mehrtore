@@ -2,8 +2,8 @@
 *
 
 # But not these files...
-!Latex/Protokoll_Ue01.tex
-!Matlab/Matlab_Ue01.m
-!PSpice_Ue01.zip
+!Latex/GR04_UE_01.tex
+!Latex/Assets/*
+!Matlab/GR04_UE_01.m
+!PSpice/GR04_UE_01.zip
 !.gitignore
-!Latex/.gitignore
