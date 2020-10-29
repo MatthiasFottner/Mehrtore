@@ -2,7 +2,5 @@
 *
 
 # But not these files...
-!Latex/GR04_UE_01.tex
-!Matlab/GR04_UE_01.m
-!PSpice/GR04_UE_01.zip
+!Latex/
 !.gitignore
