@@ -1,0 +1,23 @@
+* C:\Users\David\Documents\Studium\Elektrische Netzwerke und Mehrtore - UE\Uebungsblatt01_tex\Schaltung_PSpice.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Oct 29 18:13:05 2020
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schaltung_PSpice.net"
+.INC "Schaltung_PSpice.als"
+
+
+.probe
+
+
+.END
