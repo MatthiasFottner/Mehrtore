@@ -121,4 +121,209 @@
 \label{fig:net}
 \end{figure}
 
+\section{Aufstellen des Gleichungssystems in Matrixform durch ``hinschauen''}
+\subsection{Widerstände}
+Zuerst wird die Admittanzmatrix durch hinschauen bestimmt.
+Dazu werden auf der Hauptdiagonale alle den jeweiligen Knoten umgebenden Leitwerte addiert.
+Auf der Nebendiagonale werden die Werte der zwischen den Knoten liegenden Widerstände als negativer Leitwert eingetragen.
+Der Unbekanntenvektor besteht aus den Knotenspannungen, der Ergebnisvektor beträgt 0.
+
+\NiceMatrixOptions{code-for-first-row = \color{orange},
+                   code-for-first-col = \color{orange}}
+\begin{align*}
+  \renewcommand{\arraystretch}{2}
+  \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c}
+          & n1 & n2 & n3 & n4 & n5 \\
+          n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 \\
+          \hdottedline
+          n2 & -G_2 & G_2 + G_3 + G_4 & 0 & -G_3 & 0 \\
+          \hdottedline
+          n3 & 0 & 0 & G_5 + G_6 & -G_5 & 0 \\
+          \hdottedline
+          n4 & 0 & -G_3 & -G_5 & G_3+G_5 & 0 \\
+          \hdottedline
+          n5 & -G_1 & 0 & 0 & 0 & G_1
+        \end{bNiceArray}
+   \begin{Bmatrix}
+     U_{n1} \\
+     U_{n2} \\
+     U_{n3} \\
+     U_{n4} \\
+     U_{n5}
+   \end{Bmatrix} =
+  \begin{Bmatrix}
+    0 \\
+    0 \\
+    0 \\
+    0 \\
+    0
+  \end{Bmatrix}
+\end{align*}
+\subsection{Unabhängige Stromquelle $S3$}
+Der bekannte Strom $I_{S3}$ der Stromquelle $S3$ fließt aus Knoten $n2$ (positiv) in den Knoten $n3$ (negativ)(vgl. Abb. \ref{fig:s3}).
+Bringt man nun die Größe auf die andere Seite des Gleichungssystems,
+so muss $I_{S3}$ im Lösungsvektor negativ bei $n2$ und positiv bei $n3$ sein.
+
+\begin{figure}[!htb]
+  \centering
+\begin{circuitikz}
+  \draw node[label=left:$n_2$](n2) at (0,0)
+        node[label=right:$n_3$](n2) at (4,0);
+  \draw (0,0) to[isource, v>={\color{blue}{$U_{S3}$}}, i={\color{red}{$I_{S3}$}}, o-o] (4,0);
+\end{circuitikz}
+\caption{freigestellte Stromquelle $S3$}
+\label{fig:s3}
+\end{figure}
+Es ergibt sich folgende Änderung im Gleichungssystem:
+
+\begin{align*}
+  \renewcommand{\arraystretch}{2}
+  \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c}
+    & n1 & n2 & n3 & n4 & n5 \\
+    n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 \\
+    \hdottedline
+    n2 & -G_2 & G_2 + G_3 + G_4 & 0 & -G_3 & 0 \\
+    \hdottedline
+    n3 & 0 & 0 & G_5 + G_6 & -G_5 & 0 \\
+    \hdottedline
+    n4 & 0 & -G_3 & -G_5 & G_3+G_5 & 0 \\
+    \hdottedline
+    n5 & -G_1 & 0 & 0 & 0 & G_1
+  \end{bNiceArray}
+                            \begin{Bmatrix}
+                              U_{n1} \\
+                              U_{n2} \\
+                              U_{n3} \\
+                              U_{n4} \\
+                              U_{n5}
+                            \end{Bmatrix} =
+  \begin{Bmatrix}
+    0 \\
+    \color{red}{-I_{S3}} \\
+    \color{red}{I_{S3}}\\
+    0 \\
+    0
+  \end{Bmatrix}
+\end{align*}
+
+\subsection{Unabhängige Spannungsquelle $S2$ \color{green!50!black}{($\rightarrow +1$ Gleichung)}}
+Bei der unabhängigen Spannungsquelle kommt mit dem Strom $I_{S2}^?$ eine unbekannte Größe hinzu.
+Folglich muss auch eine weitere Gleichung im Gleichungssystem ergänzt werden.
+Diese erhält man, indem die bekannte Quellspannung $U_{S2}$ mithilfe der Knotenspannungen ausgedrückt wird (vgl. Abb. \ref{fig:s2}):
+\begin{equation*}
+  {\color{blue}{U_{S2}}} = U_{n4} - U_{n5}
+\end{equation*}
+Beim Hinzufügen von $I_{S2}^?$ in den Unbekanntenvektor, muss auch die Strombilanz der Knoten $n4$ (positiv) und $n5$ (negativ) angepasst werden.
+
+\begin{figure}[!htb]
+  \centering
+\begin{circuitikz}
+  \draw node[label=left:$n_5$](n5) at (0,0)
+        node[label=right:$n_4$](n4) at (4,0);
+  \draw (4,0) to[vsource, v={\color{blue}{$U_{S2}$}}, i>={\color{red}{$I_{S2}^?$}}, o-o] (0,0);
+\end{circuitikz}
+\caption{freigestellte Spannungsquelle $S2$}
+\label{fig:s2}
+\end{figure}
+
+
+\begin{align*}
+  \renewcommand{\arraystretch}{2}
+  \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c:c}
+    & n1 & n2 & n3 & n4 & n5 & \color{red}{I_{S2}^?}\\
+    n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 & 0\\
+    \hdottedline
+    n2 & -G_2 & G_2 + G_3 + G_4 & 0 & -G_3 & 0 & 0\\
+    \hdottedline
+    n3 & 0 & 0 & G_5 + G_6 & -G_5 & 0 & 0 \\
+    \hdottedline
+    n4 & 0 & -G_3 & -G_5 & G_3+G_5 & 0 & \color{red}{1} \\
+    \hdottedline
+    n5 & -G_1 & 0 & 0 & 0 & G_1 & \color{red}{-1} \\
+    \hdottedline
+    \color{red}{I_{S2}^?}   & 0 & 0 & 0 & \color{blue}{1} & \color{blue}{-1} & 0
+  \end{bNiceArray}
+                            \begin{Bmatrix}
+                              U_{n1} \\
+                              U_{n2} \\
+                              U_{n3} \\
+                              U_{n4} \\
+                              U_{n5} \\
+                              \color{red}{I_{S2}^?}
+                            \end{Bmatrix} =
+  \begin{Bmatrix}
+    0 \\
+    \color{red}{-I_{S3}} \\
+    \color{red}{I_{S3}}\\
+    0 \\
+    0 \\
+    \color{blue}{U_{S2}}
+  \end{Bmatrix}
+\end{align*}
+
+
+\subsection{Stromgesteuerte Spannungsquelle $S1$ \color{green!50!black}{($\rightarrow +1$ Gleichung)}}
+Bei der stromgesteuerten Spannungsquelle $S1$ kommt die unbekannte Größe $I_{S1}^?$ hinzu.
+Folglich muss auch hier das Gleichungssystem um eine Gleichung erweitert werden.
+\begin{align*}
+  U_{S1} &= \alpha \cdot I_{R3} \\
+  I_{R3} &= G_3 (U_{n2} - U_{n4}) \\
+  U_{S1} &= -U_{n1} \\
+  \Longrightarrow -U_{n1} &= \alpha \cdot G_3 (U_{n2}- U_{n4}) \\
+  0 &= \alpha \cdot G_3 (U_{n2} - U_{n4}) + U_{n1}
+\end{align*}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{circuitikz}
+    \draw node[label=left:$n_1$](n1) at (0,4)
+          node[label=right:$n_2$](n2) at (6,0)
+          node[label=right:$n_4$](n4) at (6,4);
+
+          \draw (0,4) to[short, o-] ++ (2,0) to[cvsource, i={\color{red}{$I_{S1}^?$}}, v_<={\color{blue}{$U_{S1}$}}] (2,0) to[short, -o] (0,0)
+          (2,0) node[rground]{}
+          (6,0) to[short, o-] (4,0) to[R=$R_3$, i={\color{red}{$I_{R3}$}}] (4,4) to[short, -o] (6,4);
+  \end{circuitikz}
+  \caption{freigestellte stromgesteuerte Spannungsquelle $S1$ mit Steuerungsstrom $I_{R3}$}
+  \label{fig:s1}
+\end{figure}
+
+\begin{align*}
+  \renewcommand{\arraystretch}{2}
+  \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c:c:c}
+    & n1 & n2 & n3 & n4 & n5 & \color{red}{I_{S2}^?} & \color{red}{I_{S1}^?}\\
+    n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 & 0 & -1\\
+    \hdottedline
+    n2 & -G_2 & G_2 + G_3 + G_4 & 0 & -G_3 & 0 & 0 & 0\\
+    \hdottedline
+    n3 & 0 & 0 & G_5 + G_6 & -G_5 & 0 & 0 & 0\\
+    \hdottedline
+    n4 & 0 & -G_3 & -G_5 & G_3+G_5 & 0 & \color{red}{1} & 0 \\
+    \hdottedline
+    n5 & -G_1 & 0 & 0 & 0 & G_1 & \color{red}{-1} & 0\\
+    \hdottedline
+    \color{red}{I_{S2}^?} & 0 & 0 & 0 & \color{blue}{1} & \color{blue}{-1} & 0 & 0 \\
+    \hdottedline
+    \color{red}{I_{S1}^?} & 1 & \alpha G_3 & 0 & -\alpha G_3 & 0 & 0 & 0
+  \end{bNiceArray}
+                                                                               \begin{Bmatrix}
+                                                                                 U_{n1} \\
+                                                                                 U_{n2} \\
+                                                                                 U_{n3} \\
+                                                                                 U_{n4} \\
+                                                                                 U_{n5} \\
+                                                                                 \color{red}{I_{S2}^?} \\
+                                                                                 \color{red}{I_{S1}^?}
+                                                                               \end{Bmatrix} =
+  \begin{Bmatrix}
+    0 \\
+    \color{red}{-I_{S3}} \\
+    \color{red}{I_{S3}}\\
+    0 \\
+    0 \\
+    \color{blue}{U_{S2}} \\
+    0
+  \end{Bmatrix}
+\end{align*}
+
 \end{document}

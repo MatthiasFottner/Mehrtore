@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  31 OCT 2020 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  1 NOV 2020 12:37
 entering extended mode
 **./GR04_UE_02.tex
 (GR04_UE_02.tex
@@ -1145,26 +1145,153 @@ Overfull \hbox (52.05115pt too wide) in paragraph at lines 69--120
 
 
 {C:/Users/matth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(GR04_UE_02.aux) ) 
+\g__nicematrix_max_cell_width_dim=\dimen366
+\l__nicematrix_cell_box=\box79
+\c@iRow=\count329
+\c@jCol=\count330
+\g__nicematrix_row_total_int=\count331
+\g__nicematrix_col_total_int=\count332
+\l__nicematrix_left_delim_dim=\dimen367
+\l__nicematrix_right_delim_dim=\dimen368
+\l__nicematrix_the_array_box=\box80
+\g__nicematrix_dp_row_zero_dim=\dimen369
+\g__nicematrix_ht_row_zero_dim=\dimen370
+\g__nicematrix_ht_row_one_dim=\dimen371
+\g__nicematrix_dp_ante_last_row_dim=\dimen372
+\g__nicematrix_ht_last_row_dim=\dimen373
+\g__nicematrix_dp_last_row_dim=\dimen374
+\g__nicematrix_ddots_int=\count333
+\g__nicematrix_iddots_int=\count334
+\g__nicematrix_delta_x_one_dim=\dimen375
+\g__nicematrix_delta_y_one_dim=\dimen376
+\g__nicematrix_delta_x_two_dim=\dimen377
+\g__nicematrix_delta_y_two_dim=\dimen378
+\l__nicematrix_initial_i_int=\count335
+\l__nicematrix_initial_j_int=\count336
+\l__nicematrix_final_i_int=\count337
+\l__nicematrix_final_j_int=\count338
+\l__nicematrix_l_dim=\dimen379
+
+
+GR04_UE_02.tex:171: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171         n
+               ode[label=right:$n_3$](n2) at (4,0);
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:171: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171 ...    node[label=right:$n_3$](n2) at (4,0);
+                                                  
+(That was another \errmessage.)
+
+\alshift=\dimen380
+\absvshift=\dimen381
+[2]
+
+GR04_UE_02.tex:222: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222         n
+               ode[label=right:$n_4$](n4) at (4,0);
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:222: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 ...    node[label=right:$n_4$](n4) at (4,0);
+                                                  
+(That was another \errmessage.)
+
+\alshift=\dimen382
+[3]
+
+GR04_UE_02.tex:280: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.280           n
+                 ode[label=right:$n_2$](n2) at (6,0)
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:281: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.281           n
+                 ode[label=right:$n_4$](n4) at (6,4);
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:281: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.281 ...    node[label=right:$n_4$](n4) at (6,4);
+                                                  
+(That was another \errmessage.)
+
+\alshift=\dimen383
+\realshift=\dimen384
+[4] [5] (GR04_UE_02.aux) ) 
 Here is how much of TeX's memory you used:
- 38232 strings out of 480763
- 882975 string characters out of 2904059
- 1546853 words of memory out of 3000000
- 53768 multiletter control sequences out of 15000+200000
- 553292 words of font info for 87 fonts, out of 3000000 for 9000
+ 42305 strings out of 480763
+ 965547 string characters out of 2904059
+ 1836312 words of memory out of 3000000
+ 57840 multiletter control sequences out of 15000+200000
+ 556981 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,9n,83p,10134b,935s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
-appen/ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\matth\AppData\Local\
-MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr8.pfb>
-Output written on GR04_UE_02.pdf (1 page, 67021 bytes).
+ 58i,20n,97p,10134b,935s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol
+/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.
+enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Pro
+gram Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc} <C:\Users\matth\A
+ppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Use
+rs\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.p
+k> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+ecsx1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecrm1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecsx2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymb
+ol/MnSymbol12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on GR04_UE_02.pdf (5 pages, 260499 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 235 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
