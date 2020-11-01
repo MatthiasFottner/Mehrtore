@@ -63,6 +63,8 @@
 \maketitle
 \newcommand{\unit}[1]{\,\text{#1}}
 
+\tableofcontents
+\newpage
 \section{Schaltplan mit allen Strömen, Spannungen und Knoten}
 \begin{figure}[!htb]
   \centering
@@ -121,6 +123,8 @@
 \label{fig:net}
 \end{figure}
 
+\newpage
+
 \section{Aufstellen des Gleichungssystems in Matrixform durch ``hinschauen''}
 \subsection{Widerstände}
 Zuerst wird die Admittanzmatrix durch hinschauen bestimmt.
@@ -129,9 +133,13 @@ Auf der Nebendiagonale werden die Werte der zwischen den Knoten liegenden Widers
 Der Unbekanntenvektor besteht aus den Knotenspannungen, der Ergebnisvektor beträgt 0.
 
 \NiceMatrixOptions{code-for-first-row = \color{orange},
-                   code-for-first-col = \color{orange}}
+  code-for-first-col = \color{orange}}
+\begin{equation*}
+ \text{Es gilt:} \quad G_n = \frac{1}{R_n}
+\end{equation*}
+
 \begin{align*}
-  \renewcommand{\arraystretch}{2}
+  \renewcommand{\arraystretch}{1.5}
   \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c}
           & n1 & n2 & n3 & n4 & n5 \\
           n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 \\
@@ -177,7 +185,7 @@ so muss $I_{S3}$ im Lösungsvektor negativ bei $n2$ und positiv bei $n3$ sein.
 Es ergibt sich folgende Änderung im Gleichungssystem:
 
 \begin{align*}
-  \renewcommand{\arraystretch}{2}
+  \renewcommand{\arraystretch}{1.5}
   \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c}
     & n1 & n2 & n3 & n4 & n5 \\
     n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 \\
@@ -228,7 +236,7 @@ Beim Hinzufügen von $I_{S2}^?$ in den Unbekanntenvektor, muss auch die Strombil
 
 
 \begin{align*}
-  \renewcommand{\arraystretch}{2}
+  \renewcommand{\arraystretch}{1.5}
   \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c:c}
     & n1 & n2 & n3 & n4 & n5 & \color{red}{I_{S2}^?}\\
     n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 & 0\\
@@ -289,8 +297,8 @@ Folglich muss auch hier das Gleichungssystem um eine Gleichung erweitert werden.
 \end{figure}
 
 \begin{align*}
-  \renewcommand{\arraystretch}{2}
-  \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c:c:c}
+  \renewcommand{\arraystretch}{1.5}
+  \underbrace{\begin{bNiceArray}[first-row, first-col]{c:c:c:c:c:c:c}
     & n1 & n2 & n3 & n4 & n5 & \color{red}{I_{S2}^?} & \color{red}{I_{S1}^?}\\
     n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 & 0 & -1\\
     \hdottedline
@@ -305,8 +313,8 @@ Folglich muss auch hier das Gleichungssystem um eine Gleichung erweitert werden.
     \color{red}{I_{S2}^?} & 0 & 0 & 0 & \color{blue}{1} & \color{blue}{-1} & 0 & 0 \\
     \hdottedline
     \color{red}{I_{S1}^?} & 1 & \alpha G_3 & 0 & -\alpha G_3 & 0 & 0 & 0
-  \end{bNiceArray}
-                                                                               \begin{Bmatrix}
+  \end{bNiceArray}}_{\text{A}}
+                                                                               \underbrace{\begin{Bmatrix}
                                                                                  U_{n1} \\
                                                                                  U_{n2} \\
                                                                                  U_{n3} \\
@@ -314,8 +322,8 @@ Folglich muss auch hier das Gleichungssystem um eine Gleichung erweitert werden.
                                                                                  U_{n5} \\
                                                                                  \color{red}{I_{S2}^?} \\
                                                                                  \color{red}{I_{S1}^?}
-                                                                               \end{Bmatrix} =
-  \begin{Bmatrix}
+                                                                               \end{Bmatrix}}_{\text{x}} =
+  \underbrace{\begin{Bmatrix}
     0 \\
     \color{red}{-I_{S3}} \\
     \color{red}{I_{S3}}\\
@@ -323,7 +331,174 @@ Folglich muss auch hier das Gleichungssystem um eine Gleichung erweitert werden.
     0 \\
     \color{blue}{U_{S2}} \\
     0
-  \end{Bmatrix}
+  \end{Bmatrix}}_{\text{b}}
 \end{align*}
+
+\subsection{Ausrechnen der Unbekanntenvektors $x$ } \label{sec:mat}
+Indem man beide Seiten der Gleichung mit der Inversen $A^{-1}$ multipliziert, kann man nach $x$ auflösen.
+\begin{equation*}
+  x = A^{-1} b
+\end{equation*}
+Man erhält mithilfe von Matlab für $x$:
+\begin{equation*}
+  \renewcommand{\arraystretch}{1.5}
+  x = \begin{Bmatrix}
+    U_{n1} \\
+    U_{n2} \\
+    U_{n3} \\
+    U_{n4} \\
+    U_{n5} \\
+    I_{S2}^? \\
+    I_{S1}^? \\
+  \end{Bmatrix} =
+  \begin{Bmatrix}
+    5,6140 \unit{V} \\
+    -0,1754 \unit{V} \\
+    23, 1579 \unit{V} \\
+    20,8772 \unit{V} \\
+    0,8772 \unit{V} \\
+    -0,9474 \unit{A} \\
+    1,5263 \unit{A}
+  \end{Bmatrix}
+\end{equation*}
+
+\section{Thevenin-Quelle bezüglich der Klemmen $a$ und $b$}
+\subsection{$U_{Th}$}
+Die Spannung $U_{Th}$ entspricht der Leerlaufspannung an den Klemmen $a$ und $b$ ($U_{ab,LL}$),
+welche der Spannung $U_{R5}$ entspricht (vgl. Abb. \ref{fig:uth}).
+Somit kann $U_{Th}$ mithilfe der gewonnenen Knotenspannungen aus Kapitel \ref{sec:mat} berechnet werden. Es gilt:
+\begin{equation*}
+  U_{Th} = U_{ab,LL} = U_{R5} = U_{n4} - U_{n3} = 20,8772 \unit{V} - 23,1579 \unit{V} = -2,2807 \unit{V}
+\end{equation*}
+
+\begin{figure}[!htb]
+  \centering
+\begin{circuitikz}
+  \draw node[label=north:$n_4$](n4) at (0,4)
+        node[label=north east:$n_3$](n3) at (0,0)
+        node[label=north:$a$](a) at (2,4)
+        node[label=south:$b$](b) at (2,0);
+
+  \draw (-1,4) to[short, -o] (n4)
+        (n4) to[R=$R_5$, v={\color{blue}{$U_{R5}$}}, o-o] (n3)
+        (-1,0) to[short, -o] (n3)
+        (n4) to[short, -o] (a)
+        (n3) to[short, -o] (b)
+        (n3) to[short] ++ (0,-0.5)
+        (b) to[open, v<={\color{blue}{${U_{ab,LL} = U_{Th}}$}}] (a);
+\end{circuitikz}
+\caption{Spannungsbetrachtung an den Klemmen $a$ und $b$}
+\label{fig:uth}
+\end{figure}
+
+\subsection{$I_{KS}$}
+Bei $I_{KS}$ handelt es sich um eine weiter Unbekannte, deshalb muss das Gleichungssystem um eine weitere Gleichung
+erweitert werden. Um den Kurzschluss zu simulieren, kann an den Klemmen $a$ und $b$ eine ideale Spannungsquelle mit
+$0 \unit{V}$ Spannungsabfall angenommen werden (vgl. Abb. \ref{fig:iks}). Dieser Spannungsabfall entspricht $U_{R5}$,
+und somit kann folgende Gleichung aufgestellt werden:
+
+\begin{equation*}
+  U_{R5} = U_{KS} = U_{n4} - U_{n3} = 0
+\end{equation*}
+
+\begin{figure}[!htb]
+  \centering
+  \begin{circuitikz}
+    \draw node[label=north:$n_4$](n4) at (0,4)
+          node[label=south east:$n_3$](n3) at (0,0)
+          node[label=north:$a$](a) at (2,4)
+          node[label=south:$b$](b) at (2,0);
+
+    \draw (n4) to[R=$R_5$, v={\color{blue}{${U_{R5}=0 \unit{V}}$}}, o-o] (n3)
+          (n4) to[short, -o] (a) to[short] ++ (2,0) to[vsource, v={\color{blue}{${U_{KS} = 0 \unit{V}}$}}, i>={\color{red}{$I_{KS}$}}] ++ (0,-4)
+          (n3) to[short, -o] (b) to[short] ++ (2,0)
+          (n3) to[short] ++ (0,-0.5)
+          (n3) to[short] ++ (-1,0)
+          (n4) to[short] ++ (-1,0);
+  \end{circuitikz}
+  \caption{Simulation des Kurzschlussstroms $I_{KS}$}
+  \label{fig:iks}
+\end{figure}
+
+Der Kurzschlussstrom $I_{KS}$ muss als ausfließender Strom in Knoten $n_4$ und als zufließender Strom in Knoten $n_3$
+ergänzt werden. Insgesamt ergibt sich folgendes Gleichungssystem:
+
+
+\begin{align*}
+  \renewcommand{\arraystretch}{1.5}
+  \underbrace{\begin{bNiceArray}[first-row, first-col]{c:c:c:c:c:c:c:c}
+      & n1 & n2 & n3 & n4 & n5 & \color{red}{I_{S2}^?} & \color{red}{I_{S1}^?} & \color{red}{I_{KS}}\\
+      n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 & 0 & -1 & 0\\
+      \hdottedline
+      n2 & -G_2 & G_2 + G_3 + G_4 & 0 & -G_3 & 0 & 0 & 0 & 0\\
+      \hdottedline
+      n3 & 0 & 0 & G_5 + G_6 & -G_5 & 0 & 0 & 0 & \color{red}{-1}\\
+      \hdottedline
+      n4 & 0 & -G_3 & -G_5 & G_3+G_5 & 0 & \color{red}{1} & 0 & \color{red}{1}\\
+      \hdottedline
+      n5 & -G_1 & 0 & 0 & 0 & G_1 & \color{red}{-1} & 0 & 0 \\
+      \hdottedline
+      \color{red}{I_{S2}^?} & 0 & 0 & 0 & \color{blue}{1} & \color{blue}{-1} & 0 & 0 & 0\\
+      \hdottedline
+      \color{red}{I_{S1}^?} & 1 & \alpha G_3 & 0 & -\alpha G_3 & 0 & 0 & 0 & 0 \\
+      \hdottedline
+      \color{red}{I_{KS}} & 0 & 0 & -1 & 1 & 0 & 0 & 0 & 0
+    \end{bNiceArray}}_{\text{A}}
+                                                                         \underbrace{\begin{Bmatrix}
+                                                                             U_{n1} \\
+                                                                             U_{n2} \\
+                                                                             U_{n3} \\
+                                                                             U_{n4} \\
+                                                                             U_{n5} \\
+                                                                             \color{red}{I_{S2}^?} \\
+                                                                             \color{red}{I_{S1}^?} \\
+                                                                             \color{red}{I_{KS}}
+                                                                           \end{Bmatrix}}_{\text{x}} =
+  \underbrace{\begin{Bmatrix}
+      0 \\
+      \color{red}{-I_{S3}} \\
+      \color{red}{I_{S3}}\\
+      0 \\
+      0 \\
+      \color{blue}{U_{S2}} \\
+      0 \\
+      0
+    \end{Bmatrix}}_{\text{b}}
+\end{align*}
+
+Bei erneutem Auflösen nach $x$ und Ausrechnen der Gleichung mit Matlab erhält man für $x$:
+
+\begin{equation*}
+  x = \begin{Bmatrix}
+    U_{n1} \\
+    U_{n2} \\
+    U_{n3} \\
+    U_{n4} \\
+    U_{n5} \\
+    I_{S2}^? \\
+    I_{S1}^? \\
+    I_{KS} \\
+  \end{Bmatrix} =
+  \begin{Bmatrix}
+    5,7143 \unit{V} \\
+    1,7764 \cdot 10^{-15} \unit{V} \\
+    21,4286 \unit{V} \\
+    21,4286 \unit{V} \\
+    1,4286 \unit{V} \\
+    -0,8571 \unit{A} \\
+    1,4286 \unit{A} \\
+    -0,5714 \unit{A}
+    \end{Bmatrix}
+\end{equation*}
+Der Kurzschlussstrom $I_{KS}$ entspricht somit $571,4 \unit{mA}$.
+
+\subsection{$R_{Th}$ mithilfe von $U_{Th}$ und $I_{KS}$}
+Der Innenwiderstand $R_{Th}$ der Thevenin-Quelle entspricht dank der Quellenäquivalenz von Norton- und Thevenin-Quelle
+dem Quotienten aus $U_{Th}$ und $I_{KS}$.
+Somit ergibt sich:
+
+\begin{equation*}
+  R_{Th} = R_N = \frac{U_{Th}}{I_{KS}} = \frac{-2,2807 \unit{V}}{-0,5714 \unit{A}} = 3,9912 \unit{$\Omega$}
+\end{equation*}
 
 \end{document}
