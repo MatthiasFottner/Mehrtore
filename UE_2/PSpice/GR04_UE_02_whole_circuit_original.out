@@ -1,0 +1,135 @@
+
+**** 11/02/20 22:48:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 02 22:48:21 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "GR04_UE_02_whole_circuit_original.net"
+
+**** INCLUDING GR04_UE_02_whole_circuit_original.net ****
+* Schematics Netlist *
+
+
+
+R_R4         $N_0001 0  10  
+R_R1         $N_0003 $N_0002  5  
+R_R3         $N_0004 $N_0001  15  
+R_R5         $N_0006 $N_0005  5  
+R_R6         0 $N_0005  15  
+R_R2         $N_0001 $N_0003  10  
+I_I1         $N_0001 $N_0005 DC 2  
+V_V1         $N_0006 $N_0002 DC 20  
+H_H1         0 $N_0003 VH_H1 4
+VH_H1        $N_0004 $N_0006 0V
+R_R7         $N_0005 $N_0006  12  
+I_I2         $N_0005 $N_0006 DC 1  
+
+**** RESUMING GR04_UE_02_whole_circuit_original.cir ****
+.INC "GR04_UE_02_whole_circuit_original.als"
+
+
+
+**** INCLUDING GR04_UE_02_whole_circuit_original.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R4            R4(1=$N_0001 2=0 )
+R_R1            R1(1=$N_0003 2=$N_0002 )
+R_R3            R3(1=$N_0004 2=$N_0001 )
+R_R5            R5(1=$N_0006 2=$N_0005 )
+R_R6            R6(1=0 2=$N_0005 )
+R_R2            R2(1=$N_0001 2=$N_0003 )
+I_I1            I1(+=$N_0001 -=$N_0005 )
+V_V1            V1(+=$N_0006 -=$N_0002 )
+H_H1            H1(3=0 4=$N_0003 )
+VH_H1           H1(1=$N_0004 2=$N_0006 )
+R_R7            R7(1=$N_0005 2=$N_0006 )
+I_I2            I2(+=$N_0005 -=$N_0006 )
+.ENDALIASES
+
+
+**** RESUMING GR04_UE_02_whole_circuit_original.cir ****
+.probe
+
+
+.END
+
+**** 11/02/20 22:48:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)     .0987                   ($N_0002)    1.7389                       
+
+($N_0003)    5.7707                   ($N_0004)   21.7390                       
+
+($N_0005)   20.4550                   ($N_0006)   21.7390                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.064E-01
+    VH_H1       -1.443E+00
+
+    TOTAL POWER DISSIPATION   1.61E+01  WATTS
+
+
+**** 11/02/20 22:48:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H1      
+V-SOURCE    -5.771E+00
+I-SOURCE     1.374E+00
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+
