@@ -66,6 +66,7 @@
 \tableofcontents
 \newpage
 \section{Schaltplan mit allen Strömen, Spannungen und Knoten}
+
 \begin{figure}[!htb]
   \centering
 \hspace*{-40pt}
@@ -270,7 +271,7 @@ Beim Hinzufügen von $I_{S2}^?$ in den Unbekanntenvektor, muss auch die Strombil
 \end{align*}
 
 
-\subsection{Stromgesteuerte Spannungsquelle $S1$ \color{green!50!black}{($\rightarrow +1$ Gleichung)}}
+\subsection{Stromgesteuerte Spannungsquelle $S1$ \color{green!50!black}{($\rightarrow +1$ Gleichung)}}\label{sec:completeMatrix}
 Bei der stromgesteuerten Spannungsquelle $S1$ kommt die unbekannte Größe $I_{S1}^?$ hinzu.
 Folglich muss auch hier das Gleichungssystem um eine Gleichung erweitert werden.
 \begin{align*}
@@ -492,7 +493,7 @@ Bei erneutem Auflösen nach $x$ und Ausrechnen der Gleichung mit Matlab erhält 
 \end{equation*}
 Der Kurzschlussstrom $I_{KS}$ entspricht somit $571,4 \unit{mA}$.
 
-\subsection{$R_{Th}$ mithilfe von $U_{Th}$ und $I_{KS}$}
+\subsection{$R_{Th}$ mithilfe von $U_{Th}$ und $I_{KS}$}\label{sec:var1}
 Der Innenwiderstand $R_{Th}$ der Thevenin-Quelle entspricht dank der Quellenäquivalenz von Norton- und Thevenin-Quelle
 dem Quotienten aus $U_{Th}$ und $I_{KS}$.
 Somit ergibt sich:
@@ -500,5 +501,168 @@ Somit ergibt sich:
 \begin{equation*}
   R_{Th} = R_N = \frac{U_{Th}}{I_{KS}} = \frac{-2,2807 \unit{V}}{-0,5714 \unit{A}} = 3,9912 \unit{$\Omega$}
 \end{equation*}
+
+\subsection{$R_{Th}$ mithilfe von Testspannung $U_T$}
+
+Um den Innenwiderstand der Thevenin-Quelle zu erhalten, werden zuerst alle unabhängigen Quellen im Netzwerk durch
+deren idealen Innenwiderstand ersetzt. Zusätzlich wird an den Klemmen $a$ und $b$
+eine frei wählbare Testspannung $U_T$ angelegt (vgl. Abb. \ref{fig:idealRq}).
+Daraus ergibt sich ein unbekannter Teststrom $I_T^?$, der vom Knoten $n_4$ in den Knoten $n_3$ fließt.
+Das Gleichungssystem aus Kapitel \ref{sec:completeMatrix} muss somit um eine weitere Gleichung ergänzt werden
+
+\begin{equation*}
+  U_T = U_{R5} = U_{n4} - U_{n3}
+\end{equation*}
+
+und man erhält folgende Matrixgleichung:
+
+\begin{align*}
+  \renewcommand{\arraystretch}{1.5}
+  \underbrace{\begin{bNiceArray}[first-row, first-col]{c:c:c:c:c:c:c:c}
+      & n1 & n2 & n3 & n4 & n5 & \color{red}{I_{S2}^?} & \color{red}{I_{S1}^?} & \color{red}{I_T^?}\\
+      n1 & G_1+G_2 & -G_2 & 0 & 0 & -G_1 & 0 & -1 & 0 \\
+      \hdottedline
+      n2 & -G_2 & G_2 + G_3 + G_4 & 0 & -G_3 & 0 & 0 & 0 & 0\\
+      \hdottedline
+      n3 & 0 & 0 & G_5 + G_6 & -G_5 & 0 & 0 & 0 & \color{red}{-1} \\
+      \hdottedline
+      n4 & 0 & -G_3 & -G_5 & G_3+G_5 & 0 & \color{red}{1} & 0 & \color{red}{1} \\
+      \hdottedline
+      n5 & -G_1 & 0 & 0 & 0 & G_1 & \color{red}{-1} & 0 & 0 \\
+      \hdottedline
+      \color{red}{I_{S2}^?} & 0 & 0 & 0 & \color{blue}{1} & \color{blue}{-1} & 0 & 0 & 0 \\
+      \hdottedline
+      \color{red}{I_{S1}^?} & 1 & \alpha G_3 & 0 & -\alpha G_3 & 0 & 0 & 0 & 0 \\
+      \hdottedline
+      \color{red}{I_T^?} & 0 & 0 & -1 & 1 & 0 & 0 & 0 & 0
+    \end{bNiceArray}}_{\text{A}}
+                                                                         \underbrace{\begin{Bmatrix}
+                                                                             U_{n1} \\
+                                                                             U_{n2} \\
+                                                                             U_{n3} \\
+                                                                             U_{n4} \\
+                                                                             U_{n5} \\
+                                                                             \color{red}{I_{S2}^?} \\
+                                                                             \color{red}{I_{S1}^?} \\
+                                                                             \color{red}{I_{T}^?}
+                                                                           \end{Bmatrix}}_{\text{x}} =
+  \underbrace{\begin{Bmatrix}
+      0 \\
+      \color{red}{-I_{S3}} = 0\\
+      \color{red}{I_{S3}} = 0\\
+      0 \\
+      0 \\
+      \color{blue}{U_{S2}} = 0 \\
+      0 \\
+      \color{blue}{U_T}
+    \end{Bmatrix}}_{\text{b}}
+\end{align*}
+
+\begin{figure}[!htb]
+  \centering
+  \hspace*{-40pt}
+  \begin{circuitikz}[scale=0.85]
+    \clip (-4.5,-2.3) rectangle (13.5, 10);
+    % create all nodes
+    \draw node[label=left:$n_1$](n1) at (0,4)
+    node[label=south east:$n_2$](n2) at (4,4)
+    node[label=south east:$n_3$](n3) at (8,4)
+    node[label=north:$n_4$](n4) at (4,8)
+    node[label=left:$n_5$](n5) at (0,8)
+    node[label=north:$a$](a) at (10,8)
+    node[label=south:$b$](b) at (10,4);
+
+    % draw all resistors
+    \draw (n5) to[R=$R_1$, v={\color{blue}{$U_{R1}$}}, i={\color{red}{$I_{R1}$}}, o-o] (n1)
+    (n1) to[short] ++ (0.4, 0) to[R=$R_2$, v={\color{blue}{$U_{R2}$}}, i={\color{red}{$I_{R2}$}}] ++ (2.7, 0 ) to[short] (n2)
+    (n2) to[R=$R_3$, v={\color{blue}{$U_{R3}$}}, i={\color{red}{$I_{R3}$}}, o-o] (n4)
+    (n2) to[short] ++ (0,-1) to[R=$R_4$, v={\color{blue}{$U_{R4}$}}, i={\color{red}{$I_{R4}$}}] ++ (0,-2.5) to[short] (4,0)
+    (8,8) to[R=$R_5$, v={\color{blue}{$U_{R5}$}}, i={\color{red}{$I_{R5}$}}, o-o] (n3)
+    (4,0) to[R=$R_6$, v={\color{blue}{$U_{R6}$}}, i={\color{red}{$I_{R6}$}}, o-] (8,0);
+
+    % draw sources
+    \draw (0,0) to[cvsource={\color{blue}{$U_{S1}$}}, i>={\color{red}{$I_{S1}^?$}}] (n1)
+    (n4) to[short, o-o] ++ (-1,0) to[short, v_={\color{blue}{${U_{S2} = 0 \unit{V}}$}}, i>={\color{red}{$I_{S2}^?$}}] ++ (-2,0) to[short, o-o] (n5)
+    (n2) to[short, o-o] ++ (1,0) to[open, v>={\color{blue}{$U_{S3}^?$}}] ++ (2,0) to[short, o-o] (n3)
+    (12,8) to[vsource, v={\color{blue}{$U_T$}}, i>={\color{red}{$I_T^?$}}, o-o] (12,4);
+
+    % fill in wires
+    \draw (0,0) to[short] (4,0);
+    \draw (8,0) to[short] (8,4);
+    \draw (n4) to[short] ++ (4,0);
+    \draw (n3) to[short, -o] ++ (2,0) to[short] ++ (2,0);
+    \draw (8,8) to[short, -o] ++ (2,0) to[short] ++ (2,0);
+
+    % draw ground
+    \draw (4,0) node[rground]{};
+
+    % draw node currents
+    \draw[european voltages, color=green!50!black] (n2) to[open, v=$U_{n2}$] (2.1,0)
+    (n1) to[open, v^=$U_{n1}$] (0.7,0)
+    (-1.5,8) to[open, v=$U_{n5}$] (-1.5,0);
+
+
+    % \draw[FARROW, green!50!black] plot [smooth, tension=1] coordinates {(8.7,3.3) (9,-1) (4,-1)}
+    \draw[FARROW, green!50!black] (8.6, 3.2) to[bend left=90, looseness=2] node[below right]{$U_{n3}$} (4.5,-1);
+    \draw[FARROW, green!50!black] (3, 9) to[bend right=110, looseness=1.9] node[below left]{$U_{n4}$} (0,-0.5);
+
+    % \draw [brown] (current bounding box.south west) rectangle (current bounding box.north east);
+    % \draw[gray,step=0.25] (-6,-3) grid (16.5, 11);
+
+  \end{circuitikz}
+  \caption{Netzwerk mit idealen Innenwiderständen der unabhängigen Quellen und der Testspannung $U_T$ }
+  \label{fig:idealRq}
+\end{figure}
+
+Legt man nun die Testspannung $U_T$ willkürlich auf $1 \unit{V}$ fest, so kann man das Gleichungssystem nach dem
+x-Vektor auflösen und erhält mithilfe Matlabs den Wert des Stromes $I_T^?$.
+
+\begin{equation*}
+  I_T^? = -0,2505 \unit{A}
+\end{equation*}
+
+Die Situation kann wie in Abbildung \ref{fig:rth} dargestellt werden:
+
+\begin{figure}[!htb]
+  \centering
+\begin{circuitikz}
+  \draw (0,0) to[short, -o] (4,0)
+        (0,0) to[short] (0,4) to[R=$R_{Th}$, v={\color{blue}{$U_{RTh}$}}, i={\color{red}{$I_T^?$}}, -o] (4,4)
+              to[short] ++ (2,0) to[vsource, v={\color{blue}{$U_T$}}, i>={\color{red}{$I_T^?$}}] ++ (0,-4) to[short] ++ (-2, 0)
+              node[label=north:$a$](a) at (4,4)
+              node[label=south:$b$](b) at (4,0);
+\end{circuitikz}
+\caption{Testspannung am Innenwiderstand der Thevenin-Quelle}
+\label{fig:rth}
+\end{figure}
+
+Es lässt sich also folgende Maschengleichung bestimmen:
+\begin{equation*}
+  U_{RTh} = - U_{T} = -1 \unit{V}
+\end{equation*}
+
+und letztlich der Widerstand $R_{Th}$ mithilfe des ohm'schen Gesetzes:
+\begin{equation*}
+  R_{Th} = \frac{U_{RTh}}{I_T^?} = \frac{-1 \unit{V}}{-0,2505 \unit{A}} = 3,9912 \unit{$\Omega$}
+\end{equation*}
+
+Dieser Wert deckt sich mit dem ausgerechneten Wert für $R_{Th}$ aus Kapitel \ref{sec:var1}.
+
+\newpage
+
+\section{Simulation in PSpice}
+\subsection{Originalschaltung}
+\begin{center}
+  \includegraphics[width=1\linewidth]{./Assets/simulation_original}
+  \captionof{figure}{PSpice-Simulation der Originalschaltung (vgl. Abb. \ref{fig:net})}
+  \label{fig:sim_original}
+\end{center}
+
+\subsection{Thevenin-Quelle}
+\begin{center}
+  \includegraphics[width=1\linewidth]{./Assets/simulation_thevenin}
+  \captionof{figure}{PSpice-Simulation der Thevenin-Ersatzschaltung (vgl. Abb. \ref{fig:net})}
+  \label{fig:sim_thevenin}
+\end{center}
 
 \end{document}

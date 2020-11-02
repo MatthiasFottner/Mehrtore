@@ -10,3 +10,7 @@
 \contentsline {subsection}{\numberline {3.1}$U_{Th}$}{6}%
 \contentsline {subsection}{\numberline {3.2}$I_{KS}$}{7}%
 \contentsline {subsection}{\numberline {3.3}$R_{Th}$ mithilfe von $U_{Th}$ und $I_{KS}$}{8}%
+\contentsline {subsection}{\numberline {3.4}$R_{Th}$ mithilfe von Testspannung $U_T$}{8}%
+\contentsline {section}{\numberline {4}Simulation in PSpice}{11}%
+\contentsline {subsection}{\numberline {4.1}Originalschaltung}{11}%
+\contentsline {subsection}{\numberline {4.2}Thevenin-Quelle}{11}%
