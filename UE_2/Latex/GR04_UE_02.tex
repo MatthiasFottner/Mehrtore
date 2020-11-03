@@ -363,7 +363,7 @@ Man erhält mithilfe von Matlab für $x$:
   \end{Bmatrix}
 \end{equation*}
 
-\section{Thevenin-Quelle bezüglich der Klemmen $a$ und $b$}
+\section{Thevenin-Quelle bezüglich der Klemmen $a$ und $b$}\label{sec:thev}
 \subsection{$U_{Th}$}
 Die Spannung $U_{Th}$ entspricht der Leerlaufspannung an den Klemmen $a$ und $b$ ($U_{ab,LL}$),
 welche der Spannung $U_{R5}$ entspricht (vgl. Abb. \ref{fig:uth}).
@@ -659,10 +659,31 @@ Dieser Wert deckt sich mit dem ausgerechneten Wert für $R_{Th}$ aus Kapitel \re
 \end{center}
 
 \subsection{Thevenin-Quelle}
+Bei der Simulation mit der Thevenin-Quelle wird das Netzwerk links von den Klemmen $a$ und $b$ durch eine
+ideale Spannungsquelle mit der Spannung $U_{Th}$ und einem in Serie geschaltetem Innenwiderstand $R_{Th}$ ersetzt.
+Die Werte hierfür wurden in Kapitel \ref{sec:thev} berechnet.
+Der Schaltplan aus Abbildung \ref{fig:thev} liegt der Simulation zugrunde.
+
+\begin{figure}[!htb]
+\centering
+  \begin{circuitikz}
+    \draw (0,0) to[short, -o](4,0) to[short] ++ (6,0)
+    to[isource, i={\color{red}{$I_{S4}$}}] ++ (0,4) to[short, -o] ++ (-6, 0) to[R=$R_{Th}$] (0,4)
+    to[vsource, v={\color{blue}{$U_{Th}$}}] (0,0);
+    \draw (6,4) to[R=$R_7$, v={\color{blue}{$U_{R7}$}}] (6,0);
+    \draw node[label=north:$a$](a) at (4,4)
+          node[label=south:$b$](b) at (4,0);
+  \end{circuitikz}
+  \caption{Ersatzschaltung mit Thevenin-Quelle}
+  \label{fig:thev}
+\end{figure}
+
 \begin{center}
   \includegraphics[width=1\linewidth]{./Assets/simulation_thevenin}
   \captionof{figure}{PSpice-Simulation der Thevenin-Ersatzschaltung (vgl. Abb. \ref{fig:net})}
   \label{fig:sim_thevenin}
 \end{center}
+
+\subsection{Vergleich der beiden Simulationen}
 
 \end{document}

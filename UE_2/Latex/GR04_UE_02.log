@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  2 NOV 2020 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  3 NOV 2020 00:00
 entering extended mode
 **./GR04_UE_02.tex
 (GR04_UE_02.tex
@@ -1537,49 +1537,75 @@ File: ./Assets/simulation_original.png Graphic file (type png)
 Package pdftex.def Info: ./Assets/simulation_original.png  used on input line 6
 56.
 (pdftex.def)             Requested size: 418.25555pt x 205.94359pt.
+\realshift=\dimen428
+\alshift=\dimen429
+\realshift=\dimen430
+\alshift=\dimen431
+\absvshift=\dimen432
+
+
+GR04_UE_02.tex:675: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.675           n
+                 ode[label=south:$b$](b) at (4,0);
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:675: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.675           node[label=south:$b$](b) at (4,0);
+                                                  
+(That was another \errmessage.)
+
 <./Assets/simulation_thevenin.png, id=58, 1168.365pt x 642.14906pt>
 File: ./Assets/simulation_thevenin.png Graphic file (type png)
 <use ./Assets/simulation_thevenin.png>
 Package pdftex.def Info: ./Assets/simulation_thevenin.png  used on input line 6
-63.
+82.
 (pdftex.def)             Requested size: 418.25555pt x 229.8801pt.
- [11 <./Assets/simulation_original.png> <./Assets/simulation_thevenin.png>] (GR
-04_UE_02.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[11 <./Assets/simulation_original.png>] [12 <./Assets/simulation_thevenin.png>]
+(GR04_UE_02.aux) ) 
 Here is how much of TeX's memory you used:
- 46778 strings out of 480763
- 1061359 string characters out of 2904059
- 1815308 words of memory out of 3000000
- 62296 multiletter control sequences out of 15000+200000
+ 46967 strings out of 480763
+ 1065919 string characters out of 2904059
+ 1813336 words of memory out of 3000000
+ 62485 multiletter control sequences out of 15000+200000
  560782 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,27n,98p,10134b,935s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc} <C:\User
-s\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk
->{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Progra
-m Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiK
-TeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc} <C:\Users\matth\AppData\Local\M
-iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\matth\AppDa
-ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\m
-atth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <
-C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx
-1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecrm1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
-appen/ec/dpi600\ecsx2074.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mns
-ymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/M
-nSymbol12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol
-8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb>
-Output written on GR04_UE_02.pdf (11 pages, 452814 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbo
+lC.enc} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
+i600\ecrm0800.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbol
+A.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/P
+rogram Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc} <C:\Users\matth
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\U
+sers\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095
+.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/mnsymbol/MnSymbol12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/m
+nsymbol/MnSymbol8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on GR04_UE_02.pdf (12 pages, 455800 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
+ 351 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
