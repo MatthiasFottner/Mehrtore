@@ -1,4 +1,4 @@
-*version 9.1 791953722
+*version 9.1 831477271
 u 185
 R? 7
 V? 3
@@ -21,8 +21,8 @@ AutoGenStim4ExtIFPorts 1
 @index
 pageloc 1 0 4084 
 @status
-n 0 120:10:01:13:25:24;1604233524 e 
-s 2832 120:10:01:13:25:25;1604233525 e 
+n 0 120:10:03:17:07:56;1604419676 e 
+s 2832 120:10:03:17:07:57;1604419677 e 
 *page 1 0 970 720 iA
 @ports
 port 70 GND_ANALOG 300 390 h
@@ -49,10 +49,6 @@ part 8 VSRC 260 120 d
 a 0 a 0:13 0 0 0 hln 100 PKGREF=V1
 a 1 ap 9 0 20 10 hcn 100 REFDES=V1
 a 1 u 0 0 0 0 hcn 100 DC=20
-part 127 VSRC 500 180 h
-a 0 a 0:13 0 0 0 hln 100 PKGREF=V2
-a 1 ap 9 0 20 10 hcn 100 REFDES=V2
-a 1 u 0 0 0 0 hcn 100 DC=0
 part 6 r 420 170 d
 a 0 u 13 0 15 25 hln 100 VALUE=5
 a 0 sp 0 0 0 10 hlb 100 PART=r
@@ -86,6 +82,10 @@ a 0 s 0:13 0 0 0 hln 100 PKGTYPE=RC05
 a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 a 0:13 0 0 0 hln 100 PKGREF=R3
 a 0 ap 9 0 15 0 hln 100 REFDES=R3
+part 127 VSRC 500 180 h
+a 0 a 0:13 0 0 0 hln 100 PKGREF=V2
+a 1 ap 9 0 20 10 hcn 100 REFDES=V2
+a 1 u 0 0 0 0 hcn 100 DC=0
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
@@ -147,9 +147,6 @@ s 300 260 300 310 47
 j 420 260
 + w 179
 + w 179
-j 500 220
-+ p 127 -
-+ w 179
 j 380 260
 + p 9 -
 + w 179
@@ -176,9 +173,6 @@ j 140 320
 + w 40
 j 260 120
 + p 8 +
-+ w 161
-j 500 180
-+ p 127 +
 + w 161
 j 420 170
 + p 6 1
@@ -228,6 +222,12 @@ j 340 390
 j 380 390
 + p 7 2
 + w 179
+j 500 220
++ p 127 -
++ w 179
+j 500 180
++ p 127 +
++ w 161
 @attributes
 a 0 s 0:13 0 0 0 hln 100 PAGETITLE=
 a 0 s 0:13 0 0 0 hln 100 PAGENO=1

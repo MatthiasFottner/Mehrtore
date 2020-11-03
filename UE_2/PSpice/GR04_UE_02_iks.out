@@ -1,5 +1,5 @@
 
-**** 11/01/20 13:25:25 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/03/20 17:07:57 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
 
@@ -13,7 +13,7 @@
 
 
 * Schematics Version 9.1 - Web Update 1
-* Sun Nov 01 13:25:24 2020
+* Tue Nov 03 17:07:57 2020
 
 
 
@@ -35,13 +35,13 @@ I_I1         $N_0001 $N_0002 DC 2
 R_R2         $N_0001 $N_0003  10  
 R_R1         $N_0003 $N_0004  5  
 V_V1         $N_0005 $N_0004 DC 20  
-V_V2         $N_0005 $N_0002 DC 0  
 R_R5         $N_0005 $N_0002  5  
 R_R4         $N_0001 0  10  
 R_R6         0 $N_0002  15  
 H_H1         0 $N_0003 VH_H1 4
 VH_H1        $N_0006 $N_0005 0V
 R_R3         $N_0006 $N_0001  15  
+V_V2         $N_0005 $N_0002 DC 0  
 
 **** RESUMING GR04_UE_02_iks.cir ****
 .INC "GR04_UE_02_iks.als"
@@ -56,13 +56,13 @@ I_I1            I1(+=$N_0001 -=$N_0002 )
 R_R2            R2(1=$N_0001 2=$N_0003 )
 R_R1            R1(1=$N_0003 2=$N_0004 )
 V_V1            V1(+=$N_0005 -=$N_0004 )
-V_V2            V2(+=$N_0005 -=$N_0002 )
 R_R5            R5(1=$N_0005 2=$N_0002 )
 R_R4            R4(1=$N_0001 2=0 )
 R_R6            R6(1=0 2=$N_0002 )
 H_H1            H1(3=0 4=$N_0003 )
 VH_H1           H1(1=$N_0006 2=$N_0005 )
 R_R3            R3(1=$N_0006 2=$N_0001 )
+V_V2            V2(+=$N_0005 -=$N_0002 )
 .ENDALIASES
 
 
@@ -72,7 +72,7 @@ R_R3            R3(1=$N_0006 2=$N_0001 )
 
 .END
 
-**** 11/01/20 13:25:25 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/03/20 17:07:57 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
 
@@ -100,13 +100,13 @@ R_R3            R3(1=$N_0006 2=$N_0001 )
     NAME         CURRENT
 
     V_V1        -8.571E-01
-    V_V2        -5.714E-01
     VH_H1       -1.429E+00
+    V_V2        -5.714E-01
 
     TOTAL POWER DISSIPATION   1.71E+01  WATTS
 
 
-**** 11/01/20 13:25:25 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/03/20 17:07:57 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
 
