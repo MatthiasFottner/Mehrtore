@@ -69,7 +69,10 @@
          "SCHEMATIC1")
       (Path "Outputs")
       (Path "PSpice Resources")
-      (Path "PSpice Resources" "Simulation Profiles"))
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\UE_1\PSpice\simulation.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -80,7 +83,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -4 -27 104 1734 104 728")
-        (Scroll "139 266")
+        (Scroll "431 226")
         (Zoom "240")
         (Occurrence "/"))
       (Path

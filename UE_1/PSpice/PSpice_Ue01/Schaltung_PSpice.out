@@ -1,0 +1,163 @@
+
+**** 10/29/20 18:13:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\Elektrische Netzwerke und Mehrtore - UE\Uebungsblatt01_tex\Schaltung_PSpice.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Oct 29 18:13:05 2020
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schaltung_PSpice.net"
+
+**** INCLUDING Schaltung_PSpice.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  2  
+I_Is2         0 $N_0002 DC 1  
+R_R5         $N_0004 $N_0003  6  
+R_R4         0 $N_0004  3  
+V_Us2         $N_0001 $N_0004 DC 3.5  
+R_R2         $N_0002 $N_0004  1  
+R_R3         $N_0005 $N_0004  4  
+H_H1         $N_0001 $N_0003 VH_H1 4
+VH_H1        $N_0005 0 0V
+
+**** RESUMING Schaltung_PSpice.cir ****
+.INC "Schaltung_PSpice.als"
+
+
+
+**** INCLUDING Schaltung_PSpice.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+I_Is2           Is2(+=0 -=$N_0002 )
+R_R5            R5(1=$N_0004 2=$N_0003 )
+R_R4            R4(1=0 2=$N_0004 )
+V_Us2           Us2(+=$N_0001 -=$N_0004 )
+R_R2            R2(1=$N_0002 2=$N_0004 )
+R_R3            R3(1=$N_0005 2=$N_0004 )
+H_H1            H1(3=$N_0001 4=$N_0003 )
+VH_H1           H1(1=$N_0005 2=0 )
+.ENDALIASES
+
+
+**** RESUMING Schaltung_PSpice.cir ****
+.probe
+
+
+.END
+
+**** 10/29/20 18:13:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\Elektrische Netzwerke und Mehrtore - UE\Uebungsblatt01_tex\Schaltung_PSpice.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.2143                   ($N_0002)    3.5476                       
+
+($N_0003)    3.5000                   ($N_0004)    1.7143                       
+
+($N_0005)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Us2       -1.131E+00
+    VH_H1        4.286E-01
+
+    TOTAL POWER DISSIPATION   3.96E+00  WATTS
+
+
+**** 10/29/20 18:13:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\Elektrische Netzwerke und Mehrtore - UE\Uebungsblatt01_tex\Schaltung_PSpice.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H1      
+V-SOURCE     1.714E+00
+I-SOURCE     2.976E-01
+**** 10/29/20 18:13:05 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\Elektrische Netzwerke und Mehrtore - UE\Uebungsblatt01_tex\Schaltung_PSpice.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.2143                   ($N_0002)    3.5476                       
+
+($N_0003)    3.5000                   ($N_0004)    1.7143                       
+
+($N_0005)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Us2       -1.131E+00
+    VH_H1        4.286E-01
+
+    TOTAL POWER DISSIPATION   3.96E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .11
+

@@ -17,6 +17,8 @@
 \usepackage{mathtools}
 \usepackage{setspace}
 \usepackage{nicematrix}
+\usepackage{listings}
+\usepackage{pdfpages}
 \usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
 
 
@@ -26,13 +28,34 @@
 
 
 
+
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
+\lstset{
+  language= Matlab,                     % Setzt die Sprache
+  basicstyle=\scriptsize\ttfamily,     % Setzt den Standardstil
+  % keywordstyle=\color{red}\bfseries,    % Setzt den Stil für Schlüsselwörter
+  identifierstyle=\color{blue},        % Identifier bekommen keine gesonderte formatierung
+  commentstyle=\color{darkspringgreen},        % Stil für Kommentare
+  stringstyle=\ttfamily,             % Stil für Strings (gekennzeichnet mit "String")
+  breaklines=true,             % Zeilen werden umgebrochen
+  numbers=left,                 % Zeilennummern links
+  numberstyle=\tiny,             % Stil für die Seitennummern
+  frame=single,                 % Rahmen
+  % backgroundcolor=\color{myGrey},     % Hintergrundfarbe
+  % caption={Java-Code},             % Caption
+  tabsize=2                % Größe der Tabulatoren
+}
+
+
+
+
 \begin{document}
 
 \maketitle
 \newcommand{\unit}[1]{\,\text{#1}}
 \section{Schaltplan mit allen Strömen und Spannungen}
 \begin{circuitikz}[scale=1.2]
-        \draw (0,0) node(qqqn0){};
+        \draw (0,0) node(n0){};
         \draw (0,0) to[isource=$I_{S1}$, o-o] (0,4) node[label=left:$K_2$](n2){};
         \draw (n2) to[R=$R_1$, i=$I_{R1}$, v<=$U_{R1}$] ++ (0,4) to[short] ++ (4,0) node[label=above:$K_1$](n1){};
         \draw (n1) to[vsource=$U_{S2}$, i>=$I_{S2}^{?}$,  o-o] ++ (0, -4) node[label=north east:$K_3$](n3){};
@@ -257,7 +280,16 @@ und für alle negativen Leistungen an den Quellen $S1$ und $S2$:
 Die Summe aller Leistungen ergibt so $P_p + P_n = 0 \unit{W}$.
 
 
+\section{Simulation}
+\begin{center}
+  \includegraphics[width=.8\linewidth]{./Assets/PSpice_Schaltplan}
+  \captionof{figure}{PSpice-Simulation des Netzwerks}
+  \label{fig:A1}
+\end{center}
 
+\newpage
+\section{Matlab-Skript}
 
+\lstinputlisting[language=Matlab]{./Assets/Matlab_Ue01.m}
 
 \end{document}

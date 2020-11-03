@@ -1,9 +1,0 @@
-# Ignore everything
-*
-
-# But not these files...
-!Latex/Protokoll_Ue01.tex
-!Matlab/Matlab_Ue01.m
-!PSpice_Ue01.zip
-!.gitignore
-!Latex/.gitignore
