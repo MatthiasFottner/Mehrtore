@@ -40,3 +40,4 @@ un = A^(-1)*b
 %% Berechnung der Einzelspannungen und Einzelströme
 u = [un(5)-un(1);-un(2)+un(1);un(2)-un(3);un(1)-un(2);-un(2);-un(3)]
 i = u./[r1;r2;r3;r4;r5;r6]
+
