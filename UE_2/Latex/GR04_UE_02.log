@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  5 NOV 2020 16:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  5 NOV 2020 17:30
 entering extended mode
 **./GR04_UE_02.tex
 (GR04_UE_02.tex
@@ -730,25 +730,34 @@ Package: xparse 2020-05-15 L3 Experimental document command parser
 \l__nicematrix_extra_left_margin_dim=\dimen285
 \l__nicematrix_extra_right_margin_dim=\dimen286
 \c__nicematrix_max_l_dim=\dimen287
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
-\lst@mode=\count299
-\lst@gtempboxa=\box69
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count299
+\FV@InFile=\read4
+\FV@TabBox=\box69
+\c@FancyVerbLine=\count300
+\FV@StepNumber=\count301
+\FV@OutFile=\write4
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+\lst@mode=\count302
+\lst@gtempboxa=\box70
 \lst@token=\toks38
-\lst@length=\count300
+\lst@length=\count303
 \lst@currlwidth=\dimen288
-\lst@column=\count301
-\lst@pos=\count302
+\lst@column=\count304
+\lst@pos=\count305
 \lst@lostspace=\dimen289
 \lst@width=\dimen290
-\lst@newlines=\count303
-\lst@lineno=\count304
+\lst@newlines=\count306
+\lst@lineno=\count307
 \lst@maxwidth=\dimen291
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count305
-\lst@skipnumbers=\count306
-\lst@framebox=\box70
+\c@lstnumber=\count308
+\lst@skipnumbers=\count309
+\lst@framebox=\box71
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -782,12 +791,12 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pdfpages\pppdftex.def"
 File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box71
+\AM@pagebox=\box72
 \AM@global@opts=\toks39
-\AM@pagecnt=\count307
+\AM@pagecnt=\count310
 \AM@toc@title=\toks40
-\c@AM@survey=\count308
-\AM@templatesizebox=\box72
+\c@AM@survey=\count311
+\AM@templatesizebox=\box73
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/circuitikz\circuitikz.sty"
 Package: circuitikz 2020/05/17{} The CircuiTikz circuit drawing package version
@@ -829,7 +838,7 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.
 code.tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count309
+\pgf@plot@mark@count=\count312
 \pgfplotmarksize=\dimen300
 )
 \tikz@lastx=\dimen301
@@ -840,22 +849,22 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@lastmovetoy=\dimen306
 \tikzleveldistance=\dimen307
 \tikzsiblingdistance=\dimen308
-\tikz@figbox=\box73
-\tikz@figbox@bg=\box74
-\tikz@tempbox=\box75
-\tikz@tempbox@bg=\box76
-\tikztreelevel=\count310
-\tikznumberofchildren=\count311
-\tikznumberofcurrentchild=\count312
-\tikz@fig@count=\count313
+\tikz@figbox=\box74
+\tikz@figbox@bg=\box75
+\tikz@tempbox=\box76
+\tikz@tempbox@bg=\box77
+\tikztreelevel=\count313
+\tikznumberofchildren=\count314
+\tikznumberofcurrentchild=\count315
+\tikz@fig@count=\count316
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count314
-\pgfmatrixcurrentcolumn=\count315
-\pgf@matrix@numberofcolumns=\count316
+\pgfmatrixcurrentrow=\count317
+\pgfmatrixcurrentcolumn=\count318
+\pgf@matrix@numberofcolumns=\count319
 )
-\tikz@expandcount=\count317
+\tikz@expandcount=\count320
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikz
 librarytopaths.code.tex"
@@ -901,9 +910,9 @@ File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 libraryfpu.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryfpu.code.tex"
 )) ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcirc.defines.tex"
-\pgf@circ@count@a=\count318
-\pgf@circ@count@b=\count319
-\pgf@circ@count@c=\count320
+\pgf@circ@count@a=\count321
+\pgf@circ@count@b=\count322
+\pgf@circ@count@c=\count323
 \pgf@circ@res@up=\dimen320
 \pgf@circ@res@down=\dimen321
 \pgf@circ@res@zero=\dimen322
@@ -921,7 +930,7 @@ libraryfpu.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircmonopoles.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircbipoles.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcirctripoles.tex"
-\pgf@circ@res@count=\count321
+\pgf@circ@res@count=\count324
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircquadpoles.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircmultipoles.tex")
@@ -937,27 +946,138 @@ Package circuitikz Warning: You did not specify one of the voltage directions:
 (circuitikz)                Default directions may have changed, 
 (circuitikz)                please check the manual.
 
-) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
-File: lstlang1.sty 2020/03/24 1.8d listings language file
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO
 )
-(GR04_UE_02.aux)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/kvsetkeys\kvsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/kvdefinekeys\kvdefinekeys.sty"
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/pdfescape\pdfescape.sty"
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/hycolor\hycolor.sty"
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/letltxmacro\letltxmacro.sty"
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/auxhook\auxhook.sty"
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/kvoptions\kvoptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen331
+\Hy@linkcounter=\count325
+\Hy@pagecounter=\count326
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/intcalc\intcalc.sty"
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/etexcmds\etexcmds.sty"
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count327
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count328
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen332
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/bitset\bitset.sty"
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/bigintcalc\bigintcalc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count329
+\Field@Width=\dimen333
+\Fld@charsize=\dimen334
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+\Hy@abspage=\count330
+\c@Item=\count331
+\c@Hfootnote=\count332
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/atveryend\atveryend.sty"
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count333
+\c@bookmark@seq@number=\count334
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/rerunfilecheck\rerunfilecheck.sty"
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/uniquecounter\uniquecounter.sty"
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip79
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (GR04_UE_02.aux)
 \openout1 = `GR04_UE_02.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/caption\ltcaption.sty"
@@ -966,18 +1086,19 @@ Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
 Package caption Info: rotating package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
- ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+
+("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
-\scratchdimen=\dimen331
-\scratchbox=\box77
-\nofMPsegments=\count323
-\nofMParguments=\count324
+\scratchcounter=\count335
+\scratchdimen=\dimen335
+\scratchbox=\box78
+\nofMPsegments=\count336
+\nofMParguments=\count337
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count325
-\MPscratchDim=\dimen332
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
+\MPscratchCnt=\count338
+\MPscratchDim=\dimen336
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
 \everyMPtoPDFconversion=\toks44
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -985,8 +1106,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 ABD: EveryShipout initializing macros
-\c@lstlisting=\count328
-\AtBeginShipoutBox=\box78
+\c@lstlisting=\count341
+\AtBeginShipoutBox=\box79
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pdflscape\pdflscape.sty"
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
@@ -996,61 +1117,74 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package scrbase Info: activating ngerman \figurename on input line 61.
-Package scrbase Info: activating ngerman \tablename on input line 61.
+Package hyperref Info: Link coloring OFF on input line 63.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count342
+)
+LaTeX Info: Redefining \ref on input line 63.
+LaTeX Info: Redefining \pageref on input line 63.
+LaTeX Info: Redefining \nameref on input line 63.
+
+(GR04_UE_02.out) (GR04_UE_02.out)
+\@outlinefile=\write5
+\openout5 = `GR04_UE_02.out'.
+
+Class scrartcl Info: loading recommended package `bookmark'.
+(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
+(scrartcl)           because of handling of possible bookmark level gaps.
+(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
+(scrartcl)           `bookmarkpackage=false' before \begin{document} and
+(scrartcl)           you can avoid this message adding:
+(scrartcl)             \usepackage{bookmark}
+(scrartcl)           before \begin{document} on input line 63.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/bookmark\bookmark.sty"
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/bookmark\bkm-pdftex.def"
+File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
+Package auxhook Info: \AddLineBeginMainAux comes a little late,
+(auxhook)             because the main .aux file is already opened on input lin
+e 168.
+\BKM@id=\count343
+))
+Package scrbase Info: activating ngerman \figurename on input line 63.
+Package scrbase Info: activating ngerman \tablename on input line 63.
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 6
-4.
+6.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (GR04_UE_02.toc)
-\tf@toc=\write4
-\openout4 = `GR04_UE_02.toc'.
+\tf@toc=\write6
+\openout6 = `GR04_UE_02.toc'.
 
 
 [1
 
 
 {C:/Users/matth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-GR04_UE_02.tex:77: Package tikz Error: A node must have a (possibly empty) labe
-l text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77         n
-              ode[label=south east:$n_2$](n2) at (4,4)
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-
-GR04_UE_02.tex:78: Package tikz Error: A node must have a (possibly empty) labe
-l text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.78         n
-              ode[label=south east:$n_3$](n3) at (8,4)
-(That was another \errmessage.)
-
 
 GR04_UE_02.tex:79: Package tikz Error: A node must have a (possibly empty) labe
 l text.
@@ -1060,8 +1194,11 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.79         n
-              ode[label=north:$n_4$](n4) at (4,8)
-(That was another \errmessage.)
+              ode[label=south east:$n_2$](n2) at (4,4)
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
 
 
 GR04_UE_02.tex:80: Package tikz Error: A node must have a (possibly empty) labe
@@ -1072,7 +1209,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.80         n
-              ode[label=left:$n_5$](n5) at (0,8)
+              ode[label=south east:$n_3$](n3) at (8,4)
 (That was another \errmessage.)
 
 
@@ -1084,7 +1221,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.81         n
-              ode[label=north:$a$](a) at (10,8)
+              ode[label=north:$n_4$](n4) at (4,8)
 (That was another \errmessage.)
 
 
@@ -1096,344 +1233,485 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.82         n
-              ode[label=south:$b$](b) at (10,4);
+              ode[label=left:$n_5$](n5) at (0,8)
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:82: Package tikz Error: A node must have a (possibly empty) labe
+GR04_UE_02.tex:83: Package tikz Error: A node must have a (possibly empty) labe
 l text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.82         node[label=south:$b$](b) at (10,4);
+l.83         n
+              ode[label=north:$a$](a) at (10,8)
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:84: Package tikz Error: A node must have a (possibly empty) labe
+l text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84         n
+              ode[label=south:$b$](b) at (10,4);
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:84: Package tikz Error: A node must have a (possibly empty) labe
+l text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84         node[label=south:$b$](b) at (10,4);
                                                 
 (That was another \errmessage.)
 
-\realshift=\dimen333
-\alshift=\dimen334
-\absvshift=\dimen335
-\realshift=\dimen336
-\alshift=\dimen337
-\absvshift=\dimen338
-\realshift=\dimen339
-\alshift=\dimen340
-\absvshift=\dimen341
-\realshift=\dimen342
-\alshift=\dimen343
-\absvshift=\dimen344
-\realshift=\dimen345
-\alshift=\dimen346
-\absvshift=\dimen347
-\realshift=\dimen348
-\alshift=\dimen349
-\absvshift=\dimen350
-\realshift=\dimen351
-\alshift=\dimen352
-\absvshift=\dimen353
-\alshift=\dimen354
-\alshift=\dimen355
+\realshift=\dimen337
+\alshift=\dimen338
+\absvshift=\dimen339
+\realshift=\dimen340
+\alshift=\dimen341
+\absvshift=\dimen342
+\realshift=\dimen343
+\alshift=\dimen344
+\absvshift=\dimen345
+\realshift=\dimen346
+\alshift=\dimen347
+\absvshift=\dimen348
+\realshift=\dimen349
+\alshift=\dimen350
+\absvshift=\dimen351
+\realshift=\dimen352
+\alshift=\dimen353
+\absvshift=\dimen354
+\realshift=\dimen355
 \alshift=\dimen356
 \absvshift=\dimen357
 \alshift=\dimen358
-\absvshift=\dimen359
+\alshift=\dimen359
 \alshift=\dimen360
 \absvshift=\dimen361
 \alshift=\dimen362
 \absvshift=\dimen363
 \alshift=\dimen364
 \absvshift=\dimen365
+\alshift=\dimen366
+\absvshift=\dimen367
+\alshift=\dimen368
+\absvshift=\dimen369
 
-Overfull \hbox (52.05115pt too wide) in paragraph at lines 72--123
+Overfull \hbox (52.05115pt too wide) in paragraph at lines 74--125
  []|  [] 
  []
 
 [2]
-\g__nicematrix_max_cell_width_dim=\dimen366
-\l__nicematrix_cell_box=\box79
-\c@iRow=\count329
-\c@jCol=\count330
-\g__nicematrix_row_total_int=\count331
-\g__nicematrix_col_total_int=\count332
-\l__nicematrix_left_delim_dim=\dimen367
-\l__nicematrix_right_delim_dim=\dimen368
-\l__nicematrix_the_array_box=\box80
-\g__nicematrix_dp_row_zero_dim=\dimen369
-\g__nicematrix_ht_row_zero_dim=\dimen370
-\g__nicematrix_ht_row_one_dim=\dimen371
-\g__nicematrix_dp_ante_last_row_dim=\dimen372
-\g__nicematrix_ht_last_row_dim=\dimen373
-\g__nicematrix_dp_last_row_dim=\dimen374
-\g__nicematrix_ddots_int=\count333
-\g__nicematrix_iddots_int=\count334
-\g__nicematrix_delta_x_one_dim=\dimen375
-\g__nicematrix_delta_y_one_dim=\dimen376
-\g__nicematrix_delta_x_two_dim=\dimen377
-\g__nicematrix_delta_y_two_dim=\dimen378
-\l__nicematrix_initial_i_int=\count335
-\l__nicematrix_initial_j_int=\count336
-\l__nicematrix_final_i_int=\count337
-\l__nicematrix_final_j_int=\count338
-\l__nicematrix_l_dim=\dimen379
+\g__nicematrix_max_cell_width_dim=\dimen370
+\l__nicematrix_cell_box=\box80
+\c@iRow=\count344
+\c@jCol=\count345
+\g__nicematrix_row_total_int=\count346
+\g__nicematrix_col_total_int=\count347
+\l__nicematrix_left_delim_dim=\dimen371
+\l__nicematrix_right_delim_dim=\dimen372
+\l__nicematrix_the_array_box=\box81
+\g__nicematrix_dp_row_zero_dim=\dimen373
+\g__nicematrix_ht_row_zero_dim=\dimen374
+\g__nicematrix_ht_row_one_dim=\dimen375
+\g__nicematrix_dp_ante_last_row_dim=\dimen376
+\g__nicematrix_ht_last_row_dim=\dimen377
+\g__nicematrix_dp_last_row_dim=\dimen378
+\g__nicematrix_ddots_int=\count348
+\g__nicematrix_iddots_int=\count349
+\g__nicematrix_delta_x_one_dim=\dimen379
+\g__nicematrix_delta_y_one_dim=\dimen380
+\g__nicematrix_delta_x_two_dim=\dimen381
+\g__nicematrix_delta_y_two_dim=\dimen382
+\l__nicematrix_initial_i_int=\count350
+\l__nicematrix_initial_j_int=\count351
+\l__nicematrix_final_i_int=\count352
+\l__nicematrix_final_j_int=\count353
+\l__nicematrix_l_dim=\dimen383
 
 
-GR04_UE_02.tex:180: Package tikz Error: A node must have a (possibly empty) lab
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 173.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 173.
+
+
+GR04_UE_02.tex:182: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.180         n
+l.182         n
                ode[label=right:$n_3$](n2) at (4,0);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:180: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:182: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.180 ...    node[label=right:$n_3$](n2) at (4,0);
+l.182 ...    node[label=right:$n_3$](n2) at (4,0);
                                                   
 (That was another \errmessage.)
 
-\alshift=\dimen380
-\absvshift=\dimen381
+\alshift=\dimen384
+\absvshift=\dimen385
 [3]
 
-GR04_UE_02.tex:231: Package tikz Error: A node must have a (possibly empty) lab
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\rightarrow' on input line 220.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 220.
+
+
+GR04_UE_02.tex:233: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231         n
+l.233         n
                ode[label=right:$n_4$](n4) at (4,0);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:231: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:233: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231 ...    node[label=right:$n_4$](n4) at (4,0);
+l.233 ...    node[label=right:$n_4$](n4) at (4,0);
                                                   
 (That was another \errmessage.)
 
-\alshift=\dimen382
+\alshift=\dimen386
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 276.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 276.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 276.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 276.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\rightarrow' on input line 276.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 276.
+
 [4]
 
-GR04_UE_02.tex:289: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:291: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.289           n
+l.291           n
                  ode[label=right:$n_2$](n2) at (6,0)
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:290: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:292: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.290           n
+l.292           n
                  ode[label=right:$n_4$](n4) at (6,4);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:290: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:292: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.290 ...    node[label=right:$n_4$](n4) at (6,4);
+l.292 ...    node[label=right:$n_4$](n4) at (6,4);
                                                   
 (That was another \errmessage.)
 
-\alshift=\dimen383
-\realshift=\dimen384
+\alshift=\dimen387
+\realshift=\dimen388
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 340.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 340.
+
 [5]
 
-GR04_UE_02.tex:379: Package tikz Error: A node must have a (possibly empty) lab
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 368.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 368.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 368.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 368.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 369.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 369.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 369.
+
+
+GR04_UE_02.tex:383: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.379         n
+l.383         n
                ode[label=north east:$n_3$](n3) at (0,0)
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:380: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:384: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.380         n
+l.384         n
                ode[label=north:$a$](a) at (2,4)
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:381: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:385: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.381         n
+l.385         n
                ode[label=south:$b$](b) at (2,0);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:381: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:385: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.381         node[label=south:$b$](b) at (2,0);
+l.385         node[label=south:$b$](b) at (2,0);
                                                 
 (That was another \errmessage.)
 
-\realshift=\dimen385
-\alshift=\dimen386
-\absvshift=\dimen387
-\alshift=\dimen388
-\absvshift=\dimen389
+\realshift=\dimen389
+\alshift=\dimen390
+\absvshift=\dimen391
+\alshift=\dimen392
+\absvshift=\dimen393
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 399.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 399.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 399.
+
 [6]
 
-GR04_UE_02.tex:409: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:413: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.409           n
+l.413           n
                  ode[label=south east:$n_3$](n3) at (0,0)
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:410: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:414: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.410           n
+l.414           n
                  ode[label=north:$a$](a) at (2,4)
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:411: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:415: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.411           n
+l.415           n
                  ode[label=south:$b$](b) at (2,0);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:411: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:415: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.411           node[label=south:$b$](b) at (2,0);
+l.415           node[label=south:$b$](b) at (2,0);
                                                   
 (That was another \errmessage.)
 
-\realshift=\dimen390
-\alshift=\dimen391
-\absvshift=\dimen392
-\alshift=\dimen393
+\realshift=\dimen394
+\alshift=\dimen395
+\absvshift=\dimen396
+\alshift=\dimen397
 
-Overfull \hbox (12.67404pt too wide) detected at line 468
+Overfull \hbox (12.67404pt too wide) detected at line 472
 []
  []
 
 [7]
-Overfull \hbox (18.14925pt too wide) detected at line 559
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 500.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 509.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 509.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 509.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 509.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 509.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 509.
+
+
+Overfull \hbox (18.14925pt too wide) detected at line 563
 []
  []
 
 [8]
-
-GR04_UE_02.tex:568: Package tikz Error: A node must have a (possibly empty) lab
-el text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.568     n
-           ode[label=south east:$n_2$](n2) at (4,4)
-(That was another \errmessage.)
-
-
-GR04_UE_02.tex:569: Package tikz Error: A node must have a (possibly empty) lab
-el text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.569     n
-           ode[label=south east:$n_3$](n3) at (8,4)
-(That was another \errmessage.)
-
-
-GR04_UE_02.tex:570: Package tikz Error: A node must have a (possibly empty) lab
-el text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.570     n
-           ode[label=north:$n_4$](n4) at (4,8)
-(That was another \errmessage.)
-
-
-GR04_UE_02.tex:571: Package tikz Error: A node must have a (possibly empty) lab
-el text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.571     n
-           ode[label=left:$n_5$](n5) at (0,8)
-(That was another \errmessage.)
-
 
 GR04_UE_02.tex:572: Package tikz Error: A node must have a (possibly empty) lab
 el text.
@@ -1443,7 +1721,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.572     n
-           ode[label=north:$a$](a) at (10,8)
+           ode[label=south east:$n_2$](n2) at (4,4)
 (That was another \errmessage.)
 
 
@@ -1455,135 +1733,192 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.573     n
+           ode[label=south east:$n_3$](n3) at (8,4)
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:574: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.574     n
+           ode[label=north:$n_4$](n4) at (4,8)
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:575: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.575     n
+           ode[label=left:$n_5$](n5) at (0,8)
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:576: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.576     n
+           ode[label=north:$a$](a) at (10,8)
+(That was another \errmessage.)
+
+
+GR04_UE_02.tex:577: Package tikz Error: A node must have a (possibly empty) lab
+el text.
+
+See the tikz package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.577     n
            ode[label=south:$b$](b) at (10,4);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:573: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:577: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.573     node[label=south:$b$](b) at (10,4);
+l.577     node[label=south:$b$](b) at (10,4);
                                              
 (That was another \errmessage.)
 
-\realshift=\dimen394
-\alshift=\dimen395
-\absvshift=\dimen396
-\realshift=\dimen397
-\alshift=\dimen398
-\absvshift=\dimen399
-\realshift=\dimen400
-\alshift=\dimen401
-\absvshift=\dimen402
-\realshift=\dimen403
-\alshift=\dimen404
-\absvshift=\dimen405
-\realshift=\dimen406
-\alshift=\dimen407
-\absvshift=\dimen408
-\realshift=\dimen409
-\alshift=\dimen410
-\absvshift=\dimen411
-\alshift=\dimen412
-\alshift=\dimen413
-\absvshift=\dimen414
-\alshift=\dimen415
-\absvshift=\dimen416
+\realshift=\dimen398
+\alshift=\dimen399
+\absvshift=\dimen400
+\realshift=\dimen401
+\alshift=\dimen402
+\absvshift=\dimen403
+\realshift=\dimen404
+\alshift=\dimen405
+\absvshift=\dimen406
+\realshift=\dimen407
+\alshift=\dimen408
+\absvshift=\dimen409
+\realshift=\dimen410
+\alshift=\dimen411
+\absvshift=\dimen412
+\realshift=\dimen413
+\alshift=\dimen414
+\absvshift=\dimen415
+\alshift=\dimen416
 \alshift=\dimen417
-\alshift=\dimen418
-\absvshift=\dimen419
-\alshift=\dimen420
-\absvshift=\dimen421
+\absvshift=\dimen418
+\alshift=\dimen419
+\absvshift=\dimen420
+\alshift=\dimen421
 \alshift=\dimen422
 \absvshift=\dimen423
+\alshift=\dimen424
+\absvshift=\dimen425
+\alshift=\dimen426
+\absvshift=\dimen427
 [9]
-\realshift=\dimen424
-\alshift=\dimen425
-\absvshift=\dimen426
-\alshift=\dimen427
+\realshift=\dimen428
+\alshift=\dimen429
+\absvshift=\dimen430
+\alshift=\dimen431
 
 
-GR04_UE_02.tex:633: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:637: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.633               n
+l.637               n
                      ode[label=south:$b$](b) at (4,0);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:633: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:637: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.633 ...       node[label=south:$b$](b) at (4,0);
+l.637 ...       node[label=south:$b$](b) at (4,0);
                                                   
 (That was another \errmessage.)
 
 [10]
-<./Assets/simulation_original.png, id=57, 1285.80376pt x 633.11531pt>
+<./Assets/simulation_original.png, id=131, 1285.80376pt x 633.11531pt>
 File: ./Assets/simulation_original.png Graphic file (type png)
 <use ./Assets/simulation_original.png>
 Package pdftex.def Info: ./Assets/simulation_original.png  used on input line 6
-56.
+60.
 (pdftex.def)             Requested size: 418.25555pt x 205.94359pt.
-\realshift=\dimen428
-\alshift=\dimen429
-\realshift=\dimen430
-\alshift=\dimen431
-\absvshift=\dimen432
 
 
-GR04_UE_02.tex:675: Package tikz Error: A node must have a (possibly empty) lab
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 661.
+See the caption package documentation for explanation.
+
+\realshift=\dimen432
+\alshift=\dimen433
+\realshift=\dimen434
+\alshift=\dimen435
+\absvshift=\dimen436
+
+GR04_UE_02.tex:679: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.675           n
+l.679           n
                  ode[label=south:$b$](b) at (4,0);
 (That was another \errmessage.)
 
 
-GR04_UE_02.tex:675: Package tikz Error: A node must have a (possibly empty) lab
+GR04_UE_02.tex:679: Package tikz Error: A node must have a (possibly empty) lab
 el text.
 
 See the tikz package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.675           node[label=south:$b$](b) at (4,0);
+l.679           node[label=south:$b$](b) at (4,0);
                                                   
 (That was another \errmessage.)
 
-<./Assets/simulation_thevenin.png, id=59, 1168.365pt x 642.14906pt>
+<./Assets/simulation_thevenin.png, id=137, 1168.365pt x 642.14906pt>
 File: ./Assets/simulation_thevenin.png Graphic file (type png)
 <use ./Assets/simulation_thevenin.png>
 Package pdftex.def Info: ./Assets/simulation_thevenin.png  used on input line 6
-82.
+86.
 (pdftex.def)             Requested size: 418.25555pt x 229.8801pt.
-[11 <./Assets/simulation_original.png>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
-98.
 
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 687.
+See the caption package documentation for explanation.
+
+[11 <./Assets/simulation_original.png>] [12 <./Assets/simulation_thevenin.png>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
+04.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 (../Matlab/GR04_UE_02.m
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1.
- [12 <./Assets/simulation_thevenin.png>]
+
 
 ../Matlab/GR04_UE_02.m:36: Package inputenc Error: Invalid UTF-8 byte "F6.
 
@@ -1600,13 +1935,13 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-../Matlab/GR04_UE_02.m:45: Package inputenc Error: Invalid UTF-8 byte "FC.
+../Matlab/GR04_UE_02.m:48: Package inputenc Error: Invalid UTF-8 byte "FC.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.45 %% Berechnung von R_Th über 
+l.48 %% Berechnung von R_Th über 
                                  den Kurzschlusstrom IKS: A_IKS * x_IKS = b_IKS
 
 The document does not appear to be in UTF-8 encoding.
@@ -1615,14 +1950,15 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
+[13]
 
-../Matlab/GR04_UE_02.m:58: Package inputenc Error: Invalid UTF-8 byte "F6.
+../Matlab/GR04_UE_02.m:61: Package inputenc Error: Invalid UTF-8 byte "F6.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 %% Lösen 
+l.61 %% Lösen 
               der Systemgleichung
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1631,13 +1967,13 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 
-../Matlab/GR04_UE_02.m:69: Package inputenc Error: Invalid UTF-8 byte "FC.
+../Matlab/GR04_UE_02.m:74: Package inputenc Error: Invalid UTF-8 byte "FC.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 %% Berechnung von R_Th über 
+l.74 %% Berechnung von R_Th über 
                                  die Testspannung U_T: A_T * x_T = b_T
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1645,15 +1981,14 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-[13]
 
-../Matlab/GR04_UE_02.m:84: Package inputenc Error: Invalid UTF-8 byte "F6.
+../Matlab/GR04_UE_02.m:89: Package inputenc Error: Invalid UTF-8 byte "F6.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 %% Lösen 
+l.89 %% Lösen 
               der Systemgleichung und auslesen des Teststroms I_T?
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1661,41 +1996,54 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-) [14] (GR04_UE_02.aux) ) 
+) [14] [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 749.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 749.
+ (GR04_UE_02.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 749.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 749.
+Package rerunfilecheck Info: File `GR04_UE_02.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 749.
+ ) 
 Here is how much of TeX's memory you used:
- 47846 strings out of 480763
- 1075308 string characters out of 2904059
- 1951312 words of memory out of 3000000
- 63354 multiletter control sequences out of 15000+200000
- 561409 words of font info for 110 fonts, out of 3000000 for 9000
+ 52308 strings out of 480763
+ 1145926 string characters out of 2904059
+ 2016235 words of memory out of 3000000
+ 67536 multiletter control sequences out of 15000+200000
+ 561095 words of font info for 109 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,27n,98p,10134b,2303s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fo
-nts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk>{C:/Program Files/MiKTeX 2.9/fonts
-/enc/dvips/mnsymbol/MnSymbolC.enc} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk>{C:/Program Files/MiKTeX 2.9/fonts/
-enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/m
-nsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnS
-ymbolD.enc} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecsx1200.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
-jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/
-pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\
-2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Loc
-al\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\matth\A
-ppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol12.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on GR04_UE_02.pdf (14 pages, 495443 bytes).
+ 58i,27n,98p,10134b,2495s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+ectt0800.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecrm0600.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnS
+ymbolC.enc} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
+c/dpi600\ecrm0800.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSy
+mbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{
+C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc} <C:\Users\m
+atth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <
+C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
+1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
+appen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/mnsymbol/MnSymbol12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/mnsymbol/MnSymbol8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on GR04_UE_02.pdf (15 pages, 534436 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 774 PDF objects out of 1000 (max. 8388607)
+ 181 named destinations out of 1000 (max. 500000)
+ 175 words of extra memory for PDF output out of 10000 (max. 10000000)
 
