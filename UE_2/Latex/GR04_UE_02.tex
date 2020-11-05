@@ -444,7 +444,7 @@ ergänzt werden. Insgesamt ergibt sich folgendes Gleichungssystem:
       \color{red}{I_{S1}^?} & 1 & \alpha G_3 & 0 & -\alpha G_3 & 0 & 0 & 0 & 0 \\
       \hdottedline
       \color{red}{I_{KS}} & 0 & 0 & -1 & 1 & 0 & 0 & 0 & 0
-    \end{bNiceArray}}_{\text{A}}
+    \end{bNiceArray}}_{A_{IKS}}
                                                                          \underbrace{\begin{Bmatrix}
                                                                              U_{n1} \\
                                                                              U_{n2} \\
@@ -454,7 +454,7 @@ ergänzt werden. Insgesamt ergibt sich folgendes Gleichungssystem:
                                                                              \color{red}{I_{S2}^?} \\
                                                                              \color{red}{I_{S1}^?} \\
                                                                              \color{red}{I_{KS}}
-                                                                           \end{Bmatrix}}_{\text{x}} =
+                                                                           \end{Bmatrix}}_{x_{IKS}} =
   \underbrace{\begin{Bmatrix}
       0 \\
       \color{red}{-I_{S3}} \\
@@ -464,13 +464,13 @@ ergänzt werden. Insgesamt ergibt sich folgendes Gleichungssystem:
       \color{blue}{U_{S2}} \\
       0 \\
       0
-    \end{Bmatrix}}_{\text{b}}
+    \end{Bmatrix}}_{b_{IKS}}
 \end{align*}
 
-Bei erneutem Auflösen nach $x$ und Ausrechnen der Gleichung mit Matlab erhält man für $x$:
+Bei erneutem Auflösen nach $x_{IKS}$ und Ausrechnen der Gleichung mit Matlab erhält man für $x_{IKS}$:
 
 \begin{equation*}
-  x = \begin{Bmatrix}
+  x_{IKS} = \begin{Bmatrix}
     U_{n1} \\
     U_{n2} \\
     U_{n3} \\
@@ -535,7 +535,7 @@ und man erhält folgende Matrixgleichung:
       \color{red}{I_{S1}^?} & 1 & \alpha G_3 & 0 & -\alpha G_3 & 0 & 0 & 0 & 0 \\
       \hdottedline
       \color{red}{I_T^?} & 0 & 0 & -1 & 1 & 0 & 0 & 0 & 0
-    \end{bNiceArray}}_{\text{A}}
+    \end{bNiceArray}}_{A_T}
                                                                          \underbrace{\begin{Bmatrix}
                                                                              U_{n1} \\
                                                                              U_{n2} \\
@@ -545,7 +545,7 @@ und man erhält folgende Matrixgleichung:
                                                                              \color{red}{I_{S2}^?} \\
                                                                              \color{red}{I_{S1}^?} \\
                                                                              \color{red}{I_{T}^?}
-                                                                           \end{Bmatrix}}_{\text{x}} =
+                                                                           \end{Bmatrix}}_{x_T} =
   \underbrace{\begin{Bmatrix}
       0 \\
       \color{red}{-I_{S3}} = 0\\
@@ -555,7 +555,7 @@ und man erhält folgende Matrixgleichung:
       \color{blue}{U_{S2}} = 0 \\
       0 \\
       \color{blue}{U_T}
-    \end{Bmatrix}}_{\text{b}}
+    \end{Bmatrix}}_{b_T}
 \end{align*}
 
 \begin{figure}[!htb]

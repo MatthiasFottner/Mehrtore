@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  3 NOV 2020 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  5 NOV 2020 15:49
 entering extended mode
 **./GR04_UE_02.tex
 (GR04_UE_02.tex
@@ -1531,7 +1531,7 @@ l.633 ...       node[label=south:$b$](b) at (4,0);
 (That was another \errmessage.)
 
 [10]
-<./Assets/simulation_original.png, id=56, 1285.80376pt x 633.11531pt>
+<./Assets/simulation_original.png, id=57, 1285.80376pt x 633.11531pt>
 File: ./Assets/simulation_original.png Graphic file (type png)
 <use ./Assets/simulation_original.png>
 Package pdftex.def Info: ./Assets/simulation_original.png  used on input line 6
@@ -1567,7 +1567,7 @@ l.675           node[label=south:$b$](b) at (4,0);
                                                   
 (That was another \errmessage.)
 
-<./Assets/simulation_thevenin.png, id=58, 1168.365pt x 642.14906pt>
+<./Assets/simulation_thevenin.png, id=59, 1168.365pt x 642.14906pt>
 File: ./Assets/simulation_thevenin.png Graphic file (type png)
 <use ./Assets/simulation_thevenin.png>
 Package pdftex.def Info: ./Assets/simulation_thevenin.png  used on input line 6
@@ -1578,7 +1578,7 @@ Package pdftex.def Info: ./Assets/simulation_thevenin.png  used on input line 6
 Here is how much of TeX's memory you used:
  46967 strings out of 480763
  1065919 string characters out of 2904059
- 1813336 words of memory out of 3000000
+ 1814336 words of memory out of 3000000
  62485 multiletter control sequences out of 15000+200000
  560782 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1599,13 +1599,14 @@ type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/mnsymbol/MnSymbol12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/m
 nsymbol/MnSymbol8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on GR04_UE_02.pdf (12 pages, 456745 bytes).
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on GR04_UE_02.pdf (12 pages, 466277 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
+ 355 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
