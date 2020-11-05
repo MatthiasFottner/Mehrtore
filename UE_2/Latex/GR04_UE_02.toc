@@ -1,0 +1,20 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Schaltplan mit allen Strömen, Spannungen und Knoten}{2}%
+\contentsline {section}{\numberline {2}Aufstellen des Gleichungssystems in Matrixform durch ``hinschauen''}{3}%
+\contentsline {subsection}{\numberline {2.1}Widerstände}{3}%
+\contentsline {subsection}{\numberline {2.2}Unabhängige Stromquelle $S3$}{3}%
+\contentsline {subsection}{\numberline {2.3}Unabhängige Spannungsquelle $S2$ \color {green!50!black}{($\rightarrow +1$ Gleichung)}}{4}%
+\contentsline {subsection}{\numberline {2.4}Stromgesteuerte Spannungsquelle $S1$ \color {green!50!black}{($\rightarrow +1$ Gleichung)}}{5}%
+\contentsline {subsection}{\numberline {2.5}Ausrechnen der Unbekanntenvektors $x$}{6}%
+\contentsline {section}{\numberline {3}Thevenin-Quelle bezüglich der Klemmen $a$ und $b$}{6}%
+\contentsline {subsection}{\numberline {3.1}$U_{Th}$}{6}%
+\contentsline {subsection}{\numberline {3.2}$I_{KS}$}{7}%
+\contentsline {subsection}{\numberline {3.3}$R_{Th}$ mithilfe von $U_{Th}$ und $I_{KS}$}{8}%
+\contentsline {subsection}{\numberline {3.4}$R_{Th}$ mithilfe von Testspannung $U_T$}{8}%
+\contentsline {section}{\numberline {4}Simulation in PSpice}{11}%
+\contentsline {subsection}{\numberline {4.1}Originalschaltung}{11}%
+\contentsline {subsection}{\numberline {4.2}Thevenin-Quelle}{11}%
+\contentsline {subsection}{\numberline {4.3}Vergleich der beiden Simulationen}{12}%
+\contentsline {section}{\numberline {5}Matlab-Simulation}{12}%
+\contentsline {subsection}{\numberline {5.1}Skript}{12}%
+\contentsline {subsection}{\numberline {5.2}Konsolenoutput}{14}%

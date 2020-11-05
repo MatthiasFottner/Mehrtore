@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  5 NOV 2020 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  5 NOV 2020 16:38
 entering extended mode
 **./GR04_UE_02.tex
 (GR04_UE_02.tex
@@ -1531,7 +1531,7 @@ l.633 ...       node[label=south:$b$](b) at (4,0);
 (That was another \errmessage.)
 
 [10]
-<./Assets/simulation_original.png, id=56, 1285.80376pt x 633.11531pt>
+<./Assets/simulation_original.png, id=57, 1285.80376pt x 633.11531pt>
 File: ./Assets/simulation_original.png Graphic file (type png)
 <use ./Assets/simulation_original.png>
 Package pdftex.def Info: ./Assets/simulation_original.png  used on input line 6
@@ -1567,38 +1567,135 @@ l.675           node[label=south:$b$](b) at (4,0);
                                                   
 (That was another \errmessage.)
 
-<./Assets/simulation_thevenin.png, id=58, 1168.365pt x 642.14906pt>
+<./Assets/simulation_thevenin.png, id=59, 1168.365pt x 642.14906pt>
 File: ./Assets/simulation_thevenin.png Graphic file (type png)
 <use ./Assets/simulation_thevenin.png>
 Package pdftex.def Info: ./Assets/simulation_thevenin.png  used on input line 6
 82.
 (pdftex.def)             Requested size: 418.25555pt x 229.8801pt.
 [11 <./Assets/simulation_original.png>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+98.
 
-LaTeX Warning: Reference `fig:sim_thevenin' on page 12 undefined on input line 
-692.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+(../Matlab/GR04_UE_02.m
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1.
+ [12 <./Assets/simulation_thevenin.png>]
 
+../Matlab/GR04_UE_02.m:36: Package inputenc Error: Invalid UTF-8 byte "F6.
 
-! Package Listings Error: File `./../Matlab/GR04_UE_02(.m)' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: m)
-
-Enter file name: 
- :698: Emergency stop.
-<read *> 
-         
-l.698 ...anguage=Matlab]{./../Matlab/GR04_UE_02.m}
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
                                                   
-*** (cannot \read from terminal in nonstop modes)
+l.36 %% Lösen 
+              der Systemgleichung
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
 
- 
+
+../Matlab/GR04_UE_02.m:45: Package inputenc Error: Invalid UTF-8 byte "FC.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45 %% Berechnung von R_Th über 
+                                 den Kurzschlusstrom IKS: A_IKS * x_IKS = b_IKS
+
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+../Matlab/GR04_UE_02.m:58: Package inputenc Error: Invalid UTF-8 byte "F6.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 %% Lösen 
+              der Systemgleichung
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+
+../Matlab/GR04_UE_02.m:69: Package inputenc Error: Invalid UTF-8 byte "FC.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 %% Berechnung von R_Th über 
+                                 die Testspannung U_T: A_T * x_T = b_T
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+[13]
+
+../Matlab/GR04_UE_02.m:84: Package inputenc Error: Invalid UTF-8 byte "F6.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 %% Lösen 
+              der Systemgleichung und auslesen des Teststroms I_T?
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+) [14] (GR04_UE_02.aux) ) 
 Here is how much of TeX's memory you used:
- 46967 strings out of 480763
- 1065801 string characters out of 2904059
- 1813302 words of memory out of 3000000
- 62484 multiletter control sequences out of 15000+200000
- 561565 words of font info for 109 fonts, out of 3000000 for 9000
+ 47846 strings out of 480763
+ 1075308 string characters out of 2904059
+ 1951312 words of memory out of 3000000
+ 63354 multiletter control sequences out of 15000+200000
+ 561409 words of font info for 110 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,27n,98p,10134b,935s stack positions out of 5000i,500n,10000p,200000b,50000s
- :698:  ==> Fatal error occurred, no output PDF file produced!
+ 58i,27n,98p,10134b,2303s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
+our/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk>{C:/Program Files/MiKTeX 2.9/fonts
+/enc/dvips/mnsymbol/MnSymbolC.enc} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk>{C:/Program Files/MiKTeX 2.9/fonts/
+enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/m
+nsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnS
+ymbolD.enc} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
+c/dpi600\ecsx1200.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/
+pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\
+2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Loc
+al\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\matth\A
+ppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx2074.pk><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on GR04_UE_02.pdf (14 pages, 495443 bytes).
+PDF statistics:
+ 448 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+
