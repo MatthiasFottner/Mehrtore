@@ -68,8 +68,6 @@ R_Th = sprintf('%.4f %s',R_Th_temp, Ohm)
 
 %% Berechnung von R_Th über die Testspannung U_T: A_T * x_T = b_T
 
-U_T = 1;
-
 A_T = [g1+g2, -g2, 0, 0, -g1, 0, -1, 0;
     -g2, g2+g3+g4, 0, -g3, 0, 0, 0, 0;
     0, 0, g5+g6, -g5, 0, 0, 0, -1;
@@ -79,7 +77,7 @@ A_T = [g1+g2, -g2, 0, 0, -g1, 0, -1, 0;
     1, (a*g3), 0, -(a*g3), 0, 0, 0, 0;
     0, 0, -1, 1, 0, 0 , 0, 0;];
 
-b_T = [0; 0; 0; 0; 0; 0; 0; U_T];
+b_T = [0; 0; 0; 0; 0; 0; 0; 1];
 
 %% Lösen der Systemgleichung und auslesen des Teststroms I_T?
 x_T_temp = A_T^(-1)*b_T;
@@ -88,6 +86,6 @@ I_T = sprintf('%.4f A',x_T_temp(8))
 
 %% R_Th mithilfe von U_T und I_T
 
-R_Th_temp2 = -(U_T)/x_T_temp(8);
+R_Th_temp = U_Th/x_IKS(8);
 
-R_Th = sprintf('%.4f %s',R_Th_temp2, Ohm)
+R_Th = sprintf('%.4f %s',R_Th_temp, Ohm)
