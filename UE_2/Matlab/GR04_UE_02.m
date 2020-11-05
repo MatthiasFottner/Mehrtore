@@ -34,12 +34,15 @@ A = [g1+g2, -g2, 0, 0, -g1, 0, -1;
 b = [0; -Is3; Is3; 0; 0; Us2; 0];
 
 %% Lösen der Systemgleichung
-x = A^(-1)*b
+x_temp = A^(-1)*b;
 
+x = sprintf('%.4f V\n%.4f V\n%.4f V\n%.4f V\n%.4f V\n%.4f A\n%.4f A',x_temp(1), x_temp(2), x_temp(3), x_temp(4), x_temp(5), x_temp(6), x_temp(7))
 
 %% Berechnung von U_Th
 
-U_Th = x(4)-x(3)
+U_Th_temp = x_temp(4)-x_temp(3);
+
+U_Th = sprintf('%.4f V', U_Th_temp)
 
 
 %% Berechnung von R_Th über den Kurzschlusstrom IKS: A_IKS * x_IKS = b_IKS
@@ -56,11 +59,13 @@ A_IKS = [g1+g2, -g2, 0, 0, -g1, 0, -1, 0;
 b_IKS = [0; -Is3; Is3; 0; 0; Us2; 0; 0];
 
 %% Lösen der Systemgleichung
-x_IKS = A_IKS^(-1)*b_IKS
+x_IKS = A_IKS^(-1)*b_IKS;
+
+I_KS = sprintf('%.4f A',x_IKS(8))
 
 %% R_Th mithilfe von U_Th und I_KS
 
-R_Th_temp = U_Th/x_IKS(8);
+R_Th_temp = U_Th_temp/x_IKS(8);
 
 R_Th = sprintf('%.4f %s',R_Th_temp, Ohm)
 
