@@ -1,0 +1,106 @@
+
+**** 11/02/20 22:54:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 02 22:54:12 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "GR04_UE_02_whole_circuit_thevenin.net"
+
+**** INCLUDING GR04_UE_02_whole_circuit_thevenin.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  3.99122807  
+I_I1         0 $N_0001 DC 1  
+R_R2         0 $N_0001  12  
+V_V1         $N_0002 0 DC -2.2807  
+
+**** RESUMING GR04_UE_02_whole_circuit_thevenin.cir ****
+.INC "GR04_UE_02_whole_circuit_thevenin.als"
+
+
+
+**** INCLUDING GR04_UE_02_whole_circuit_thevenin.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+I_I1            I1(+=0 -=$N_0001 )
+R_R2            R2(1=0 2=$N_0001 )
+V_V1            V1(+=$N_0002 -=0 )
+.ENDALIASES
+
+
+**** RESUMING GR04_UE_02_whole_circuit_thevenin.cir ****
+.probe
+
+
+.END
+
+**** 11/02/20 22:54:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    1.2836                   ($N_0002)   -2.2807                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         8.930E-01
+
+    TOTAL POWER DISSIPATION   2.04E+00  WATTS
+
+
+**** 11/02/20 22:54:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\matth\OneDrive - Technische Universitt Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\U
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+
