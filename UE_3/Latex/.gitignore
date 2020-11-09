@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!GR04_UE_03.tex
+!getlab.sty
+!./Figures/*
