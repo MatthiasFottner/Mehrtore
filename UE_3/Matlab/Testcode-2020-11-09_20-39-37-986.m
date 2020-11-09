@@ -34,23 +34,13 @@ b = [0; 0; Is2; -Is2; Us1];
 x = A^(-1)*b
 
 
+%% Berechnung von R_Th
+
+R_Th = ((r1+r3)*r2)/(r1+r3+r2) + r4
 
 %% Berechnung von U_Th
 
-U_R2 = -x(1);
-U_R4 = x(1) - x(4);
+U_R2 = -x(1)
+U_R4 = x(1) - x(4)
 
-U_Ca = -U_R2 - U_R4
-
-
-
-
-
-
-%%Plot
-
-t = linspace(0.1,0.10122);
-
-u_c = -6 + (U_Ca + 6)*exp((-t+0.1)/(15*10^(-6)*17));
-
-plot(t, u_c)
+U_Th = U_R2 + U_R4
