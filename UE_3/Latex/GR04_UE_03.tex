@@ -11,6 +11,7 @@
 \usepackage{rotating}
 \usepackage[normalem]{ulem}
 \usepackage{amsmath}
+\usepackage{trfsigns}
 \usepackage{textcomp}
 \usepackage{amssymb}
 \usepackage{capt-of}
@@ -23,6 +24,8 @@
 \usepackage{listings}
 \usepackage{pdfpages}
 \usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
 
 
 \definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
@@ -106,6 +109,38 @@
 
 
 
+\newcommand{\vlaplace}[1][]{\mbox{\setlength{\unitlength}{0.1em}%
+    \begin{picture}(10,20)%
+      \put(3,2){\circle{4}}%
+      \put(3,4){\line(0,1){12}}%
+      \put(3,18){\circle*{4}}%
+      \put(10,7){#1}
+    \end{picture}%
+  }%
+}%
+
+\newcommand{\vLaplace}[1][]{\mbox{\setlength{\unitlength}{0.1em}%
+    \begin{picture}(10,20)%
+      \put(3,2){\circle*{4}}%
+      \put(3,4){\line(0,1){12}}%
+      \put(3,18){\circle{4}}%
+      \put(10,7){#1}
+    \end{picture}%
+  }%
+}%
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{document}
 
@@ -146,6 +181,7 @@
 \newpage
 
 
+\allowdisplaybreaks
 
 \section{Bestimmen des Anfangszustands von $u_C$} % David
 \subsection{Schaltplan zur Schalterposition a}
@@ -154,9 +190,79 @@
 \subsection{Bestimmen von $u_C$}
 \section{Aufstellen der Differentialgleichung} % Matthias
 \subsection{Schaltplan zur Schalterposition b}
+\begin{circuitikz}
+  \clip (-0.8,-1) rectangle (11.5, 4.8);
+  \draw (0,0) to[C, v<={\color{blue}{$u_C$}}, i<={\color{red}{$i_C$}}] ++ (0,4)
+  to[short, -o] ++ (2,0)
+  to[R=$R_5$, v<={\color{blue}{$u_{R5}$}}, i<={\color{red}{$i_{R5}$}}, o-*] ++ (4,0)
+  to[R=$R_7$, v={\color{blue}{$U_{R7}$}}, i={\color{red}{$I_{R7}$}}, *-] ++ (4,0)
+  to[isource, i={\color{red}{$I_{S3}$}}] ++ (0,-4)
+  to[short, -o] ++ (-4, 0)
+  to[short, *-o] ++ (-4,0)
+  to[short, o-] ++ (-2, 0)
+  (6,4) to[R=$R_6$, v={\color{blue}{$u_{R6}$}}, i={\color{red}{$i_{R6}$}}] (6,0)
+  (6,0) node[rground]{};
+
+  \draw[european voltages, color=green!50!black] (6.5, 4) to[open, v^=$U_{n1}$] (7,0);
+  \draw[FARROW, green!50!black] (10.2, 3.8) to[bend left=80, looseness=1.7] node[below right]{$U_{n3}$} (6.5, -0.3);
+  % \draw[gray,step=0.25] (-6,-3) grid (16.5, 11);
+  % \draw [brown] (current bounding box.south west) rectangle (current bounding box.north east);
+\end{circuitikz}
+
+\begin{circuitikz}
+  \draw (0,0) to[C, v<={\color{blue}{$u_C$}}] (0,4)
+              to[short, -o] ++ (2,0)
+              to[R=$R_{Th}$, v<={\color{blue}{$u_{RTh}$}}, i<={\color{red}{$i_C$}}] ++ (4,0)
+              to[vsource, v={\color{blue}{$U_{Th}$}}] ++ (0,-4)
+              to[short, -o] ++ (-4, 0)
+              to[short] ++ (-2,0);
+\end{circuitikz}
+
 \subsection{Erstellen der KSV-Matrix}
+\begin{align*}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{bNiceArray}{c:c}
+    G_6 + G_7 & -G_7 \\
+    \hdottedline
+    -G_7 & G_7
+  \end{bNiceArray}
+                            \begin{Bmatrix}
+                              U_{n1} \\
+                              U_{n2} \\
+                            \end{Bmatrix} =
+  \begin{Bmatrix}
+    0 \\
+    -I_{S3}
+  \end{Bmatrix}
+\end{align*}
+
 \subsection{Lösen der Differentialgleichung}
+\subsubsection{(Laplace Lösung)}
+\setlength{\jot}{12pt}
+\begin{align*}
+  u_C + u_{RTh} &= U_{Th} \\
+  u_C + R_{Th} \cdot i_C &= U_{Th} \\
+  u_C + R_{Th} \cdot C \cdot u_C^{\prime} &= U_{Th} \\
+  u_C^{\prime} + u_C \left( \frac{1}{R_{Th} \cdot C}\right) &= \frac{U_{Th}}{R_{Th} \cdot C} \\
+                &\vLaplace \\
+  s \cdot u_C(s) - u_C (0) + \left( \frac{1}{R_{Th} \cdot C} \right) u_C(s) &= \frac{U_{Th}}{R_{Th} \cdot C} \cdot \frac{1}{s} \\
+  u_C(s) \left(s + \frac{1}{R_{Th} \cdot C}\right) &= \frac{U_{Th}}{R_{Th} \cdot C} \cdot \frac{1}{s} + u_C(0) \\
+  u_C(s) &= \frac{U_{Th}}{R_{Th} \cdot C} \cdot\frac{1}{s \left( s + \frac{1}{R_{Th} \cdot C} \right)} + \frac{u_C(0)}{s + \frac{1}{R_{Th} \cdot C}} \\ \\
+  \frac{1}{s\left(s + \frac{1}{R_{Th} \cdot C} \right)} &= \frac{A}{s} + \frac{B}{s + \frac{1}{R_{Th}\cdot C}} \\
+  A &= \frac{1}{s + \frac{1}{R_{Th} \cdot C}} \Big|_{s=0} = R_{Th} \cdot C \\
+  B &= \frac{1}{s} \Big|_{s=-\frac{1}{R_{Th} \cdot C}} = - R_{Th} \cdot C \\ \\
+  u_C(s) &= \frac{U_{Th}}{R_{Th} \cdot C} \left( \frac{R_{Th} \cdot C}{s} - \frac{R_{Th} \cdot C}{s + \frac{1}{R_{Th} \cdot C}}\right) + \frac{u_C(0)}{s + \frac{1}{R_{Th} \cdot C}} \\
+                &= U_{Th} \cdot \frac{1}{s} + \left( u_C(0) - U_{Th} \right) \frac{1}{s + \frac{1}{R_{Th} \cdot C}} \\
+                &\vlaplace \\
+  u_C(t) &= U_{Th} + (u_C(0) - U_{Th}) \cdot e^{-\frac{t}{R_{Th} \cdot C}} \\
+\end{align*}
+
+Die Funktion ist um $T_0$ nach rechts verschoben. Deswegen gilt:
+\begin{align*}
+  u_C(t) = \sigma(t-T_0) \left[ U_{Th} + (u_C(0) - U_{Th}) \cdot e^{-\frac{t-T_0}{R_{Th} \cdot C}} \right]
+\end{align*}
 \subsubsection{Homogene Lösung}
+
 \subsubsection{Inhomogene Lösung}
 \subsubsection{Anfangswertproblem}
 \subsubsection{Gesamtlösung}
