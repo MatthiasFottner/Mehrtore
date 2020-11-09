@@ -1,0 +1,22 @@
+* C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\UE_3\PSpice\GR04_UE_03_position_a_network.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 08 15:37:12 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "GR04_UE_03_position_a_network.net"
+.INC "GR04_UE_03_position_a_network.als"
+
+
+.probe
+
+
+.END
