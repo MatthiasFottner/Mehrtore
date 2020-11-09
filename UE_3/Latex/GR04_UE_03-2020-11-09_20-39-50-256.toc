@@ -1,0 +1,16 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Bestimmen des Anfangszustands von $u_C$}{3}%
+\contentsline {subsection}{\numberline {1.1}Schaltplan zur Schalterposition a}{3}%
+\contentsline {subsection}{\numberline {1.2}Erstellen der erweiterten KSV-Matrix}{4}%
+\contentsline {subsection}{\numberline {1.3}Bestimmen von $u_C$}{4}%
+\contentsline {section}{\numberline {2}Aufstellen der Differentialgleichung}{4}%
+\contentsline {subsection}{\numberline {2.1}Schaltplan zur Schalterposition b}{4}%
+\contentsline {subsection}{\numberline {2.2}Erstellen der KSV-Matrix}{4}%
+\contentsline {subsection}{\numberline {2.3}Lösen der Differentialgleichung}{4}%
+\contentsline {subsubsection}{\numberline {2.3.1}Homogene Lösung}{4}%
+\contentsline {subsubsection}{\numberline {2.3.2}Inhomogene Lösung}{4}%
+\contentsline {subsubsection}{\numberline {2.3.3}Anfangswertproblem}{4}%
+\contentsline {subsubsection}{\numberline {2.3.4}Gesamtlösung}{4}%
+\contentsline {section}{\numberline {3}Vergleich mit allgemeiner Lösungsformel}{4}%
+\contentsline {section}{\numberline {4}Simulation in PSpice}{4}%
+\contentsline {section}{\numberline {5}Matlab-Skript}{4}%
