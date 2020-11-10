@@ -277,7 +277,7 @@ Man erhält mithilfe von Matlab für $x$:
   \end{Bmatrix}
 \end{equation*}
 
-\subsection{Bestimmen von $u_C$}
+\subsection{Bestimmen von $u_C$} \label{sec:u_c}
 
 Wie sich im Schaltplan in Abbildung \ref{fig:schaltplan_a} erkennen lässt, entspricht $U_{C,a} = U_{n4}$:
 
@@ -361,16 +361,72 @@ Die Funktion ist um $T_0$ nach rechts verschoben. Deswegen gilt:
 \begin{align*}
   u_C(t) = \sigma(t-T_0) \left[ U_{Th} + (u_C(0) - U_{Th}) \cdot e^{-\frac{t-T_0}{R_{Th} \cdot C}} \right]
 \end{align*}
+
+
 \subsubsection{Homogene Lösung}
-\section{Aufstellen der Differentialgleichung} % Matthias
-\subsection{Schaltplan zur Schalterposition b}
-\subsection{Erstellen der KSV-Matrix}
-\subsection{Lösen der Differentialgleichung}
-\subsubsection{Homogene Lösung}
-\subsubsection{Inhomogene Lösung}
+Die inhomogene Differentialgleichung 1. Ordnung lautet:
+
+\begin{equation*}
+  u_C^{\prime} + u_C \cdot \frac{1}{R_{Th} \cdot C} =  \frac{U_{Th}}{R_{Th} \cdot C}
+\end{equation*}
+
+Der homogene Anteil lässt sich somit folgendermaßen beschreiben:
+\begin{equation*}
+  u_{C,h}^{\prime} + u_{C,h} \cdot \frac{1}{R_{Th} \cdot C} = 0
+\end{equation*}
+
+Aufgrund des Schaltvorgangs zum  Zeitpunkt $t=T_0$, wird die Gleichung um $T_0$ nach rechts verschoben.
+Man setzt an:
+
+\begin{align*}
+  u_{C,h} &= K \cdot e^{-\lambda \cdot (t-T_0)} \\
+  u_{C,h}^{\prime} &= - \lambda \cdot K \cdot e^{-\lambda \cdot (t-T_0)} \\
+  \Longrightarrow -\lambda \cdot K \cdot e^{-\lambda \cdot (t-T_0)} + K \cdot e^{-\lambda \cdot (t-T_0)} \frac{1}{R_{Th}\cdot C} &= 0 \\
+  \underbrace{K \cdot e^{-\lambda \cdot (t-T_0)}}_{\neq 0} \left( \frac{1}{R_{Th}\cdot C} - \lambda\right) &= 0 \\
+  \frac{1}{R_{Th}\cdot C} &= \lambda \\
+  \Longrightarrow u_{C,h} &= K \cdot e^{-\frac{t-T_0}{R_{Th}\cdot C}}
+\end{align*}
+
+\subsubsection{Partikuläre Lösung}
+Für die partikuläre Lösung kann man $u_{C,p} = A$ ansetzen und erhält:
+\begin{align*}
+  u_{C,p} &= A \\
+  u_{C,p}^{\prime} &= 0 \\
+  \Longrightarrow 0 + A \cdot \frac{1}{R_{Th}\cdot C} &= \frac{U_{Th}}{R_{Th}\cdot C} \\
+  A &= U_{Th}
+\end{align*}
+
+Die Gesamtlösung der Differentialgleichung setzt sich nun aus der homogenen und der partikulären Lösung zusammen:
+\begin{equation}\label{eq:diff}
+  u_C = u_{C,h} + u_{C,p} = K \cdot e^{-\frac{t-T_0}{R_{Th}\cdot C}} + U_{Th}
+\end{equation}
+
 \subsubsection{Anfangswertproblem}
-\subsubsection{Gesamtlösung}
+In Kapitel \ref{sec:u_c} wurde bereits der Spannungswert des Kondensators $u_{C,a} = u_C(T_0)$ zum Zeitpunkt $t \leq T_0$ ausgerechnet.
+Diesen Anfangswert der stetigen Kondensatorspannung $u_C$ zum Zeitpunkt $T_0$ kann man nun dazu verwenden,
+den Wert von K aus der Formel \ref{eq:diff} auszurechnen.
+\begin{align*}
+  u_C (T_0) &= K \cdot \underbrace{e^{\frac{T_0 - T_0}{R_{Th}\cdot C}}}_{=1} + U_{Th} \\
+  \Longrightarrow K &= u_C (T_0) - U_{Th}
+\end{align*}
+
+\subsubsection{Gesamtlösung}\label{sec:sol}
+Setzt man nun den erhaltenen Wert von $K$ in die Formel \ref{eq:diff} ein, so lautet die gelöste Differentialgleichung:
+\begin{equation*}
+  u_C = (u_C(T_0) - U_{Th}) \cdot e^{-\frac{t}{R_{Th}\cdot C}} + U_{Th}
+\end{equation*}
+
 \section{Vergleich mit allgemeiner Lösungsformel}
+Transiente Vorgänge lassen sich verallgemeinert mit folgender Lösungsformel lösen:
+\begin{equation*}
+  x(t) = x_f + \left[ x_0 - x_f \right] \cdot e^{-\frac{t-t_0}{\tau}}
+\end{equation*}
+
+$x_0$ entspricht dem Anfangswert, welcher bei $t=T_0$ den Wert $u_C(T_0) = U_{C,a}$ hat.
+$x_f$ entsprich dem Endwert, dieser ist in gegebener Schaltung der Wert von $U_{Th}$, da dieser Spannungswert übrig bleibt,
+nachdem sich der Kondensator übrig bleibt.
+Setzt man für $x_0$ und $x_f$ die entsprechenden Werte in die allgemeine Lösungsformel ein,
+so ist diese Form identisch mit der Gesamtlösung aus Kapitel \ref{sec:sol}.
 \section{Simulation in PSpice}
 \section{Matlab-Skript}
 
