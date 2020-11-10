@@ -445,11 +445,16 @@ In der Schalterposition a muss der Kondensator $C$ nicht aufgezeichnet werden, d
   \label{fig:b}
 \end{center}
 
+\newpage
 \subsection{Simulation des Umschaltvorgangs}
+In Abbildung \ref{fig:umschalt} ist der Schaltungsaufbau für die Simulation des Umschaltvorgangs zu sehen.
+Dabei ist der Schalter tOpen zum Zeitpunkt $0 < t \leq 100 \unit{ms}$ geschlossen, während tClose geschlossen ist.
+Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
+
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/simulation_original}
-  \captionof{figure}{PSpice-Simulation der Originalschaltung (vgl. Abb. \ref{fig:net})}
-  \label{fig:sim_original}
+  \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  \captionof{figure}{PSpice-Simulation des Umschaltvorgangs}
+  \label{fig:umschalt}
 \end{center}
 
 \section{Matlab-Skript}
