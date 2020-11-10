@@ -19,5 +19,5 @@
 \contentsline {subsection}{\numberline {4.3}Simulation des Umschaltvorgangs}{11}%
 \contentsline {section}{\numberline {5}Matlab-Simulation}{12}%
 \contentsline {subsection}{\numberline {5.1}Skript}{12}%
-\contentsline {subsection}{\numberline {5.2}Plot}{13}%
-\contentsline {subsection}{\numberline {5.3}Konsolenoutput}{13}%
+\contentsline {subsection}{\numberline {5.2}Plot}{15}%
+\contentsline {subsection}{\numberline {5.3}Konsolenoutput}{16}%

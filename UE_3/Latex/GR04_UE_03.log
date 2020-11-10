@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 21:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 22:01
 entering extended mode
 **./GR04_UE_03.tex
 (GR04_UE_03.tex
@@ -1344,7 +1344,11 @@ Package circuitikz Warning: You did not specify one of the voltage directions:
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-(GR04_UE_03.aux)
+(GR04_UE_03.aux
+
+LaTeX Warning: Label `fig:umschalt' multiply defined.
+
+)
 \openout1 = `GR04_UE_03.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
@@ -1361,8 +1365,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 148.
 LaTeX Font Info:    ... okay on input line 148.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 148.
 LaTeX Font Info:    ... okay on input line 148.
-
-("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
 \scratchdimen=\dimen327
@@ -1510,24 +1513,28 @@ Missing character: There is no 0 in font nullfont!
 \realshift=\dimen363
 \absvshift=\dimen364
  [4] [5] [6] [7]
-<./Assets/Schalterposition a - PSpice.jpg, id=55, 578.76225pt x 611.28375pt>
-File: ./Assets/Schalterposition a - PSpice.jpg Graphic file (type jpg)
-<use ./Assets/Schalterposition a - PSpice.jpg>
-Package pdftex.def Info: ./Assets/Schalterposition a - PSpice.jpg  used on inpu
-t line 438.
-(pdftex.def)             Requested size: 418.25555pt x 441.7656pt.
- [8] [9 <./Assets/Schalterposition a - PSpice.jpg>]
-<./Assets/Schalterposition b - PSpice.jpg, id=62, 886.512pt x 589.60275pt>
-File: ./Assets/Schalterposition b - PSpice.jpg Graphic file (type jpg)
-<use ./Assets/Schalterposition b - PSpice.jpg>
-Package pdftex.def Info: ./Assets/Schalterposition b - PSpice.jpg  used on inpu
-t line 446.
-(pdftex.def)             Requested size: 418.25555pt x 278.17493pt.
- [10 <./Assets/Schalterposition b - PSpice.jpg>]
+
+pdfTeX warning: pdflatex (file ./Assets/SP_a.pdf): PDF inclusion: found PDF ver
+sion <1.6>, but at most version <1.5> allowed
+<./Assets/SP_a.pdf, id=55, 157.11699pt x 184.57457pt>
+File: ./Assets/SP_a.pdf Graphic file (type pdf)
+<use ./Assets/SP_a.pdf>
+Package pdftex.def Info: ./Assets/SP_a.pdf  used on input line 438.
+(pdftex.def)             Requested size: 418.25555pt x 491.41843pt.
+[8] [9 <./Assets/SP_a.pdf, page is rotated 90 degrees>]
+
+pdfTeX warning: pdflatex (file ./Assets/SP_b.pdf): PDF inclusion: found PDF ver
+sion <1.6>, but at most version <1.5> allowed
+<./Assets/SP_b.pdf, id=67, 170.33739pt x 116.44002pt>
+File: ./Assets/SP_b.pdf Graphic file (type pdf)
+<use ./Assets/SP_b.pdf>
+Package pdftex.def Info: ./Assets/SP_b.pdf  used on input line 446.
+(pdftex.def)             Requested size: 418.25555pt x 285.9539pt.
+[10 <./Assets/SP_b.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex (file ./Assets/gesamter Schaltvorgang.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Assets/gesamter Schaltvorgang.pdf, id=66, 341.4095pt x 185.26314pt>
+<./Assets/gesamter Schaltvorgang.pdf, id=76, 341.4095pt x 185.26314pt>
 File: ./Assets/gesamter Schaltvorgang.pdf Graphic file (type pdf)
 <use ./Assets/gesamter Schaltvorgang.pdf>
 Package pdftex.def Info: ./Assets/gesamter Schaltvorgang.pdf  used on input lin
@@ -1575,45 +1582,63 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-) [13] (GR04_UE_03.aux) ) 
+)
+<./Assets/u_C_plot.pdf, id=90, 614.295pt x 794.97pt>
+File: ./Assets/u_C_plot.pdf Graphic file (type pdf)
+<use ./Assets/u_C_plot.pdf>
+Package pdftex.def Info: ./Assets/u_C_plot.pdf  used on input line 472.
+(pdftex.def)             Requested size: 737.1503pt x 953.95924pt.
+
+Overfull \hbox (318.89474pt too wide) in paragraph at lines 472--473
+ [] 
+ []
+
+[13] [14]
+Overfull \vbox (390.8291pt too high) has occurred while \output is active []
+
+
+[15 <./Assets/u_C_plot.pdf>] [16] (GR04_UE_03.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 40009 strings out of 480763
- 925063 string characters out of 2904059
- 1666028 words of memory out of 3000000
- 55482 multiletter control sequences out of 15000+200000
+ 40010 strings out of 480763
+ 924781 string characters out of 2904059
+ 1655028 words of memory out of 3000000
+ 55483 multiletter control sequences out of 15000+200000
  563396 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,20n,97p,10134b,2298s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\ectt0800.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fo
-nts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk>{C:/Program Files/MiKTeX 2.9/fonts
-/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/
-mnsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/Mn
-SymbolC.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc
-} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
-crm0900.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecsx1200.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/
-jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/
-pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\
-2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Loc
-al\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\matth\A
-ppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Use
-rs\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.p
-k> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol6.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1
-.pfb>
-Output written on GR04_UE_03.pdf (13 pages, 504660 bytes).
+ <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+ectt0800.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecrm0600.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnS
+ymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Program
+ Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc} <C:\Users\matth\AppDa
+ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\m
+atth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <
+C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
+1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
+appen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\matth\AppData\Local\
+MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\matth\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol6.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
+Output written on GR04_UE_03.pdf (16 pages, 401236 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
+ 555 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

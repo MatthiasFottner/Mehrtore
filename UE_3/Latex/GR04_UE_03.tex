@@ -435,7 +435,7 @@ so ist diese Form identisch mit der Gesamtlösung aus Kapitel \ref{sec:sol}.
 In der Schalterposition a muss der Kondensator $C$ nicht aufgezeichnet werden, da er nach langer Zeit wie ein Leerlauf fungiert.
 
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/Schalterposition a - PSpice}
+  \includegraphics[width=1\linewidth]{./Assets/SP_a}
   \captionof{figure}{PSpice-Simulation der Schalterposition a}
   \label{fig:a}
 \end{center}
@@ -443,7 +443,7 @@ In der Schalterposition a muss der Kondensator $C$ nicht aufgezeichnet werden, d
 
 \subsection{Schalterposition b}
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/Schalterposition b - PSpice}
+  \includegraphics[width=1\linewidth]{./Assets/SP_b}
   \captionof{figure}{PSpice-Simulation der Schalterposition b}
   \label{fig:b}
 \end{center}
@@ -467,6 +467,12 @@ Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
 \lstinputlisting[language=Matlab]{./../Matlab/GR04_UE_03.m}
 
 \subsection{Plot}
+\begin{center}
+  % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  \includegraphics[scale=1.2]{./Assets/u_C_plot.pdf}
+  \captionof{figure}{Matlab Plot des Umschaltvorgangs von $t=T_0$ bis $t=T_0 + 5 \cdot  \tau$}
+  \label{fig:umschalt}
+\end{center}
 
 
 \subsection{Konsolenoutput}
