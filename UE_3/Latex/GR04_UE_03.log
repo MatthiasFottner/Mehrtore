@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 22:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 22:55
 entering extended mode
 **./GR04_UE_03.tex
 (GR04_UE_03.tex
@@ -1348,6 +1348,9 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 
 LaTeX Warning: Label `fig:umschalt' multiply defined.
 
+
+LaTeX Warning: Label `fig:umschalt' multiply defined.
+
 )
 \openout1 = `GR04_UE_03.aux'.
 
@@ -1545,9 +1548,19 @@ Overfull \hbox (25.57674pt too wide) in paragraph at lines 462--463
  [] 
  []
 
-[11 <./Assets/gesamter Schaltvorgang.pdf, page is rotated 90 degrees>]
+
+
+pdfTeX warning: pdflatex (file ./Assets/PS_SV.pdf): PDF inclusion: found PDF ve
+rsion <1.6>, but at most version <1.5> allowed
+<./Assets/PS_SV.pdf, id=77, 776.43352pt x 481.01297pt>
+File: ./Assets/PS_SV.pdf Graphic file (type pdf)
+<use ./Assets/PS_SV.pdf>
+Package pdftex.def Info: ./Assets/PS_SV.pdf  used on input line 469.
+(pdftex.def)             Requested size: 334.60571pt x 207.29393pt.
+[11 <./Assets/gesamter Schaltvorgang.pdf, page is rotated 90 degrees> <./Assets
+/PS_SV.pdf, page is rotated 90 degrees>]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-70.
+78.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1588,10 +1601,10 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 )
-<./Assets/u_C_plot.pdf, id=90, 386.67159pt x 293.30177pt>
+<./Assets/u_C_plot.pdf, id=105, 386.67159pt x 293.30177pt>
 File: ./Assets/u_C_plot.pdf Graphic file (type pdf)
 <use ./Assets/u_C_plot.pdf>
-Package pdftex.def Info: ./Assets/u_C_plot.pdf  used on input line 492.
+Package pdftex.def Info: ./Assets/u_C_plot.pdf  used on input line 500.
 (pdftex.def)             Requested size: 386.67064pt x 293.30106pt.
  [13] [14 <./Assets/u_C_plot.pdf>] (GR04_UE_03.aux)
 
@@ -1599,10 +1612,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 40010 strings out of 480763
- 924781 string characters out of 2904059
+ 40016 strings out of 480763
+ 924923 string characters out of 2904059
  1666028 words of memory out of 3000000
- 55483 multiletter control sequences out of 15000+200000
+ 55488 multiletter control sequences out of 15000+200000
  563396 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,20n,97p,10134b,2298s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1632,9 +1645,9 @@ sfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on GR04_UE_03.pdf (14 pages, 400663 bytes).
+Output written on GR04_UE_03.pdf (14 pages, 440571 bytes).
 PDF statistics:
- 550 PDF objects out of 1000 (max. 8388607)
+ 565 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
