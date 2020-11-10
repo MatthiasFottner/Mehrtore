@@ -1,5 +1,7 @@
 % Created 2020-10-25 So 23:03
 % Intended LaTeX compiler: pdflatex
+\UseRawInputEncoding
+
 \documentclass[11pt]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -20,6 +22,7 @@
 \usepackage{setspace}
 \usepackage{nicematrix}
 \usepackage{varwidth}
+\usepackage{pdfpages}
 % \usepackage{getlab}
 \usepackage{listings}
 \usepackage{pdfpages}
@@ -452,12 +455,35 @@ Dabei ist der Schalter tOpen zum Zeitpunkt $0 < t \leq 100 \unit{ms}$ geschlosse
 Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
 
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  \includegraphics[scale=1.2]{./Assets/gesamter Schaltvorgang.pdf}
   \captionof{figure}{PSpice-Simulation des Umschaltvorgangs}
   \label{fig:umschalt}
 \end{center}
 
-\section{Matlab-Skript}
+\newpage
+\section{Matlab-Simulation}
+\subsection{Skript}
+\lstinputlisting[language=Matlab]{./../Matlab/GR04_UE_03.m}
 
+\subsection{Plot}
+
+
+\subsection{Konsolenoutput}
+\begin{lstlisting}[language=Matlab, escapeinside={(*}{*)}]
+  U_C_a =
+
+  "-4.3200 V"
+
+
+  U_Th =
+
+  "-6.0000 V"
+
+
+  R_Th =
+
+  "17 (*$\Omega$*)"
+\end{lstlisting}
 
 \end{document}

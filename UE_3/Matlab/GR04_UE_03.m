@@ -15,7 +15,7 @@ C = 15*10^(-6);
 Us1 = 10;
 Is2 = (120*10^(-3));
 Is3 = 0.5;
-T_0 = 100*10^(-3); 
+T_0 = 100*10^(-3);
 
 g1 = 1/r1;
 g2 = 1/r2;
@@ -95,4 +95,3 @@ xticks(t_label)
 xticklabels({'0\tau','1\tau','2\tau','3\tau','4\tau','5\tau'})
 yticks([-6 point(2) -4.32])
 yticklabels({'-6 V', 'ca. 37%', '-4.32 V'})
-
