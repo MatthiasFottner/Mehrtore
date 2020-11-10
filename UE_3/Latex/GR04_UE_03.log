@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  9 NOV 2020 15:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 18:27
 entering extended mode
 **./GR04_UE_03.tex
 (GR04_UE_03.tex
@@ -290,6 +290,9 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/trfsigns\trfsigns.sty"
+Package: trfsigns 
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\textcomp.sty"
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
@@ -778,8 +781,8 @@ File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 \AM@templatesizebox=\box73
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/circuitikz\circuitikz.sty"
-Package: circuitikz 2020/05/17{} The CircuiTikz circuit drawing package version
- 1.1.2
+Package: circuitikz 2020/10/04{} The CircuiTikz circuit drawing package version
+ 1.2.4
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty"
 ("C:\Program Files\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty"
@@ -900,9 +903,9 @@ libraryfpu.code.tex"
 \pgf@circ@res@other=\dimen320
 \pgf@circ@res@step=\dimen321
 \pgf@circ@res@temp=\dimen322
-\pgfstartlinewidth=\dimen323
-\pgf@circ@Rlen=\dimen324
-\pgf@circ@scaled@Rlen=\dimen325
+\pgf@circ@Rlen=\dimen323
+\pgf@circ@scaled@Rlen=\dimen324
+\pgfstartlinewidth=\dimen325
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircutils.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircshapes.tex")
@@ -914,7 +917,9 @@ libraryfpu.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircquadpoles.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircmultipoles.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcirclabel.tex")
-("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircvoltage.tex")
+("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircvoltage.tex"
+\pgfcirc@labelshift=\dimen326
+)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcirccurrent.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircflow.tex")
 ("C:\Program Files\MiKTeX 2.9\tex/generic/circuitikz\pgfcircpath.tex")
@@ -931,31 +936,31 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 (GR04_UE_03.aux)
 \openout1 = `GR04_UE_03.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
+LaTeX Font Info:    ... okay on input line 145.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
-\scratchdimen=\dimen326
+\scratchdimen=\dimen327
 \scratchbox=\box78
 \nofMPsegments=\count322
 \nofMParguments=\count323
 \everyMPshowfont=\toks43
 \MPscratchCnt=\count324
-\MPscratchDim=\dimen327
+\MPscratchDim=\dimen328
 \MPnumerator=\count325
 \makeMPintoPDFobject=\count326
 \everyMPtoPDFconversion=\toks44
@@ -1000,13 +1005,13 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 138
+LaTeX Font Info:    Trying to load font information for U+msa on input line 173
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 138
+LaTeX Font Info:    Trying to load font information for U+msb on input line 173
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
@@ -1015,10 +1020,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <./Figures/TUGraz.png, id=4, 1284.8pt x 642.4pt>
 File: ./Figures/TUGraz.png Graphic file (type png)
 <use ./Figures/TUGraz.png>
-Package pdftex.def Info: ./Figures/TUGraz.png  used on input line 138.
+Package pdftex.def Info: ./Figures/TUGraz.png  used on input line 173.
 (pdftex.def)             Requested size: 108.12054pt x 54.05925pt.
 
-Overfull \hbox (58.27287pt too wide) in paragraph at lines 138--138
+Overfull \hbox (58.27287pt too wide) in paragraph at lines 173--173
  [] 
  []
 
@@ -1027,7 +1032,7 @@ Overfull \hbox (58.27287pt too wide) in paragraph at lines 138--138
 {C:/Users/matth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./Figures/T
 UGraz.png>]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-44.
+79.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1037,33 +1042,98 @@ File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 
  [2
 
-] [3] (GR04_UE_03.aux) ) 
+]
+\realshift=\dimen329
+\absvshift=\dimen330
+\realshift=\dimen331
+\absvshift=\dimen332
+\realshift=\dimen333
+\absvshift=\dimen334
+\realshift=\dimen335
+\absvshift=\dimen336
+\realshift=\dimen337
+\absvshift=\dimen338
+\absvshift=\dimen339
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+ [3]
+\g__nicematrix_max_cell_width_dim=\dimen340
+\l__nicematrix_cell_box=\box80
+\c@iRow=\count328
+\c@jCol=\count329
+\g__nicematrix_row_total_int=\count330
+\g__nicematrix_col_total_int=\count331
+\l__nicematrix_left_delim_dim=\dimen341
+\l__nicematrix_right_delim_dim=\dimen342
+\l__nicematrix_the_array_box=\box81
+\g__nicematrix_dp_row_zero_dim=\dimen343
+\g__nicematrix_ht_row_zero_dim=\dimen344
+\g__nicematrix_ht_row_one_dim=\dimen345
+\g__nicematrix_dp_ante_last_row_dim=\dimen346
+\g__nicematrix_ht_last_row_dim=\dimen347
+\g__nicematrix_dp_last_row_dim=\dimen348
+\g__nicematrix_ddots_int=\count332
+\g__nicematrix_iddots_int=\count333
+\g__nicematrix_delta_x_one_dim=\dimen349
+\g__nicematrix_delta_y_one_dim=\dimen350
+\g__nicematrix_delta_x_two_dim=\dimen351
+\g__nicematrix_delta_y_two_dim=\dimen352
+\l__nicematrix_initial_i_int=\count334
+\l__nicematrix_initial_j_int=\count335
+\l__nicematrix_final_i_int=\count336
+\l__nicematrix_final_j_int=\count337
+\l__nicematrix_l_dim=\dimen353
+\absvshift=\dimen354
+\realshift=\dimen355
+\absvshift=\dimen356
+\realshift=\dimen357
+\absvshift=\dimen358
+\realshift=\dimen359
+\absvshift=\dimen360
+\absvshift=\dimen361
+\absvshift=\dimen362
+\realshift=\dimen363
+\absvshift=\dimen364
+ [4] [5] [6] [7] [8] (GR04_UE_03.aux) ) 
 Here is how much of TeX's memory you used:
- 36078 strings out of 480763
- 834947 string characters out of 2904059
- 1487646 words of memory out of 3000000
- 51590 multiletter control sequences out of 15000+200000
- 558517 words of font info for 100 fonts, out of 3000000 for 9000
+ 39042 strings out of 480763
+ 913525 string characters out of 2904059
+ 1565525 words of memory out of 3000000
+ 54547 multiletter control sequences out of 15000+200000
+ 560812 words of font info for 103 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,18n,83p,10134b,399s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/M
-nSymbolD.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.en
-c} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecsx1200.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\matth\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\matth\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Us
-ers\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.
-pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-Output written on GR04_UE_03.pdf (3 pages, 152458 bytes).
+ 58i,20n,97p,10134b,915s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/d
+vips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymb
+ol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbol
+C.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc} <C:\
+Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm090
+0.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecsx1200.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknapp
+en/ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Local\MiK
+TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\matth\AppData
+\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\mat
+th\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:
+\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm12
+00.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
+Output written on GR04_UE_03.pdf (8 pages, 283287 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
+ 411 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

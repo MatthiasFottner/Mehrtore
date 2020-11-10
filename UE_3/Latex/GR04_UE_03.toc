@@ -1,16 +1,17 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{\numberline {1}Bestimmen des Anfangszustands von $u_C$}{3}%
 \contentsline {subsection}{\numberline {1.1}Schaltplan zur Schalterposition a}{3}%
-\contentsline {subsection}{\numberline {1.2}Erstellen der erweiterten KSV-Matrix}{3}%
-\contentsline {subsection}{\numberline {1.3}Bestimmen von $u_C$}{3}%
-\contentsline {section}{\numberline {2}Aufstellen der Differentialgleichung}{3}%
-\contentsline {subsection}{\numberline {2.1}Schaltplan zur Schalterposition b}{3}%
-\contentsline {subsection}{\numberline {2.2}Erstellen der KSV-Matrix}{3}%
-\contentsline {subsection}{\numberline {2.3}Lösen der Differentialgleichung}{3}%
-\contentsline {subsubsection}{\numberline {2.3.1}Homogene Lösung}{3}%
-\contentsline {subsubsection}{\numberline {2.3.2}Inhomogene Lösung}{3}%
-\contentsline {subsubsection}{\numberline {2.3.3}Anfangswertproblem}{3}%
-\contentsline {subsubsection}{\numberline {2.3.4}Gesamtlösung}{3}%
-\contentsline {section}{\numberline {3}Vergleich mit allgemeiner Lösungsformel}{3}%
-\contentsline {section}{\numberline {4}Simulation in PSpice}{3}%
-\contentsline {section}{\numberline {5}Matlab-Skript}{3}%
+\contentsline {subsection}{\numberline {1.2}Erstellen der erweiterten KSV-Matrix}{4}%
+\contentsline {subsection}{\numberline {1.3}Bestimmen von $u_C$}{4}%
+\contentsline {section}{\numberline {2}Aufstellen der Differentialgleichung}{5}%
+\contentsline {subsection}{\numberline {2.1}Schaltplan zur Schalterposition b}{5}%
+\contentsline {subsection}{\numberline {2.2}Erstellen der KSV-Matrix}{5}%
+\contentsline {subsection}{\numberline {2.3}Lösen der Differentialgleichung}{5}%
+\contentsline {subsubsection}{\numberline {2.3.1}(Laplace Lösung)}{5}%
+\contentsline {subsubsection}{\numberline {2.3.2}Homogene Lösung}{7}%
+\contentsline {subsubsection}{\numberline {2.3.3}Partikuläre Lösung}{7}%
+\contentsline {subsubsection}{\numberline {2.3.4}Anfangswertproblem}{8}%
+\contentsline {subsubsection}{\numberline {2.3.5}Gesamtlösung}{8}%
+\contentsline {section}{\numberline {3}Vergleich mit allgemeiner Lösungsformel}{8}%
+\contentsline {section}{\numberline {4}Simulation in PSpice}{8}%
+\contentsline {section}{\numberline {5}Matlab-Skript}{8}%
