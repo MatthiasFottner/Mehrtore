@@ -14,4 +14,6 @@
 \contentsline {subsubsection}{\numberline {2.3.5}Gesamtlösung}{8}%
 \contentsline {section}{\numberline {3}Vergleich mit allgemeiner Lösungsformel}{8}%
 \contentsline {section}{\numberline {4}Simulation in PSpice}{8}%
-\contentsline {section}{\numberline {5}Matlab-Skript}{8}%
+\contentsline {subsection}{\numberline {4.1}Schalterposition a}{8}%
+\contentsline {subsection}{\numberline {4.2}Schalterposition b}{10}%
+\contentsline {section}{\numberline {5}Matlab-Skript}{10}%

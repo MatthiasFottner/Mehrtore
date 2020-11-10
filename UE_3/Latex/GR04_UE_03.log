@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 18:50
 entering extended mode
 **./GR04_UE_03.tex
 (GR04_UE_03.tex
@@ -1098,42 +1098,57 @@ Missing character: There is no 0 in font nullfont!
 \absvshift=\dimen362
 \realshift=\dimen363
 \absvshift=\dimen364
- [4] [5] [6] [7] [8] (GR04_UE_03.aux) ) 
+ [4] [5] [6] [7]
+<./Assets/Schalterposition a - PSpice.jpg, id=55, 578.76225pt x 611.28375pt>
+File: ./Assets/Schalterposition a - PSpice.jpg Graphic file (type jpg)
+<use ./Assets/Schalterposition a - PSpice.jpg>
+Package pdftex.def Info: ./Assets/Schalterposition a - PSpice.jpg  used on inpu
+t line 435.
+(pdftex.def)             Requested size: 418.25555pt x 441.7656pt.
+ [8] [9 <./Assets/Schalterposition a - PSpice.jpg>]
+<./Assets/Schalterposition b - PSpice.jpg, id=62, 886.512pt x 589.60275pt>
+File: ./Assets/Schalterposition b - PSpice.jpg Graphic file (type jpg)
+<use ./Assets/Schalterposition b - PSpice.jpg>
+Package pdftex.def Info: ./Assets/Schalterposition b - PSpice.jpg  used on inpu
+t line 443.
+(pdftex.def)             Requested size: 418.25555pt x 278.17493pt.
+ [10 <./Assets/Schalterposition b - PSpice.jpg>] (GR04_UE_03.aux) ) 
 Here is how much of TeX's memory you used:
- 39042 strings out of 480763
- 913525 string characters out of 2904059
+ 39022 strings out of 480763
+ 912851 string characters out of 2904059
  1565525 words of memory out of 3000000
- 54547 multiletter control sequences out of 15000+200000
+ 54523 multiletter control sequences out of 15000+200000
  560812 words of font info for 103 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,20n,97p,10134b,915s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/d
-vips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymb
-ol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbol
-C.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc} <C:\
-Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm090
-0.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
-00\ecsx1200.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknapp
-en/ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fo
-nts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\Users\matth\AppData\Local\MiK
-TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\matth\AppData
-\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\mat
-th\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:
-\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm12
-00.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol6.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on GR04_UE_03.pdf (8 pages, 283287 bytes).
+{C:/Program 
+Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTe
+X 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts
+/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/
+mnsymbol/MnSymbolD.enc} <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\font
+s/pk/ljfour/jknappen/ec/dpi600\ecsx1200.pk> <C:\Users\matth\AppData\Local\MiKTe
+X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\matth\AppData\L
+ocal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1095.pk> <C:\Users\matth
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1440.pk> <C:\U
+sers\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488
+.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecrm1440.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ecrm2488.pk> <C:\Users\matth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsy
+mbol/MnSymbol6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnS
+ymbol8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/latxfont/lcircle1.pfb>
+Output written on GR04_UE_03.pdf (10 pages, 441154 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
+ 424 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
