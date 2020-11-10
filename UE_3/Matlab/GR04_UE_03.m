@@ -1,3 +1,6 @@
+clc
+Ohm = char(hex2dec('03A9'));
+
 %% Variablendefinition der bekannten Werte
 
 r1 = 4;
@@ -60,6 +63,8 @@ x_b = A_b^(-1)*b_b
 U_TH_b = x_b(1)
 
 disp("")
+
+U_Th = sprintf('%.4f V', U_Th_temp)
 
 
 
