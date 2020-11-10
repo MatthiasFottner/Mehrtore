@@ -15,7 +15,7 @@ C = 15*10^(-6);
 Us1 = 10;
 Is2 = (120*10^(-3));
 Is3 = 0.5;
-T_0 = 1*10^(-3); 
+T_0 = 100*10^(-3); 
 
 g1 = 1/r1;
 g2 = 1/r2;
@@ -36,16 +36,17 @@ A_a = [g2+g3+g4, 0, -g3, -g4, 0;
 b_a = [0; 0; Is2; -Is2; Us1];
 
 %% Lösen der Systemgleichung
-x_a = A_a^(-1)*b_a
+x_a = A_a^(-1)*b_a;
 
 
 
-%% Berechnung von U_Th_a
+%% Berechnung von U_C_a = Anfangswert
 
-U_R2 = -x(1);
-U_R4 = x(1) - x(4);
+U_C_a_temp = x_a(4);
 
-U_Th_a = -U_R2 - U_R4
+U_C_a = sprintf("%.4f V" , U_C_a_temp)
+
+
 
 
 %% Definition der Systemmatrix in der Form A * x = b von Schalterposition b
@@ -56,21 +57,36 @@ A_b = [g6+g7, -g7;
 b_b = [0; -Is3];
 
 %% Lösen der Systemgleichung
-x_b = A_b^(-1)*b_b
+x_b = A_b^(-1)*b_b;
 
 %% Berechnung von U_Th_b
 
-U_Th_b = x_b(1)
+U_Th_b_temp = x_b(1);
 
-U_Th_b = sprintf("%.4f V" , U_Th_b)
+U_Th_b = sprintf("%.4f V" , U_Th_b_temp)
 
 
+%% Berechnung von R_Th_b
 
+R_Th_b_temp = r5+r6;
+
+R_Th_b = sprintf("%.0f %s" , R_Th_b_temp, Ohm)
 
 %% Plot
 
-t = linspace(0.1,0.10122);
+tau = R_Th_b_temp * C
 
-u_c = -6 + (U_Ca + 6)*exp((-t+0.1)/(15*10^(-6)*17));
+t = linspace(0.1,0.101275);
+t_label = linspace(0.1,0.101275, 6)
 
+u_c = U_Th_b_temp + (U_C_a_temp - U_Th_b_temp)*exp((-t+T_0)/(C*R_Th_b_temp));
 plot(t, u_c);
+hold on
+point = [0.1+tau, U_Th_b_temp + (U_C_a_temp - U_Th_b_temp)*exp((-(0.1+tau)+T_0)/(C*R_Th_b_temp))];
+plot(point(1), point(2), 'o')
+
+xticks(t_label)
+xticklabels({'0\tau','1\tau','2\tau','3\tau','4\tau','5\tau'})
+yticks([-6 -4.32])
+yticklabels({'-6 V','-4.32 V'})
+

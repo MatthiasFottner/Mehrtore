@@ -15,7 +15,7 @@ C = 15*10^(-6);
 Us1 = 10;
 Is2 = (120*10^(-3));
 Is3 = 0.5;
-T_0 = 1*10^(-3); 
+T_0 = 100*10^(-3); 
 
 g1 = 1/r1;
 g2 = 1/r2;
@@ -40,11 +40,11 @@ x_a = A_a^(-1)*b_a;
 
 
 
-%% Berechnung von U_Th_a
+%% Berechnung von U_C_a = Anfangswert
 
-U_Th_a = x_a(4);
+U_C_a_temp = x_a(4);
 
-U_Th_a = sprintf("%.4f V" , U_Th_a)
+U_C_a = sprintf("%.4f V" , U_C_a_temp)
 
 
 
@@ -59,19 +59,40 @@ b_b = [0; -Is3];
 %% Lösen der Systemgleichung
 x_b = A_b^(-1)*b_b;
 
-%% Berechnung von U_Th_b
+%% Berechnung von U_Th
 
-U_Th_b = x_b(1);
+U_Th_temp = x_b(1);
 
-U_Th_b = sprintf("%.4f V" , U_Th_b)
+U_Th = sprintf("%.4f V" , U_Th_temp)
 
 
+%% Berechnung von R_Th_b
 
+R_Th_temp = r5+r6;
+
+R_Th = sprintf("%.0f %s" , R_Th_temp, Ohm)
 
 %% Plot
 
-t = linspace(0.1,0.10122);
+tau = R_Th_temp * C;
 
-u_c = -6 + (U_Ca + 6)*exp((-t+0.1)/(15*10^(-6)*17));
+t = linspace(0.1,0.101275);
+t_label = linspace(0.1,0.101275, 6);
 
-plot(t, u_c);
+
+figure('Name','Spannung u_C ab T_0','NumberTitle','off');
+axLims = [0.1 (0.1+5*tau) -6 -4.32];  %[x-min, x-max, y-min, y-max] axis limits
+u_c = U_Th_temp + (U_C_a_temp - U_Th_temp)*exp((-t+T_0)/(C*R_Th_temp));
+
+plot(t, u_c, 'b');
+hold on
+point = [0.1+tau, U_Th_temp + (U_C_a_temp - U_Th_temp)*exp((-(0.1+tau)+T_0)/(C*R_Th_temp))];
+plot(point(1), point(2), 'o')
+plot([point(1), point(1)], [axLims(3), point(2)], 'k:')  %vertical line
+plot([axLims(1), point(1)], [point(2), point(2)], 'k:')  %horizontal line
+
+xticks(t_label)
+xticklabels({'0\tau','1\tau','2\tau','3\tau','4\tau','5\tau'})
+yticks([-6 point(2) -4.32])
+yticklabels({'-6 V', 'ca. 37%', '-4.32 V'})
+
