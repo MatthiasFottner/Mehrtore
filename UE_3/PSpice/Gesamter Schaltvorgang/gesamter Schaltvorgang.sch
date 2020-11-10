@@ -27,7 +27,7 @@ AutoGenStim4ExtIFPorts 1
 pageloc 1 0 5065 
 @status
 n 0 120:10:10:18:53:35;1605030815 e 
-s 2832 120:10:10:18:53:35;1605030815 e 
+s 0 120:10:10:18:53:36;1605030816 e 
 *page 1 0 970 720 iA
 @ports
 port 115 GND_EARTH 730 490 h
