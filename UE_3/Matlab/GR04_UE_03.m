@@ -92,7 +92,7 @@ plot([point(1), point(1)], [axLims(3), point(2)], 'k:')  %vertical line
 plot([axLims(1), point(1)], [point(2), point(2)], 'k:')  %horizontal line
 
 xticks(t_label)
-xticklabels({'0\tau','1\tau','2\tau','3\tau','4\tau','5\tau'})
+xticklabels({'T_0','T_0 + \tau','T_0 + 2\tau','T_0 + 3\tau','T_0 + 4\tau','T_0 + 5\tau'})
 yticks([-6 point(2) -4.32])
 yticklabels({'-6 V', 'ca. 37%', '-4.32 V'})
 
