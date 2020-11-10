@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 22:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 23:32
 entering extended mode
 **./GR04_UE_03.tex
 (GR04_UE_03.tex
@@ -1519,32 +1519,32 @@ Missing character: There is no 0 in font nullfont!
 
 pdfTeX warning: pdflatex (file ./Assets/SP_a.pdf): PDF inclusion: found PDF ver
 sion <1.6>, but at most version <1.5> allowed
-<./Assets/SP_a.pdf, id=58, 157.11699pt x 184.57457pt>
+<./Assets/SP_a.pdf, id=58, 147.44185pt x 173.81738pt>
 File: ./Assets/SP_a.pdf Graphic file (type pdf)
 <use ./Assets/SP_a.pdf>
 Package pdftex.def Info: ./Assets/SP_a.pdf  used on input line 441.
-(pdftex.def)             Requested size: 251.3875pt x 295.3197pt.
+(pdftex.def)             Requested size: 235.90724pt x 278.10815pt.
 [9 <./Assets/SP_a.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex (file ./Assets/SP_b.pdf): PDF inclusion: found PDF ver
 sion <1.6>, but at most version <1.5> allowed
-<./Assets/SP_b.pdf, id=67, 170.33739pt x 116.44002pt>
+<./Assets/SP_b.pdf, id=67, 163.00298pt x 109.72394pt>
 File: ./Assets/SP_b.pdf Graphic file (type pdf)
 <use ./Assets/SP_b.pdf>
 Package pdftex.def Info: ./Assets/SP_b.pdf  used on input line 449.
-(pdftex.def)             Requested size: 272.54016pt x 186.30426pt.
+(pdftex.def)             Requested size: 260.80508pt x 175.5585pt.
 [10 <./Assets/SP_b.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex (file ./Assets/gesamter Schaltvorgang.pdf): PDF inclus
 ion: found PDF version <1.6>, but at most version <1.5> allowed
-<./Assets/gesamter Schaltvorgang.pdf, id=76, 341.4095pt x 185.26314pt>
+<./Assets/gesamter Schaltvorgang.pdf, id=76, 331.98428pt x 165.64084pt>
 File: ./Assets/gesamter Schaltvorgang.pdf Graphic file (type pdf)
 <use ./Assets/gesamter Schaltvorgang.pdf>
 Package pdftex.def Info: ./Assets/gesamter Schaltvorgang.pdf  used on input lin
 e 462.
-(pdftex.def)             Requested size: 443.83229pt x 240.84204pt.
+(pdftex.def)             Requested size: 431.5795pt x 215.33304pt.
 
-Overfull \hbox (25.57674pt too wide) in paragraph at lines 462--463
+Overfull \hbox (13.32394pt too wide) in paragraph at lines 462--463
  [] 
  []
 
@@ -1645,7 +1645,7 @@ sfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on GR04_UE_03.pdf (14 pages, 440571 bytes).
+Output written on GR04_UE_03.pdf (14 pages, 440109 bytes).
 PDF statistics:
  565 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
