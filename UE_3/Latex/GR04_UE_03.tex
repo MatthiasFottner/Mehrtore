@@ -430,12 +430,15 @@ $x_f$ entsprich dem Endwert, dieser ist in gegebener Schaltung der Wert von $U_{
 nachdem sich der Kondensator übrig bleibt.
 Setzt man für $x_0$ und $x_f$ die entsprechenden Werte in die allgemeine Lösungsformel ein,
 so ist diese Form identisch mit der Gesamtlösung aus Kapitel \ref{sec:sol}.
+
+
+\newpage
 \section{Simulation in PSpice}
 \subsection{Schalterposition a}
 In der Schalterposition a muss der Kondensator $C$ nicht aufgezeichnet werden, da er nach langer Zeit wie ein Leerlauf fungiert.
 
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/SP_a}
+  \includegraphics[scale=1.6]{./Assets/SP_a}
   \captionof{figure}{PSpice-Simulation der Schalterposition a}
   \label{fig:a}
 \end{center}
@@ -443,7 +446,7 @@ In der Schalterposition a muss der Kondensator $C$ nicht aufgezeichnet werden, d
 
 \subsection{Schalterposition b}
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/SP_b}
+  \includegraphics[scale=1.6]{./Assets/SP_b}
   \captionof{figure}{PSpice-Simulation der Schalterposition b}
   \label{fig:b}
 \end{center}
@@ -456,7 +459,7 @@ Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
 
 \begin{center}
   % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
-  \includegraphics[scale=1.2]{./Assets/gesamter Schaltvorgang.pdf}
+  \includegraphics[scale=1.3]{./Assets/gesamter Schaltvorgang.pdf}
   \captionof{figure}{PSpice-Simulation des Umschaltvorgangs}
   \label{fig:umschalt}
 \end{center}
@@ -465,15 +468,6 @@ Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
 \section{Matlab-Simulation}
 \subsection{Skript}
 \lstinputlisting[language=Matlab]{./../Matlab/GR04_UE_03.m}
-
-\subsection{Plot}
-\begin{center}
-  % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
-  \includegraphics[scale=1.2]{./Assets/u_C_plot.pdf}
-  \captionof{figure}{Matlab Plot des Umschaltvorgangs von $t=T_0$ bis $t=T_0 + 5 \cdot  \tau$}
-  \label{fig:umschalt}
-\end{center}
-
 
 \subsection{Konsolenoutput}
 \begin{lstlisting}[language=Matlab, escapeinside={(*}{*)}]
@@ -491,5 +485,14 @@ Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
 
   "17 (*$\Omega$*)"
 \end{lstlisting}
+
+\subsection{Plot}
+\begin{center}
+  % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  \includegraphics[scale=1]{./Assets/u_C_plot.pdf}
+  \captionof{figure}{Matlab Plot des Umschaltvorgangs von $t=T_0$ bis $t=T_0 + 5 \cdot  \tau$}
+  \label{fig:umschalt}
+\end{center}
+
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  10 NOV 2020 22:07
 entering extended mode
 **./GR04_UE_03.tex
 (GR04_UE_03.tex
@@ -1512,24 +1512,24 @@ Missing character: There is no 0 in font nullfont!
 \absvshift=\dimen362
 \realshift=\dimen363
 \absvshift=\dimen364
- [4] [5] [6] [7]
+ [4] [5] [6] [7] [8]
 
 pdfTeX warning: pdflatex (file ./Assets/SP_a.pdf): PDF inclusion: found PDF ver
 sion <1.6>, but at most version <1.5> allowed
-<./Assets/SP_a.pdf, id=55, 157.11699pt x 184.57457pt>
+<./Assets/SP_a.pdf, id=58, 157.11699pt x 184.57457pt>
 File: ./Assets/SP_a.pdf Graphic file (type pdf)
 <use ./Assets/SP_a.pdf>
-Package pdftex.def Info: ./Assets/SP_a.pdf  used on input line 438.
-(pdftex.def)             Requested size: 418.25555pt x 491.41843pt.
-[8] [9 <./Assets/SP_a.pdf, page is rotated 90 degrees>]
+Package pdftex.def Info: ./Assets/SP_a.pdf  used on input line 441.
+(pdftex.def)             Requested size: 251.3875pt x 295.3197pt.
+[9 <./Assets/SP_a.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex (file ./Assets/SP_b.pdf): PDF inclusion: found PDF ver
 sion <1.6>, but at most version <1.5> allowed
 <./Assets/SP_b.pdf, id=67, 170.33739pt x 116.44002pt>
 File: ./Assets/SP_b.pdf Graphic file (type pdf)
 <use ./Assets/SP_b.pdf>
-Package pdftex.def Info: ./Assets/SP_b.pdf  used on input line 446.
-(pdftex.def)             Requested size: 418.25555pt x 285.9539pt.
+Package pdftex.def Info: ./Assets/SP_b.pdf  used on input line 449.
+(pdftex.def)             Requested size: 272.54016pt x 186.30426pt.
 [10 <./Assets/SP_b.pdf, page is rotated 90 degrees>]
 
 pdfTeX warning: pdflatex (file ./Assets/gesamter Schaltvorgang.pdf): PDF inclus
@@ -1538,11 +1538,16 @@ ion: found PDF version <1.6>, but at most version <1.5> allowed
 File: ./Assets/gesamter Schaltvorgang.pdf Graphic file (type pdf)
 <use ./Assets/gesamter Schaltvorgang.pdf>
 Package pdftex.def Info: ./Assets/gesamter Schaltvorgang.pdf  used on input lin
-e 459.
-(pdftex.def)             Requested size: 409.68935pt x 222.31464pt.
+e 462.
+(pdftex.def)             Requested size: 443.83229pt x 240.84204pt.
+
+Overfull \hbox (25.57674pt too wide) in paragraph at lines 462--463
+ [] 
+ []
+
 [11 <./Assets/gesamter Schaltvorgang.pdf, page is rotated 90 degrees>]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 4
-67.
+70.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
@@ -1583,21 +1588,12 @@ in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
 )
-<./Assets/u_C_plot.pdf, id=90, 614.295pt x 794.97pt>
+<./Assets/u_C_plot.pdf, id=90, 386.67159pt x 293.30177pt>
 File: ./Assets/u_C_plot.pdf Graphic file (type pdf)
 <use ./Assets/u_C_plot.pdf>
-Package pdftex.def Info: ./Assets/u_C_plot.pdf  used on input line 472.
-(pdftex.def)             Requested size: 737.1503pt x 953.95924pt.
-
-Overfull \hbox (318.89474pt too wide) in paragraph at lines 472--473
- [] 
- []
-
-[13] [14]
-Overfull \vbox (390.8291pt too high) has occurred while \output is active []
-
-
-[15 <./Assets/u_C_plot.pdf>] [16] (GR04_UE_03.aux)
+Package pdftex.def Info: ./Assets/u_C_plot.pdf  used on input line 492.
+(pdftex.def)             Requested size: 386.67064pt x 293.30106pt.
+ [13] [14 <./Assets/u_C_plot.pdf>] (GR04_UE_03.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1605,7 +1601,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  40010 strings out of 480763
  924781 string characters out of 2904059
- 1655028 words of memory out of 3000000
+ 1666028 words of memory out of 3000000
  55483 multiletter control sequences out of 15000+200000
  563396 words of font info for 112 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1636,9 +1632,9 @@ sfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb>
-Output written on GR04_UE_03.pdf (16 pages, 401236 bytes).
+Output written on GR04_UE_03.pdf (14 pages, 400663 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
+ 550 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
