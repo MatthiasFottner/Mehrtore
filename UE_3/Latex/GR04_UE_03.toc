@@ -16,4 +16,5 @@
 \contentsline {section}{\numberline {4}Simulation in PSpice}{8}%
 \contentsline {subsection}{\numberline {4.1}Schalterposition a}{8}%
 \contentsline {subsection}{\numberline {4.2}Schalterposition b}{10}%
-\contentsline {section}{\numberline {5}Matlab-Skript}{10}%
+\contentsline {subsection}{\numberline {4.3}Simulation des Umschaltvorgangs}{11}%
+\contentsline {section}{\numberline {5}Matlab-Skript}{11}%
