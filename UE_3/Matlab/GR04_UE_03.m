@@ -36,16 +36,17 @@ A_a = [g2+g3+g4, 0, -g3, -g4, 0;
 b_a = [0; 0; Is2; -Is2; Us1];
 
 %% Lösen der Systemgleichung
-x_a = A_a^(-1)*b_a
+x_a = A_a^(-1)*b_a;
 
 
 
 %% Berechnung von U_Th_a
 
-U_R2 = -x(1);
-U_R4 = x(1) - x(4);
+U_Th_a = x_a(4);
 
-U_Th_a = -U_R2 - U_R4
+U_Th_a = sprintf("%.4f V" , U_Th_a)
+
+
 
 
 %% Definition der Systemmatrix in der Form A * x = b von Schalterposition b
@@ -56,15 +57,13 @@ A_b = [g6+g7, -g7;
 b_b = [0; -Is3];
 
 %% Lösen der Systemgleichung
-x_b = A_b^(-1)*b_b
+x_b = A_b^(-1)*b_b;
 
 %% Berechnung von U_Th_b
 
-U_TH_b = x_b(1)
+U_Th_b = x_b(1);
 
-disp("")
-
-U_Th = sprintf('%.4f V', U_Th_temp)
+U_Th_b = sprintf("%.4f V" , U_Th_b)
 
 
 
