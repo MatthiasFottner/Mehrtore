@@ -1,0 +1,22 @@
+* C:\Users\matth\OneDrive - Technische Universität Graz\Dokumente\Studium\Graz\Semester_3\Elektrische_Netzwerke_und_Mehrtore\UE_git\UE_2\PSpice\Schematic2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Oct 31 21:10:23 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic2.net"
+.INC "Schematic2.als"
+
+
+.probe
+
+
+.END
