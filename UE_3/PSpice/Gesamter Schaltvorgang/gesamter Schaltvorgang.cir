@@ -1,0 +1,23 @@
+* C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_3\PSpice\Gesamter Schaltvorgang\gesamter Schaltvorgang.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Nov 10 18:09:16 2020
+
+
+
+** Analysis setup **
+.tran 0 0.101275s 0 10us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "gesamter Schaltvorgang.net"
+.INC "gesamter Schaltvorgang.als"
+
+
+.probe
+
+
+.END
