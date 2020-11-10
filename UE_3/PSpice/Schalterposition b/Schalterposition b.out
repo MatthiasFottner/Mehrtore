@@ -1,0 +1,103 @@
+
+**** 11/10/20 17:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_3\PSpice\Schalterposition b\Schalterposi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Nov 10 17:18:27 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schalterposition b.net"
+
+**** INCLUDING "Schalterposition b.net" ****
+* Schematics Netlist *
+
+
+
+R_R7         $N_0002 $N_0001  20  
+I_IS3         $N_0001 0 DC 0.5  
+R_R6         0 $N_0002  12  
+
+**** RESUMING "Schalterposition b.cir" ****
+.INC "Schalterposition b.als"
+
+
+
+**** INCLUDING "Schalterposition b.als" ****
+* Schematics Aliases *
+
+.ALIASES
+R_R7            R7(1=$N_0002 2=$N_0001 )
+I_IS3           IS3(+=$N_0001 -=0 )
+R_R6            R6(1=0 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING "Schalterposition b.cir" ****
+.probe
+
+
+.END
+
+**** 11/10/20 17:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_3\PSpice\Schalterposition b\Schalterposi
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)  -16.0000                   ($N_0002)   -6.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/10/20 17:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_3\PSpice\Schalterposition b\Schalterposi
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .05
+
