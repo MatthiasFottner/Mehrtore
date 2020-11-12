@@ -21,7 +21,6 @@
 \usepackage{mathtools}
 \usepackage{setspace}
 \usepackage{nicematrix}
-\usepackage{varwidth}
 \usepackage{pdfpages}
 % \usepackage{getlab}
 \usepackage{listings}
@@ -30,6 +29,7 @@
 \usetikzlibrary{arrows.meta}
 \tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
 \usepackage{hyperref}
+%\usepackage{varwidth}
 
 
 \definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
@@ -160,13 +160,11 @@
 % ----------------------------
 {
   \begin{center}
-    \begin{varwidth}{\textwidth}
-    \begin{enumerate}
-    \item Matthias Fottner
-    \item David Keller
-    \item  Moritz Woltron
-    \end{enumerate}
-    \end{varwidth}
+    \begin{minipage}{0.28\linewidth}
+	1. Matthias Fottner\\
+	2. David Keller\\
+	3. Moritz Woltron
+    \end{minipage}
 \end{center}
 }
 % ----------------------------
@@ -539,7 +537,7 @@ Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
   % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
   \includegraphics[width=0.8\linewidth]{./Assets/PS_SV.pdf}
   \captionof{figure}{PSpice-Plot des Umschaltvorgangs}
-  \label{fig:umschalt}
+  \label{fig:umschalt_1}
 \end{center}
 
 
@@ -570,7 +568,7 @@ Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
   % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
   \includegraphics[scale=1]{./Assets/u_C_plot.pdf}
   \captionof{figure}{Matlab Plot des Umschaltvorgangs von $t=T_0$ bis $t=T_0 + 5 \cdot  \tau$}
-  \label{fig:umschalt}
+  \label{fig:umschalt_2}
 \end{center}
 
 
