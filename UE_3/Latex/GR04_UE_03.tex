@@ -1,5 +1,7 @@
 % Created 2020-10-25 So 23:03
 % Intended LaTeX compiler: pdflatex
+\UseRawInputEncoding
+
 \documentclass[11pt]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -19,13 +21,15 @@
 \usepackage{mathtools}
 \usepackage{setspace}
 \usepackage{nicematrix}
-\usepackage{varwidth}
+\usepackage{pdfpages}
 % \usepackage{getlab}
 \usepackage{listings}
 \usepackage{pdfpages}
 \usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
 \usetikzlibrary{arrows.meta}
 \tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
+\usepackage{hyperref}
+%\usepackage{varwidth}
 
 
 \definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
@@ -156,13 +160,11 @@
 % ----------------------------
 {
   \begin{center}
-    \begin{varwidth}{\textwidth}
-    \begin{enumerate}
-    \item Matthias Fottner
-    \item David Keller
-    \item  Moritz Woltron
-    \end{enumerate}
-    \end{varwidth}
+    \begin{minipage}{0.28\linewidth}
+	1. Matthias Fottner\\
+	2. David Keller\\
+	3. Moritz Woltron
+    \end{minipage}
 \end{center}
 }
 % ----------------------------
@@ -186,27 +188,29 @@
 \section{Bestimmen des Anfangszustands von $u_C$} % David
 \subsection{Schaltplan zur Schalterposition a}
 
+Die Schaltung befindet sich bis zum Zeitpunkt $t = T_0$ in Schalterposition a. In Abbildung \ref{fig:schaltplan_a} ist das Ersatzschaltbild für den Ladevorgang zuständigen Teil des Netzwerks zu sehen. Da nach langer Zeit ein Kondensator als Leerlauf betrachtet werden darf, kann $I_{R5} = i_C = 0 \unit{A}$ gesetzt werden. Durch Netzwerkanalyse mittels des KSVs lässt sich $u_C$ als $U_{n4}$ ausdrücken. (vgl. Abbildung \ref{fig:schaltplan_a})
+
 \begin{figure}[!htb]
 \begin{center}
         \begin{circuitikz} [european resistors, scale=1]
                 \clip (-2,-5.7) rectangle (12.5, 5);
 
-                \draw(0,0) to [R=$R_3$, v={\color{blue}{$U_{R3}$}}, i={\color{red}{$I_{R3}$}}, *-*] (4,0);
+                \draw(0,0) to [R=$R_3$, v={\color{blue}{$U_{R3}$}}, i={\color{red}{$I_{R3}$}}, *-*] (4,0) node[label={[font=\footnotesize] 45:n1}] {};
                 \draw(4,0) to [R=$R_4$, v={\color{blue}{$U_{R4}$}}, i={\color{red}{$I_{R4}$}}] (4,4);
                 \draw(4,0) to [R=$R_2$, v<={\color{blue}{$U_{R2}$}}, i<={\color{red}{$I_{R2}$}}] (4,-4);
 
 
 
                 \draw(0,0) node[label={[font=\footnotesize]-190:n3}] {} to (0,4);
-                \draw(0,4) to[isource, i<={\color{red}{$I_{S2}$}}, -*] (4,4) node[label={[font=\footnotesize]90:n2}] {};
-                \draw(4,4) to [R=$R_5$, v={\color{blue}{$U_{R5} = 0\unit{A}$}}, i={\color{red}{$I_{R5} = 0\unit{A}$}}, -o] (8,4);
+                \draw(0,4) to[isource, i<={\color{red}{$I_{S2}$}}, -*] (4,4) node[label={[font=\footnotesize]90:n4}] {};
+                \draw(4,4) to [R=$R_5$, v={\color{blue}{$U_{R5} = 0\unit{V}$}}, i={\color{red}{$I_{R5} = 0\unit{A}$}}, -o] (8,4);
                 \draw(8,4) to (10,4);
 
-                \draw(0,0) to[vsource, v<={\color{blue}{$U_{S1}$}}, i<={\color{red}{$I_{S1}^?$}}] (0,-4);
+                \draw(0,0) to[vsource, v<={\color{blue}{$U_{S1}$}}, i<={\color{red}{$I_{S1}^?$}}] (0,-4) node[label={[font=\footnotesize]-90:n2}] {};
                 \draw(0,-4) to [R=$R_1$, v={\color{blue}{$U_{R1}$}}, i={\color{red}{$I_{R1}$}}, *-*] (4,-4) node[rground]{};
                 \draw(4,-4) to [short, -o] (8,-4);
                 \draw(8,-4) to (10,-4);
-                \draw(10,-4) to [C, v<={\color{blue}{$u_{C} = 0\unit{A}$}}, i<={\color{red}{$i_{C} = 0\unit{A}$}}] (10,4);
+                \draw(10,-4) to [C, v<={\color{blue}{$u_{C}$}}, i<={\color{red}{$i_{C} = 0\unit{A}$}}] (10,4);
 
                 \draw[FARROW, green!50!black] (-0.2, 0) to[bend left=-90, looseness=2.2] node[below left]{$U_{n3}$} (3.9,-4.2);
                 \draw[FARROW, green!50!black] (4.1, 3.95) to[bend right=-75, looseness=0.9] node[below right]{$U_{n4}$} (4.4,-3.9);
@@ -219,16 +223,24 @@
 
         \end{circuitikz}
 \end{center}
-\caption{Netzwerk mit allen eingezeichneten Strömen, (Knoten-)spannungen und Knoten}
+\caption{relevantes Netzwerk zur Schalterposition a mit allen eingezeichneten Strömen, (Knoten-)spannungen und Knoten}
 \label{fig:schaltplan_a}
 \end{figure}
 
 \pagebreak
 
 \subsection{Erstellen der erweiterten KSV-Matrix}
+
+Durch "hinschauen" kann die netzwerkzugehörige KSV-Matrix aufgestellt werden. Diese besteht zum einen aus der Admittanzmatrix und zum anderen aus der zusätzlichen Gleichung für den unbekannten Strom $I^?_{S1}$. Jene erhält man über die Darstellung der Quellspannung $U_{S1}$ mit den Knotenspannungen $U_{n2}$ und $U_{n3}$:
+
+\begin{equation*}
+	U_{S1} = U_{n2} - U_{n3} 
+\end{equation*}
+
+
 \begin{align*}
   \renewcommand{\arraystretch}{1.5}
-  \begin{bNiceArray}[first-row, first-col]{c:c:c:c:c}
+  \underbrace{\begin{bNiceArray}[first-row, first-col]{c:c:c:c:c}
     & n1 & n2 & n3 & n4 & \color{red}{I_{S1}^?} \\
     n1 & G_2+G_3+G_4 & 0 & -G_3 & -G_4 & 0 \\
     \hdottedline
@@ -239,29 +251,29 @@
     n4 & -G_4 & 0 & 0 & G_4 & 0 \\
     \hdottedline
     \color{red}{I_{S1}^?} & 0 & 1 & -1 & 0 & 0
-  \end{bNiceArray}
-                                             \begin{Bmatrix}
+  \end{bNiceArray}}_{A_a}
+                                             \underbrace{\begin{Bmatrix}
                                                U_{n1} \\
                                                U_{n2} \\
                                                U_{n3} \\
                                                U_{n4} \\
                                                \color{red}{I_{S1}^?}
-                                             \end{Bmatrix} =
-  \begin{Bmatrix}
+                                             \end{Bmatrix}}_{x_a} =
+  \underbrace{\begin{Bmatrix}
     0 \\
     0 \\
     \color{red}{I_{S2}} \\
     \color{red}{-I_{S2}}\\
     \color{blue}{U_{S1}}
-  \end{Bmatrix}\\
+  \end{Bmatrix}}_{b_a}\\
 \end{align*}
 
 
 
-Man erhält mithilfe von Matlab für $x$:
+Man erhält mithilfe von Matlab für $x_a$:
 \begin{equation*}
   \renewcommand{\arraystretch}{1.5}
-  x = \begin{Bmatrix}
+  x_a = \begin{Bmatrix}
     U_{n1} \\
     U_{n2} \\
     U_{n3} \\
@@ -277,25 +289,31 @@ Man erhält mithilfe von Matlab für $x$:
   \end{Bmatrix}
 \end{equation*}
 
-\subsection{Bestimmen von $u_C$} \label{sec:u_c}
+\subsection{Bestimmen von $U_{C_a}$} \label{sec:u_c}
 
-Wie sich im Schaltplan in Abbildung \ref{fig:schaltplan_a} erkennen lässt, entspricht $U_{C,a} = U_{n4}$:
+Wie sich im Schaltplan in Abbildung \ref{fig:schaltplan_a} erkennen lässt, entspricht $U_{C_a} = U_{n4}$:
 
 \begin{equation*}
-  U_{C,a} = U_{n4} = -4,32 \unit{V}
+  U_{C_a} = U_{n4} = -4,32 \unit{V}
 \end{equation*}
 
 
-
+\pagebreak
 
 \section{Aufstellen der Differentialgleichung} % Matthias
 \subsection{Schaltplan zur Schalterposition b}
+
+Zum Zeitpunkt $t = T_0$ wird der Schalter in die b Position gebracht und der sich vom Kondensator links befindliche Teil der Schaltung getrennt. Um das Aufstellen der Differentialgleichung zu erleichtern, kann mittels KSV die Theveninquelle und der dazugehörige Innenwiderstand ermittelt werden. (vgl. Abbildung \ref{fig:SP_b} und \ref{fig:TQ_b})
+
+\begin{figure}[!htb]
+\begin{center}
 \begin{circuitikz}
+	
   \clip (-0.8,-1) rectangle (11.5, 4.8);
   \draw (0,0) to[C, v<={\color{blue}{$u_C$}}, i<={\color{red}{$i_C$}}] ++ (0,4)
   to[short, -o] ++ (2,0)
-  to[R=$R_5$, v<={\color{blue}{$u_{R5}$}}, i<={\color{red}{$i_{R5}$}}, o-*] ++ (4,0)
-  to[R=$R_7$, v={\color{blue}{$U_{R7}$}}, i={\color{red}{$I_{R7}$}}, *-] ++ (4,0)
+  to[R=$R_5$, v<={\color{blue}{$u_{R5}$}}, i<={\color{red}{$i_{R5}$}}, o-*] ++ (4,0) node[label={[font=\footnotesize]90:n1}] {}
+  to[R=$R_7$, v={\color{blue}{$U_{R7}$}}, i={\color{red}{$I_{R7}$}}, *-*] ++ (4,0) node[label={[font=\footnotesize]90:n2}] {}
   to[isource, i={\color{red}{$I_{S3}$}}] ++ (0,-4)
   to[short, -o] ++ (-4, 0)
   to[short, *-o] ++ (-4,0)
@@ -308,33 +326,86 @@ Wie sich im Schaltplan in Abbildung \ref{fig:schaltplan_a} erkennen lässt, ents
   % \draw[gray,step=0.25] (-6,-3) grid (16.5, 11);
   % \draw [brown] (current bounding box.south west) rectangle (current bounding box.north east);
 \end{circuitikz}
+\caption{relevantes Netzwerk zur Schalterposition a mit allen eingezeichneten Strömen, (Knoten-)spannungen und Knoten}
+\label{fig:SP_b}
+\end{center}
+\end{figure}
 
-\begin{circuitikz}
-  \draw (0,0) to[C, v<={\color{blue}{$u_C$}}] (0,4)
-              to[short, -o] ++ (2,0)
-              to[R=$R_{Th}$, v<={\color{blue}{$u_{RTh}$}}, i<={\color{red}{$i_C$}}] ++ (4,0)
-              to[vsource, v={\color{blue}{$U_{Th}$}}] ++ (0,-4)
-              to[short, -o] ++ (-4, 0)
-              to[short] ++ (-2,0);
-\end{circuitikz}
+\begin{figure}[!htb]
+	\begin{center}
+		\begin{circuitikz}
+			\draw (2,4)
+			to[R=$R_{5}$, o-] ++ (4,0)
+			to[R=$R_{6}$] ++ (0,-4)
+			to[short, -o] ++ (-4, 0);
+			\draw[FARROW, label=$R_{Th}$] (1,2)  -- (2,2);
+			\draw (0,1) to [open] (0,2) node[label={[font=\footnotesize]0:$R_{Th}$}] {};
+ 		\end{circuitikz}
+		\caption{Schaltbild zur Bestimmung des Innenwiderstandes $R_{Th}$ }
+		\label{fig:RTh_b}
+	\end{center}
+\end{figure}
+
+Der Innenwiderstand kann folgendermaßen berechnet werden:
+
+\begin{equation*}
+R_{Th} = R_5 + R_6 = 17 \unit{$\Omega$}
+\end{equation*}
+
 
 \subsection{Erstellen der KSV-Matrix}
+
+Durch "hinschauen" kann erneut eine KSV-Matrix zu dem Netzwerk in Abbildung \ref{fig:SP_b} aufgestellt werden und mit der Lösung $x_b\ U_{Th}$ bestimmt werden.
+
 \begin{align*}
   \renewcommand{\arraystretch}{1.5}
-  \begin{bNiceArray}{c:c}
+  \underbrace{\begin{bNiceArray}{c:c}
     G_6 + G_7 & -G_7 \\
     \hdottedline
     -G_7 & G_7
-  \end{bNiceArray}
-                            \begin{Bmatrix}
+  \end{bNiceArray}}_{A_b}
+                            \underbrace{\begin{Bmatrix}
                               U_{n1} \\
                               U_{n2} \\
-                            \end{Bmatrix} =
-  \begin{Bmatrix}
+                            \end{Bmatrix}}_{x_b} =
+  \underbrace{\begin{Bmatrix}
     0 \\
     -I_{S3}
-  \end{Bmatrix}
+  \end{Bmatrix}}_{b_b}
 \end{align*}
+
+\begin{equation*}
+\renewcommand{\arraystretch}{1.5}
+x_b = \begin{Bmatrix}
+U_{n1} \\
+U_{n2} \\
+\end{Bmatrix} = 
+	\begin{Bmatrix}
+		-6 \unit{V}\\
+		-16 \unit{V}\\
+		\end{Bmatrix}
+\end{equation*}
+
+\begin{equation*}
+	U_{Th} = U_{n1} = -6 \unit{V}
+\end{equation*}
+
+Mit den ermittelten Werten für $U_{Th}$ und $R_{Th}$ kann die Ersatzquellenschaltung erstellt und anschließend die Differentialgleichung aufgestellt werden.
+
+\begin{figure}[!htb]
+	\begin{center}
+		\begin{circuitikz}
+			\draw (0,0) to[C, v<={\color{blue}{$u_C$}}] (0,4)
+			to[short, -o] ++ (2,0)
+			to[R=$R_{Th}$, v<={\color{blue}{$u_{RTh}$}}, i<={\color{red}{$i_C$}}] ++ (4,0)
+			to[vsource, v={\color{blue}{$U_{Th}$}}] ++ (0,-4)
+			to[short, -o] ++ (-4, 0)
+			to[short] ++ (-2,0);
+		\end{circuitikz}
+		\caption{Thevenin-Ersatzquelle des Netzwerks aus Abbildung \ref{fig:SP_b}}
+		\label{fig:TQ_b}
+	\end{center}
+\end{figure}
 
 \subsection{Lösen der Differentialgleichung}
 \subsubsection{(Laplace Lösung)}
@@ -402,7 +473,8 @@ Die Gesamtlösung der Differentialgleichung setzt sich nun aus der homogenen und
 \end{equation}
 
 \subsubsection{Anfangswertproblem}
-In Kapitel \ref{sec:u_c} wurde bereits der Spannungswert des Kondensators $u_{C,a} = u_C(T_0)$ zum Zeitpunkt $t \leq T_0$ ausgerechnet.
+In Kapitel \ref{sec:u_c} wurde bereits der Spannungswert des Kondensators $U_{C_a} = u_C(T_0)$ zum Zeitpunkt $t \leq T_0$ ausgerechnet.
+Da die Spannung am Kondensator eine stetige Größe ist, ist $u_C^+(T_0)$ = $u_C^-(T_0)$.
 Diesen Anfangswert der stetigen Kondensatorspannung $u_C$ zum Zeitpunkt $T_0$ kann man nun dazu verwenden,
 den Wert von K aus der Formel \ref{eq:diff} auszurechnen.
 \begin{align*}
@@ -422,17 +494,20 @@ Transiente Vorgänge lassen sich verallgemeinert mit folgender Lösungsformel l�
   x(t) = x_f + \left[ x_0 - x_f \right] \cdot e^{-\frac{t-t_0}{\tau}}
 \end{equation*}
 
-$x_0$ entspricht dem Anfangswert, welcher bei $t=T_0$ den Wert $u_C(T_0) = U_{C,a}$ hat.
+$x_0$ entspricht dem Anfangswert, welcher bei $t=T_0$ den Wert $u_C(T_0) = U_{C_a}$ hat.
 $x_f$ entsprich dem Endwert, dieser ist in gegebener Schaltung der Wert von $U_{Th}$, da dieser Spannungswert übrig bleibt,
-nachdem sich der Kondensator übrig bleibt.
+nachdem sich der Kondensator entladen hat.
 Setzt man für $x_0$ und $x_f$ die entsprechenden Werte in die allgemeine Lösungsformel ein,
 so ist diese Form identisch mit der Gesamtlösung aus Kapitel \ref{sec:sol}.
+
+
+\newpage
 \section{Simulation in PSpice}
 \subsection{Schalterposition a}
 In der Schalterposition a muss der Kondensator $C$ nicht aufgezeichnet werden, da er nach langer Zeit wie ein Leerlauf fungiert.
 
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/Schalterposition a - PSpice}
+  \includegraphics[scale=1.6]{./Assets/SP_a}
   \captionof{figure}{PSpice-Simulation der Schalterposition a}
   \label{fig:a}
 \end{center}
@@ -440,7 +515,7 @@ In der Schalterposition a muss der Kondensator $C$ nicht aufgezeichnet werden, d
 
 \subsection{Schalterposition b}
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/Schalterposition b - PSpice}
+  \includegraphics[scale=1.6]{./Assets/SP_b}
   \captionof{figure}{PSpice-Simulation der Schalterposition b}
   \label{fig:b}
 \end{center}
@@ -452,12 +527,49 @@ Dabei ist der Schalter tOpen zum Zeitpunkt $0 < t \leq 100 \unit{ms}$ geschlosse
 Zum Zeitpunkt $t > 100 \unit{ms}$ ist tOpen offen und tClose geschlossen.
 
 \begin{center}
-  \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  \includegraphics[scale=1.3]{./Assets/gesamter Schaltvorgang.pdf}
   \captionof{figure}{PSpice-Simulation des Umschaltvorgangs}
   \label{fig:umschalt}
 \end{center}
 
-\section{Matlab-Skript}
+\begin{center}
+  % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  \includegraphics[width=0.8\linewidth]{./Assets/PS_SV.pdf}
+  \captionof{figure}{PSpice-Plot des Umschaltvorgangs}
+  \label{fig:umschalt_1}
+\end{center}
+
+
+\newpage
+\section{Matlab-Simulation}
+\subsection{Skript}
+\lstinputlisting[language=Matlab]{./../Matlab/GR04_UE_03.m}
+
+\subsection{Konsolenoutput}
+\begin{lstlisting}[language=Matlab, escapeinside={(*}{*)}]
+  U_C_a =
+
+  "-4.3200 V"
+
+
+  U_Th =
+
+  "-6.0000 V"
+
+
+  R_Th =
+
+  "17 (*$\Omega$*)"
+\end{lstlisting}
+
+\subsection{Plot}
+\begin{center}
+  % \includegraphics[width=1\linewidth]{./Assets/gesamter Schaltvorgang - PSpice}
+  \includegraphics[scale=1]{./Assets/u_C_plot.pdf}
+  \captionof{figure}{Matlab Plot des Umschaltvorgangs von $t=T_0$ bis $t=T_0 + 5 \cdot  \tau$}
+  \label{fig:umschalt_2}
+\end{center}
 
 
 \end{document}
