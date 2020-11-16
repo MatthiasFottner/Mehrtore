@@ -1,0 +1,176 @@
+% Created 2020-10-25 So 23:03
+% Intended LaTeX compiler: pdflatex
+\UseRawInputEncoding
+
+\documentclass[11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{trfsigns}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{MnSymbol}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{nicematrix}
+\usepackage{pdfpages}
+% \usepackage{getlab}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
+\usepackage{hyperref}
+% \usepackage{varwidth}
+
+
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
+\lstset{
+  language= Matlab,                     % Setzt die Sprache
+  basicstyle=\scriptsize\ttfamily,     % Setzt den Standardstil
+  % keywordstyle=\color{red}\bfseries,    % Setzt den Stil für Schlüsselwörter
+  identifierstyle=\color{blue},        % Identifier bekommen keine gesonderte formatierung
+  commentstyle=\color{darkspringgreen},        % Stil für Kommentare
+  stringstyle=\ttfamily,             % Stil für Strings (gekennzeichnet mit "String")
+  breaklines=true,             % Zeilen werden umgebrochen
+  numbers=left,                 % Zeilennummern links
+  numberstyle=\tiny,             % Stil für die Seitennummern
+  frame=single,                 % Rahmen
+  % backgroundcolor=\color{myGrey},     % Hintergrundfarbe
+  % caption={Java-Code},             % Caption
+  tabsize=2                % Größe der Tabulatoren
+}
+
+
+
+\newcommand{\GETHeader}[6]{%
+  \begin{titlepage}
+    \pagestyle{empty} \enlargethispage*{25cm}\samepage{
+      \vspace*{-2.5cm}
+      \begin{center}
+        %
+        \begin{tabular}[b]{lr}
+          %
+          \hspace*{-1.5cm}
+          \begin{tabular}{p{3.8cm}}
+            \includegraphics[width=3.8cm]{./Figures/TUGraz}
+          \end{tabular}
+          %
+          \hspace*{-1cm}
+          %
+          %
+          \begin{tabular}{p{13.8cm}}
+            \begin{flushright}
+              \large
+              Institut für Grundlagen und Theorie der Elektrotechnik\\
+              ~\\
+            \end{flushright}
+          \end{tabular}
+        \end{tabular}
+
+        \vspace*{2.2cm}
+        %
+        \Huge {Elektrische Netzwerke und Mehrtore \\ Übung\\} %
+        \vspace*{.5cm} \Large{ Wintersemester 2020\\}
+        %
+        \vspace*{1.5cm}
+
+        \Huge{\textbf{#1}\\}
+
+        %
+        % \vspace*{0.8cm} \Large{Übungsdatum: {#2}\\}
+        %
+        \vspace*{1cm} \vfill
+        %
+        \Large{Gruppe: {#2}\\} \vspace*{0.5cm}%
+
+
+        % \Large{Protokollführer(in): {#3}\\} \vspace*{1cm}
+
+        \Large{Gruppenteilnehmer:\\} \vspace*{.1cm}
+        % Name der beteiligten Studierenden
+        \Large{#3} \vspace{1cm}
+        %
+        %
+        \Large{Vortragende: #4\\} \vspace*{.1cm}   %\vspace*{1.5cm}
+        % \Large{Betreuer(in): #6\\}
+        \vspace*{1.5cm}
+        %
+        \Large{#5, am #6}
+      \end{center}}%
+    %
+    \clearpage
+  \end{titlepage}}
+
+
+
+
+
+
+
+
+\begin{document}
+
+\GETHeader                                                                              %  Bitte Ausfüllen!!!
+% ----------------------------
+{Protokoll Übung 3: \\ Schaltvorgang Kondensator}                         %  Übungstitel
+% ----------------------------
+% {25. Mai 2020}                                                                  %  Übungsdatum
+% ----------------------------
+{04}                                                                   %  Gruppen-Nr.
+% ----------------------------
+% {Matthias Fottner}                                                                      % Name des Protokollführers oder der Protokollführerin
+% ----------------------------
+{
+  \begin{center}
+    \begin{minipage}{0.28\linewidth}
+      1. Matthias Fottner\\
+      2. David Keller\\
+      3. Moritz Woltron
+    \end{minipage}
+  \end{center}
+}
+% ----------------------------
+{Helena Grabner}                                                                     %  Laborleiter(in)
+% {Übung 2}                                                               %  Betreuer(in)
+% ----------------------------
+{Graz}                                                                                  %  Ort der Protokollerstellung
+{\today}                                                                %  Datum Protokollerstellung
+
+
+\newcommand{\unit}[1]{\,\text{#1}}
+
+
+\tableofcontents
+
+\newpage
+
+
+\allowdisplaybreaks
+
+
+\section{Ermitteln der DGL von $i_L(t)$ für $0 \leq t \leq 2\tau_1$} %David
+\subsection{Schaltbild des Netzwerks für $0 \leq t \leq 2\tau_1$}%David
+\subsection{Aufstellen der DGL mithilfe der allgemeinen Lösungsformel} %David
+\section{Ermitteln der DGL von $i_L(t)$ für $t > 2\tau_1$}%Matthias
+\subsection{Schaltbild des Netzwerks für $t > 2\tau_1$}%Matthias
+\subsection{Aufstellen der Kirchhoff'schen Knoten- und Maschengleichungen}%Matthias
+\subsection{Herleitung der DGL 2. Ordnung von $i_L(t)$ für $t > 2\tau_1$}%Matthias
+\subsection{Interpretation der Parameter $\delta$,  $\omega_0$ und $\Omega_d$}%Matthias
+\subsection{Anfangswertproblem}%Matthias
+\subsubsection{Anfangsbedingungen}%Matthias
+\subsubsection{Lösen von $K_1$ und $K_2$}%Matthias
+\section{Plots und Simulationen} %David
+\subsection{Matlab-Plot $i_L(t)$} %David
+\subsection{PSpice-Plot $i_L(t)$ und $u_L(t)$} %David
+
+\subsection{}
+\end{document}
