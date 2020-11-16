@@ -1,0 +1,223 @@
+% Created 2020-10-25 So 23:03
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{MnSymbol}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{nicematrix}
+\usepackage{varwidth}
+% \usepackage{getlab}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
+
+
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
+\lstset{
+  language= Matlab,                     % Setzt die Sprache
+  basicstyle=\scriptsize\ttfamily,     % Setzt den Standardstil
+  % keywordstyle=\color{red}\bfseries,    % Setzt den Stil für Schlüsselwörter
+  identifierstyle=\color{blue},        % Identifier bekommen keine gesonderte formatierung
+  commentstyle=\color{darkspringgreen},        % Stil für Kommentare
+  stringstyle=\ttfamily,             % Stil für Strings (gekennzeichnet mit "String")
+  breaklines=true,             % Zeilen werden umgebrochen
+  numbers=left,                 % Zeilennummern links
+  numberstyle=\tiny,             % Stil für die Seitennummern
+  frame=single,                 % Rahmen
+  % backgroundcolor=\color{myGrey},     % Hintergrundfarbe
+  % caption={Java-Code},             % Caption
+  tabsize=2                % Größe der Tabulatoren
+}
+
+
+
+\newcommand{\GETHeader}[6]{%
+  \begin{titlepage}
+    \pagestyle{empty} \enlargethispage*{25cm}\samepage{
+      \vspace*{-2.5cm}
+      \begin{center}
+        %
+        \begin{tabular}[b]{lr}
+          %
+          \hspace*{-1.5cm}
+          \begin{tabular}{p{3.8cm}}
+            \includegraphics[width=3.8cm]{./Figures/TUGraz}
+          \end{tabular}
+          %
+          \hspace*{-1cm}
+          %
+          %
+          \begin{tabular}{p{13.8cm}}
+            \begin{flushright}
+              \large
+              Institut für Grundlagen und Theorie der Elektrotechnik\\
+              ~\\
+            \end{flushright}
+          \end{tabular}
+        \end{tabular}
+
+        \vspace*{2.2cm}
+        %
+        \Huge {Elektrische Netzwerke und Mehrtore \\ Übung\\} %
+        \vspace*{.5cm} \Large{ Wintersemester 2020\\}
+        %
+        \vspace*{1.5cm}
+
+        \Huge{\textbf{#1}\\}
+
+        %
+        % \vspace*{0.8cm} \Large{Übungsdatum: {#2}\\}
+        %
+        \vspace*{1cm} \vfill
+        %
+        \Large{Gruppe: {#2}\\} \vspace*{0.5cm}%
+
+
+        % \Large{Protokollführer(in): {#3}\\} \vspace*{1cm}
+
+        \Large{Gruppenteilnehmer:\\} \vspace*{.1cm}
+        % Name der beteiligten Studierenden
+        \Large{#3} \vspace{1cm}
+        %
+        %
+        \Large{Vortragende: #4\\} \vspace*{.1cm}   %\vspace*{1.5cm}
+        % \Large{Betreuer(in): #6\\}
+        \vspace*{1.5cm}
+        %
+        \Large{#5, am #6}
+      \end{center}}%
+    %
+    \clearpage
+  \end{titlepage}}
+
+
+
+
+
+\begin{document}
+
+\GETHeader                                                                              %  Bitte Ausfüllen!!!
+% ----------------------------
+{Protokoll Übung 3: \\ Schaltvorgang Kondensator}                         %  Übungstitel
+% ----------------------------
+% {25. Mai 2020}                                                                  %  Übungsdatum
+% ----------------------------
+{04}                                                                   %  Gruppen-Nr.
+% ----------------------------
+% {Matthias Fottner}                                                                      % Name des Protokollführers oder der Protokollführerin
+% ----------------------------
+{
+  \begin{center}
+    \begin{varwidth}{\textwidth}
+    \begin{enumerate}
+    \item Matthias Fottner
+    \item David Keller
+    \item  Moritz Woltron
+    \end{enumerate}
+    \end{varwidth}
+\end{center}
+}
+% ----------------------------
+{Helena Grabner}                                                                     %  Laborleiter(in)
+% {Übung 2}                                                               %  Betreuer(in)
+% ----------------------------
+{Graz}                                                                                  %  Ort der Protokollerstellung
+{\today}                                                                %  Datum Protokollerstellung
+
+
+\newcommand{\unit}[1]{\,\text{#1}}
+
+
+\tableofcontents
+
+\newpage
+
+
+
+\section{Bestimmen des Anfangszustands von $u_C$}
+\subsection{Schaltplan zur Schalterposition a}
+\begin{figure}[!htb]
+	\centering
+	\hspace*{-40pt}
+	\begin{circuitikz}[scale=0.85]
+		\clip (-4.5,-2.5) rectangle (16.5, 11);
+		% create all nodes
+		\draw node[label=left:$n_1$](n1) at (0,4)
+		node[label=south east:$n_2$](n2) at (4,4)
+		node[label=south east:$n_3$](n3) at (8,4)
+		node[label=north:$n_4$](n4) at (4,8)
+		node[label=left:$n_5$](n5) at (0,8)
+		node[label=north:$a$](a) at (10,8)
+		node[label=south:$b$](b) at (10,4);
+		
+		% draw all resistors
+		\draw (n5) to[R=$R_1$, v={\color{blue}{$U_{R1}$}}, i={\color{red}{$I_{R1}$}}, o-o] (n1)
+		(n1) to[short] ++ (0.4, 0) to[R=$R_2$, v={\color{blue}{$U_{R2}$}}, i={\color{red}{$I_{R2}$}}] ++ (2.7, 0 ) to[short] (n2)
+		(n2) to[R=$R_3$, v={\color{blue}{$U_{R3}$}}, i={\color{red}{$I_{R3}$}}, o-o] (n4)
+		(n2) to[short] ++ (0,-1) to[R=$R_4$, v={\color{blue}{$U_{R4}$}}, i={\color{red}{$I_{R4}$}}] ++ (0,-2.5) to[short] (4,0)
+		(8,8) to[R=$R_5$, v={\color{blue}{$U_{R5}$}}, i={\color{red}{$I_{R5}$}}, o-o] (n3)
+		(4,0) to[R=$R_6$, v={\color{blue}{$U_{R6}$}}, i={\color{red}{$I_{R6}$}}, o-] (8,0)
+		(12,8) to[R=$R_7$, v={\color{blue}{$U_{R7}$}}, i={\color{red}{$I_{R7}$}}, o-o] (12,4);
+		
+		% draw sources
+		\draw (0,0) to[cvsource={\color{blue}{$U_{S1}$}}, i>={\color{red}{$I_{S1}^?$}}] (n1)
+		(n4) to[vsource, v_={\color{blue}{$U_{S2}$}}, i>_={\color{red}{$I_{S2}^?$}}] (n5)
+		(n2) to[short, o-] ++ (0.5,0) to[isource, v>={\color{blue}{$U_{S3}^?$}}, i>={\color{red}{$I_{S3}$}}] ++ (3,0) to[short, -o] (n3)
+		(15,4) to[isource, v>={\color{blue}{$U_{S4}^?$}}, i={\color{red}{$I_{S4}$}}] (15,8);
+		
+		% fill in wires
+		\draw (0,0) to[short] (4,0);
+		\draw (8,0) to[short] (8,4);
+		\draw (n4) to[short] ++ (4,0);
+		\draw (n3) to[short, -o] ++ (2,0) to[short] ++ (2,0) to[short] ++ (3,0);
+		\draw (8,8) to[short, -o] ++ (2,0) to[short] ++ (2,0) to[short] ++ (3,0);
+		
+		% draw ground
+		\draw (4,0) node[rground]{};
+		
+		% draw node currents
+		\draw[european voltages, color=green!50!black] (n2) to[open, v=$U_{n2}$] (2.1,0)
+		(n1) to[open, v^=$U_{n1}$] (0.7,0)
+		(-1.5,8) to[open, v=$U_{n5}$] (-1.5,0);
+		
+		
+		% \draw[FARROW, green!50!black] plot [smooth, tension=1] coordinates {(8.7,3.3) (9,-1) (4,-1)}
+		%\draw[FARROW, green!50!black] (8.6, 3.2) to[bend left=90, looseness=2] node[below right]{$U_{n3}$} (4.5,-1);
+		%\draw[FARROW, green!50!black] (3, 9) to[bend right=110, looseness=1.9] node[below left]{$U_{n4}$} (0,-0.5);
+		
+		% \draw [brown] (current bounding box.south west) rectangle (current bounding box.north east);
+		% \draw[gray,step=0.25] (-6,-3) grid (16.5, 11);
+		
+	\end{circuitikz}
+	\caption{Netzwerk mit allen eingezeichneten Strömen, (Knoten-)spannungen und Knoten}
+	\label{fig:net}
+\end{figure}
+\subsection{Erstellen der erweiterten KSV-Matrix}
+\subsection{Bestimmen von $u_C$}
+\section{Aufstellen der Differentialgleichung}
+\subsection{Schaltplan zur Schalterposition b}
+\subsection{Erstellen der KSV-Matrix}
+\subsection{Lösen der Differentialgleichung}
+\subsubsection{Homogene Lösung}
+\subsubsection{Inhomogene Lösung}
+\subsubsection{Anfangswertproblem}
+\subsubsection{Gesamtlösung}
+\section{Vergleich mit allgemeiner Lösungsformel}
+\section{Simulation in PSpice}
+\section{Matlab-Skript}
+
+
+\end{document}

@@ -1,0 +1,61 @@
+
+**** 11/15/20 17:08:00 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\SP_1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 15 17:07:42 2020
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "SP_1.net"
+
+**** INCLUDING SP_1.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  50  
+V_V1         $N_0001 $N_0003 DC 10  
+L_L1         $N_0003 $N_0002  100mH  
+
+**** RESUMING SP_1.cir ****
+.INC "SP_1.als"
+
+
+
+**** INCLUDING SP_1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+V_V1            V1(+=$N_0001 -=$N_0003 )
+L_L1            L1(1=$N_0003 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING SP_1.cir ****
+.probe
+
+
+.END
+
+ERROR -- Node $N_0002 is floating
+ERROR -- Node $N_0001 is floating
+ERROR -- Node $N_0003 is floating

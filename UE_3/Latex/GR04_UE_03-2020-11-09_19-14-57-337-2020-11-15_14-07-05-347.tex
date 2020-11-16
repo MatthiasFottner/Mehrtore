@@ -1,0 +1,170 @@
+% Created 2020-10-25 So 23:03
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{MnSymbol}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{nicematrix}
+\usepackage{varwidth}
+% \usepackage{getlab}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
+
+
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
+\lstset{
+  language= Matlab,                     % Setzt die Sprache
+  basicstyle=\scriptsize\ttfamily,     % Setzt den Standardstil
+  % keywordstyle=\color{red}\bfseries,    % Setzt den Stil für Schlüsselwörter
+  identifierstyle=\color{blue},        % Identifier bekommen keine gesonderte formatierung
+  commentstyle=\color{darkspringgreen},        % Stil für Kommentare
+  stringstyle=\ttfamily,             % Stil für Strings (gekennzeichnet mit "String")
+  breaklines=true,             % Zeilen werden umgebrochen
+  numbers=left,                 % Zeilennummern links
+  numberstyle=\tiny,             % Stil für die Seitennummern
+  frame=single,                 % Rahmen
+  % backgroundcolor=\color{myGrey},     % Hintergrundfarbe
+  % caption={Java-Code},             % Caption
+  tabsize=2                % Größe der Tabulatoren
+}
+
+
+
+\newcommand{\GETHeader}[6]{%
+  \begin{titlepage}
+    \pagestyle{empty} \enlargethispage*{25cm}\samepage{
+      \vspace*{-2.5cm}
+      \begin{center}
+        %
+        \begin{tabular}[b]{lr}
+          %
+          \hspace*{-1.5cm}
+          \begin{tabular}{p{3.8cm}}
+            \includegraphics[width=3.8cm]{./Figures/TUGraz}
+          \end{tabular}
+          %
+          \hspace*{-1cm}
+          %
+          %
+          \begin{tabular}{p{13.8cm}}
+            \begin{flushright}
+              \large
+              Institut für Grundlagen und Theorie der Elektrotechnik\\
+              ~\\
+            \end{flushright}
+          \end{tabular}
+        \end{tabular}
+
+        \vspace*{2.2cm}
+        %
+        \Huge {Elektrische Netzwerke und Mehrtore \\ Übung\\} %
+        \vspace*{.5cm} \Large{ Wintersemester 2020\\}
+        %
+        \vspace*{1.5cm}
+
+        \Huge{\textbf{#1}\\}
+
+        %
+        % \vspace*{0.8cm} \Large{Übungsdatum: {#2}\\}
+        %
+        \vspace*{1cm} \vfill
+        %
+        \Large{Gruppe: {#2}\\} \vspace*{0.5cm}%
+
+
+        % \Large{Protokollführer(in): {#3}\\} \vspace*{1cm}
+
+        \Large{Gruppenteilnehmer:\\} \vspace*{.1cm}
+        % Name der beteiligten Studierenden
+        \Large{#3} \vspace{1cm}
+        %
+        %
+        \Large{Vortragende: #4\\} \vspace*{.1cm}   %\vspace*{1.5cm}
+        % \Large{Betreuer(in): #6\\}
+        \vspace*{1.5cm}
+        %
+        \Large{#5, am #6}
+      \end{center}}%
+    %
+    \clearpage
+  \end{titlepage}}
+
+
+
+
+
+\begin{document}
+
+\GETHeader                                                                              %  Bitte Ausfüllen!!!
+% ----------------------------
+{Protokoll Übung 3: \\ Schaltvorgang Kondensator}                         %  Übungstitel
+% ----------------------------
+% {25. Mai 2020}                                                                  %  Übungsdatum
+% ----------------------------
+{04}                                                                   %  Gruppen-Nr.
+% ----------------------------
+% {Matthias Fottner}                                                                      % Name des Protokollführers oder der Protokollführerin
+% ----------------------------
+{
+  \begin{center}
+    \begin{varwidth}{\textwidth}
+    \begin{enumerate}
+    \item Matthias Fottner
+    \item David Keller
+    \item  Moritz Woltron
+    \end{enumerate}
+    \end{varwidth}
+\end{center}
+}
+% ----------------------------
+{Helena Grabner}                                                                     %  Laborleiter(in)
+% {Übung 2}                                                               %  Betreuer(in)
+% ----------------------------
+{Graz}                                                                                  %  Ort der Protokollerstellung
+{\today}                                                                %  Datum Protokollerstellung
+
+
+\newcommand{\unit}[1]{\,\text{#1}}
+
+
+\tableofcontents
+
+\newpage
+
+
+
+\section{Bestimmen des Anfangszustands von $u_C$}
+\subsection{Schaltplan zur Schalterposition a}
+\begin{circuitikz}
+	\draw (0, 1) to [R] (4, 1);
+\end{circuitikz}
+\subsection{Erstellen der erweiterten KSV-Matrix}
+\subsection{Bestimmen von $u_C$}
+\section{Aufstellen der Differentialgleichung}
+\subsection{Schaltplan zur Schalterposition b}
+\subsection{Erstellen der KSV-Matrix}
+\subsection{Lösen der Differentialgleichung}
+\subsubsection{Homogene Lösung}
+\subsubsection{Inhomogene Lösung}
+\subsubsection{Anfangswertproblem}
+\subsubsection{Gesamtlösung}
+\section{Vergleich mit allgemeiner Lösungsformel}
+\section{Simulation in PSpice}
+\section{Matlab-Skript}
+
+
+\end{document}
