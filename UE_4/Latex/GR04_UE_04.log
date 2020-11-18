@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  18 NOV 2020 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.20)  18 NOV 2020 18:05
 entering extended mode
 **./GR04_UE_04.tex
 (GR04_UE_04.tex
@@ -1469,11 +1469,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--192
 \realshift=\dimen337
 \absvshift=\dimen338
  [4] [5] [6]
-<./Assets/ML_Strom_Plot.pdf, id=54, 365.57176pt x 307.01701pt>
+<./Assets/ML_Strom_Plot.pdf, id=54, 385.79062pt x 299.2781pt>
 File: ./Assets/ML_Strom_Plot.pdf Graphic file (type pdf)
 <use ./Assets/ML_Strom_Plot.pdf>
 Package pdftex.def Info: ./Assets/ML_Strom_Plot.pdf  used on input line 336.
-(pdftex.def)             Requested size: 292.7776pt x 245.88564pt.
+(pdftex.def)             Requested size: 292.7776pt x 227.12491pt.
  [7]
 <./Assets/ML_Spannung_Plot.pdf, id=59, 375.94453pt x 299.6304pt>
 File: ./Assets/ML_Spannung_Plot.pdf Graphic file (type pdf)
@@ -1535,7 +1535,7 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmr8.pfb>
-Output written on GR04_UE_04.pdf (9 pages, 427056 bytes).
+Output written on GR04_UE_04.pdf (9 pages, 428789 bytes).
 PDF statistics:
  439 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
