@@ -25,10 +25,10 @@
 % \usepackage{getlab}
 \usepackage{listings}
 \usepackage{pdfpages}
-\usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
+\usepackage[straightvoltages, european resistors, european inductors]{circuitikz}
 \usetikzlibrary{arrows.meta}
 \tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
-\usepackage{hyperref}
+% \usepackage{hyperref}
 % \usepackage{varwidth}
 
 
@@ -162,15 +162,107 @@
 \subsection{Aufstellen der DGL mithilfe der allgemeinen Lösungsformel} %David
 \section{Ermitteln der DGL von $i_L(t)$ für $t > 2\tau_1$}%Matthias
 \subsection{Schaltbild des Netzwerks für $t > 2\tau_1$}%Matthias
+\begin{figure}[!htb]
+\begin{center}
+\begin{circuitikz}
+  \draw (0,8) to[L=$L$, v={\color{blue}{$u_L$}}, i={\color{red}{$i_L$}}] (0,0)
+  		to[short, -*] ++ (4,0) node[label={[font=\footnotesize]-90:n2}] {}
+  		to[R=$R_2$, v={\color{blue}{$u_{R2}$}}, i={\color{red}{$i_{R2}$}}, *-*] ++ (0,8)
+  		to[short] ++ (4,0)
+  		to[R=$R_3$, v<={\color{blue}{$u_{R3}$}}] ++ (0,-4)
+  		to[C=$C$, v<={\color{blue}{$u_C$}}, i<={\color{red}{$i_C$}}] ++ (0,-4)
+  		to[short] ++ (-4,0);
+  \draw (0,8) to[short] (4,8) node[label={[font=\footnotesize]90:n1}] {};
+  \draw[darkspringgreen, thin, <-] (2,4)node{$m_1$}  ++(-60:0.5) arc (-60:170:0.5);
+  \draw[darkspringgreen, thin, <-] (6,4)node{$m_2$}  ++(-60:0.5) arc (-60:170:0.5);
+\end{circuitikz}
+\end{center}
+\end{figure}
+
 \subsection{Aufstellen der Kirchhoff'schen Knoten- und Maschengleichungen}%Matthias
+\begin{align*}
+	n_1&: \qquad i_L - i_{R2} - i_C = 0 \\
+	n_2&: \qquad i_C + i_{R2} - i_L = 0 \\ \\
+	m_1&: \qquad -u_{R2} - u_L = 0 \\
+	m_2&: \qquad u_{R2} - u_{R3} - u_C = 0
+\end{align*}
+
 \subsection{Herleitung der DGL 2. Ordnung von $i_L(t)$ für $t > 2\tau_1$}%Matthias
+\begin{align*}
+	-i_C - i_{R2} + i_L &= 0 \\
+	-C {\color{darkspringgreen}{u_C}}' - \frac{u_{R2}}{R_2} + i_L &= 0 
+\end{align*}
+{\color{darkspringgreen}{
+\begin{align*}
+		u_C &= u_{R2} - u_{R3} \\
+			&= -u_L - u_{R3} \\
+			&= -(L i_L' + u_{R3})	
+\end{align*}}}
+\begin{align*}
+	\Longrightarrow C \frac{d}{dt} \left[ L i_L' + u_{R3}\right] - \frac{u_{R2}}{R2} + i_L &= 0 \\
+	C L i_L'' + \frac{d}{dt} C R_3 i_C - \frac{u_{R2}}{R2} + i_L &= 0 \\
+	C L i_L'' + \frac{d}{dt} C R_3 (i_L - i_{R2}) - \frac{u_{R2}}{R2} + i_L &= 0 \\
+	C L i_L'' +  C R_3 i_L' - \frac{d}{dt}\left( CR\frac{u_{R2}}{R_2} \right)- \frac{u_{R2}}{R2} + i_L &= 0 \\
+	C L i_L'' +  C R_3 i_L' + \frac{CR_3L}{R_2} i_L'' - \frac{u_{R2}}{R2} + i_L &= 0 \\
+	C L i_L'' +  C R_3 i_L' + \frac{CR_3L}{R_2} i_L'' + \frac{L}{R_2}i_L' + i_L &= 0 \\
+	i_L'' \left( CL + \frac{CR_3L}{R_2} \right) + i_L' \left( CR_3 + \frac{L}{R_2} \right) + i_L &= 0 \\
+	i_L'' + i_L' \left(\frac{R_3 C + \frac{L}{R_2} }{L C + \frac{R_3 L C}{R_2} } \right) + i_L \left(\frac{1}{L C +\frac{R_3 L C}{R_2} } \right) &= 0 \\
+	i_L'' + i_L' \underbrace{\left( \frac{R_2 R_3 C + L}{R_2 L C + R_3 L C} \right)}_{=: 2\delta} + i_L \underbrace{\left(\frac{R_2}{R_2 L C + R_3 L C} \right)}_{=:\omega_0^2} &= 0
+\end{align*}
+
+Ansatz: $\quad \tilde{t} = t-2\tau_{1}$
+\begin{align*}
+  i_{L}(\tilde{t}) &= e^{\lambda \tilde{t}} \\
+  i_{L}'(\tilde{t}) &= \lambda e^{\lambda \tilde{t}} \\
+  i_{L}'' (\tilde{t}) &= \lambda^{2} e^{\lambda \tilde{t}}
+\end{align*}
+
+\begin{align*}
+  \Longrightarrow \lambda^{2} e^{\lambda \tilde{t}} + 2 \delta \lambda e^{\lambda \tilde{t}} + \omega_{0}^{2} i_{L} &= 0 \\
+  \lambda_{1,2} &= -\delta \pm \sqrt{\delta^{2} - \omega_{0}^{2}} \\
+  \color{darkspringgreen}{\delta^{2} - \omega_{0}^{2}} &{\color{darkspringgreen}{= \left( \frac{R_{2} R_{3} C + L}{R_{2}LC + R_{3}LC} \right)^{2} - \frac{R_{2}}{R_{2}LC + R_{3}LC} = - 416667 \frac{1}{s^{2}} < 0}} \\
+  \lambda_{1,2} &= -\delta \pm \sqrt{(-1) \underbrace{\omega_{0}^{2} - \delta^{2}}_{\Omega_{d}}} \\
+              &= -\delta \pm j \Omega_{d}
+\end{align*}
+Lösung:
+\begin{align*}
+  i_{L}(\tilde{t}) = e^{-\delta \tilde{t}} \left[ \tilde{K}_{1} e^{j\Omega_{d}\tilde{t}} + \tilde{K}_{2} e^{-j\Omega_{d} \tilde{t}}\right] = e^{-j\delta \tilde{t}} \left[ K_{1} \cos(\Omega_{d} \tilde{t}) + K_{2} \sin (\Omega_{d} \tilde{t})\right]
+\end{align*}
 \subsection{Interpretation der Parameter $\delta$,  $\omega_0$ und $\Omega_d$}%Matthias
 \subsection{Anfangswertproblem}%Matthias
 \subsubsection{Anfangsbedingungen}%Matthias
+\begin{align*}
+  i_{L}(\tilde{t} = 0^{+}) &= i_{L}(\tilde{t} = 0^{-}) = i_{L}(t=2\tau_{1}) = 179,7 \unit{mA} \\
+  u_{C}(\tilde{t} = 0^{+}) &= u_{C}(\tilde{t} = 0^{-}) = U_{C,0} = 25 \unit{V}
+\end{align*}
+\begin{align*}
+  u_{C}(\tilde{t} = 0^{+})=U_{C,0} = u_{R2} -u_{R3} &= -L i_{L}' -R_{3}i_{L}-\frac{R_{3}L}{R_{2}} i_{L}' \\
+                                            &= i_{L}' \left[ -\left( L +    \frac{R_{3}L}{R_{2}}\right)\right] - R_{3}i_{L} \\
+  U_{C_{0}} + R_{3}i_{L} &= i_{L}'\left[ -\left( L + \frac{R_{3}L}{R_{2}}\right)\right] \\
+  i_{L}' &= - \frac{U_{C,0} + R_{3}i_{L}}{L + \frac{R_{3}L}{R_{2}}} \\
+        &= - \frac{R_{2} (U_{C,0} + R_{3} i_{L})}{R_{2}L + R_{3}L}
+\end{align*}
+
 \subsubsection{Lösen von $K_1$ und $K_2$}%Matthias
+\begin{align*}
+  i_{L}(\tilde{t} = 0) &= e^{0} \left[ K_{1} \cos(0) + K_{2} \sin(0)\right] = K_{1} \\
+  K_{1} &= 179,7 \unit{mA} \\ \\
+  i_{L}'(\tilde{t}) &= -\delta e^{-\delta \tilde{t}} \left[ K_{1} \cos(\Omega_{d} \tilde{t}) + K_{2} \sin(\Omega_{d} \tilde{t})\right] + e^{-\delta \tilde{t}} \left[ -K_{1} \Omega_{d} \sin(\Omega_{d} \tilde{t}) + K_{2} \Omega_{d} \cos(\Omega_{d} \tilde{t})\right] \\
+  i_{L}'(\tilde{t}=0) &= -\delta\cdot 1 \left[ K_{1}\cdot 1 K_{2} \cdot 0\right] + 1 \cdot \left[ -K_{1}\Omega_{d} \cdot 0 + K_{2} \Omega_{d} \cdot 1\right] \\
+  &= -\delta K_{1} + K_{2}\Omega_{d} \overset{!}{=} - \frac{R_{2} (U_{C,0} + R_{3} i_{L})}{R_{2}L + R_{3}L}
+\end{align*}
+\begin{align*}
+  -\delta K_{1} + K_{2}\Omega_{d} &= - \frac{R_{2} (U_{C,0} + R_{3} i_{L})}{R_{2}L + R_{3}L} \\
+  K_{2}\Omega_{d} &= \delta K_{1} - \frac{R_{2}(U_{C,0} + R_{3}i_{L})}{R_{2}L + R_{3}L} \\
+  K_{2} &= \frac{\delta K_{1} - \frac{R_{2}(U_{C,0} + R_{3} i_{L})}{R_{2}L + R_{3}L}}{\Omega_{d}}
+\end{align*}
+
+Lösung:
+\begin{align*}
+  i_{L}(\tilde{t}) &= e^{-\delta \tilde{t}}\left[ K_{1} \cos(\Omega_{d} \tilde{t}) + K_{2} \sin(\Omega_{d} \tilde{t}) \right] \\
+  &= e^{-\delta \tilde{t}}\left[ 179,7 \unit{mA} \cos(\Omega_{d} \tilde{t}) + \frac{\delta K_{1} - \frac{R_{2}(U_{C,0} + R_{3} i_{L})}{R_{2}L + R_{3}L}}{\Omega_{d}} \sin(\Omega_{d} \tilde{t}) \right]
+\end{align*}
 \section{Plots und Simulationen} %David
 \subsection{Matlab-Plot $i_L(t)$} %David
 \subsection{PSpice-Plot $i_L(t)$ und $u_L(t)$} %David
-
-\subsection{}
 \end{document}
