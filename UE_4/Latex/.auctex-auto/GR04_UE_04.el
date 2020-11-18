@@ -30,6 +30,7 @@
     "mathtools"
     "setspace"
     "nicematrix"
+    "empheq"
     "pdfpages"
     "listings"
     "circuitikz")
