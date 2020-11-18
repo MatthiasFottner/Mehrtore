@@ -12,4 +12,4 @@
 \contentsline {subsubsection}{\numberline {2.5.2}Lösen von $K_1$ und $K_2$}{7}%
 \contentsline {section}{\numberline {3}Plots und Simulationen}{8}%
 \contentsline {subsection}{\numberline {3.1}Matlab-Plot $i_L(t)$}{8}%
-\contentsline {subsection}{\numberline {3.2}PSpice-Plot $i_L(t)$ und $u_L(t)$}{8}%
+\contentsline {subsection}{\numberline {3.2}PSpice-Plot $i_L(t)$ und $u_L(t)$}{9}%

@@ -38,6 +38,7 @@
     '("GETHeader" 6))
    (LaTeX-add-labels
     "fig:schaltplan_a"
-    "fig:ML_Strom_Plot"))
+    "fig:ML_Strom_Plot"
+    "fig:ML_Spannung_Plot"))
  :latex)
 
