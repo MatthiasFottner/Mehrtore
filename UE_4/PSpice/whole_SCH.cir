@@ -1,0 +1,23 @@
+* C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\PSpice\whole_SCH.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 16 23:19:30 2020
+
+
+
+** Analysis setup **
+.tran 0ns 20ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "whole_SCH.net"
+.INC "whole_SCH.als"
+
+
+.probe
+
+
+.END

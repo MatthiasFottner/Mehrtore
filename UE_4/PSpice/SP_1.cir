@@ -1,0 +1,23 @@
+* C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\SP_1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 15 17:17:19 2020
+
+
+
+** Analysis setup **
+.tran 0ns 4ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "SP_1.net"
+.INC "SP_1.als"
+
+
+.probe
+
+
+.END

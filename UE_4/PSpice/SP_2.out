@@ -1,0 +1,133 @@
+
+**** 11/16/20 19:54:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\SP_2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 16 00:23:16 2020
+
+
+
+** Analysis setup **
+.tran 0.001ms 0.02s
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "SP_2.net"
+
+**** INCLUDING SP_2.net ****
+* Schematics Netlist *
+
+
+
+R_R3         $N_0002 $N_0001  100  
+R_R2         0 $N_0001  200  
+L_L2         0 $N_0001  100mH IC=179.7mA 
+C_C2         0 $N_0002  10u IC=25V 
+
+**** RESUMING SP_2.cir ****
+.INC "SP_2.als"
+
+
+
+**** INCLUDING SP_2.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R3            R3(1=$N_0002 2=$N_0001 )
+R_R2            R2(1=0 2=$N_0001 )
+L_L2            L2(1=0 2=$N_0001 )
+C_C2            C2(1=0 2=$N_0002 )
+.ENDALIASES
+
+
+**** RESUMING SP_2.cir ****
+.probe
+
+
+.END
+
+**** 11/16/20 19:54:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\SP_2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   -4.6864                   ($N_0002)  -25.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/16/20 19:54:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\SP_2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 11/16/20 19:54:43 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\SP_2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   -4.6864                   ($N_0002)  -25.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .08
+

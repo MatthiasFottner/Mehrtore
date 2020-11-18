@@ -1,0 +1,197 @@
+
+**** 11/16/20 22:27:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\whole_SCH.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 16 20:28:34 2020
+
+
+
+** Analysis setup **
+.tran 0ns 20ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "whole_SCH.net"
+
+**** INCLUDING whole_SCH.net ****
+* Schematics Netlist *
+
+
+
+V_U_0         $N_0001 $N_0002 DC 10  
+X_U3         $N_0003 $N_0004 Sw_tClose PARAMS: tClose=4ms ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U1         0 $N_0003 Sw_tClose PARAMS: tClose=4ms ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U2         0 $N_0002 Sw_tOpen PARAMS: tOpen=4ms ttran=1u Rclosed=0.01
++  Ropen=1Meg
+L_L         $N_0005 0  100mH IC=50mA 
+R_R2         $N_0004 $N_0005  200  
+R_R1         $N_0001 $N_0005  50  
+R_R3         $N_0006 $N_0005  100  
+C_C         $N_0003 $N_0006  10u IC=25V 
+
+**** RESUMING whole_SCH.cir ****
+.INC "whole_SCH.als"
+
+
+
+**** INCLUDING whole_SCH.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_U_0           U_0(+=$N_0001 -=$N_0002 )
+X_U3            U3(1=$N_0003 2=$N_0004 )
+X_U1            U1(1=0 2=$N_0003 )
+X_U2            U2(1=0 2=$N_0002 )
+L_L             L(1=$N_0005 2=0 )
+R_R2            R2(1=$N_0004 2=$N_0005 )
+R_R1            R1(1=$N_0001 2=$N_0005 )
+R_R3            R3(1=$N_0006 2=$N_0005 )
+C_C             C(1=$N_0003 2=$N_0006 )
+.ENDALIASES
+
+
+**** RESUMING whole_SCH.cir ****
+.probe
+
+
+.END
+
+**** 11/16/20 22:27:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\whole_SCH.sch
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.Smod       X_U1.Smod       X_U2.Smod       
+         RON     .01             .01             .01         
+        ROFF    1.000000E+06    1.000000E+06    1.000000E+06 
+         VON    1               1               1            
+        VOFF    0               0               0            
+
+
+**** 11/16/20 22:27:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\whole_SCH.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(X_U1.3)    0.0000 (X_U2.3)    1.0000 (X_U3.3)    0.0000 ($N_0001)    9.9995    
+
+($N_0002)-500.3E-06                   ($N_0003)   32.4920                       
+
+($N_0004)    7.5029                   ($N_0005)    7.4979                       
+
+($N_0006)    7.4921                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_U_0       -5.003E-02
+    X_U3.V1      0.000E+00
+    X_U1.V1      0.000E+00
+    X_U2.V1     -1.000E-12
+
+    TOTAL POWER DISSIPATION   5.00E-01  WATTS
+
+
+**** 11/16/20 22:27:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\whole_SCH.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE CONTROLLED SWITCHES
+
+
+NAME         X_U3.S1     X_U1.S1     X_U2.S1   
+MODEL        X_U3.Smod   X_U1.Smod   X_U2.Smod 
+I LOAD       2.50E-05   -3.25E-05    5.00E-02 
+V LOAD       2.50E+01   -3.25E+01    5.00E-04 
+R LOAD       1.00E+06    1.00E+06    1.00E-02 
+V CTRL       0.00E+00    0.00E+00    1.00E+00 
+**** 11/16/20 22:27:51 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\whole_SCH.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(X_U1.3)    0.0000 (X_U2.3)    1.0000 (X_U3.3)    0.0000 ($N_0001)    9.9995    
+
+($N_0002)-500.3E-06                   ($N_0003)   32.4920                       
+
+($N_0004)    7.5029                   ($N_0005)    7.4979                       
+
+($N_0006)    7.4921                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_U_0       -5.003E-02
+    X_U3.V1      0.000E+00
+    X_U1.V1      0.000E+00
+    X_U2.V1     -1.000E-12
+
+    TOTAL POWER DISSIPATION   5.00E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .08
+
