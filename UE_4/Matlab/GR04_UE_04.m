@@ -31,15 +31,32 @@ K_2 = ((delta * K_1 - (r2 * (U_C0 + r3 * i_L_t_tilde)) / (r2  * L + r3 * L)) / (
 
 
 t = linspace(0,0.02, 1000000);
-
+t_label = linspace(0,0.02, 11);
+A_label = linspace(-0.1,0.2, 7);
+A_label = sort([A_label, 0.1797])
+axLims = [0 0.02 -0.1 -0.2];  %[x-min, x-max, y-min, y-max] axis limits
+%t_label = [0, tau_1, 2*tau_1, 3*tau_1, 4*tau_1, 5*tau_1];
 %i_L_t((5*10^(-3)), delta, K_1, K_2, Omega_d, tau_1)
 
 
 %plot(t, (i_L_t_1(t, delta, K_1, K_2, Omega_d, tau_1)))
-
+figure('Name','Strom der Spule i_L','NumberTitle','off');
 plot(t, ((-1)*(heaviside(t-2*tau_1)-1)) .* i_L_t_0(t, U_0, r1, tau_1, I_L0) + heaviside(t-2*tau_1) .* (i_L_t_1(t, delta, K_1, K_2, Omega_d, tau_1)))
+hold on
+point = [2*tau_1, 0.1797];
+plot(point(1), point(2), 'o')
+plot([point(1), point(1)], [axLims(3), point(2)], 'k:')  %vertical line
+plot([axLims(1), point(1)], [point(2), point(2)], 'k:')  %horizontal line
 
-%plot(t, ((-1)*(heaviside(t-2*tau_1)-1))i_L_t_0(t, U_0, r1, tau_1, I_L0))
+
+xlabel('t in ms') 
+ylabel('mA') 
+
+xticks(t_label)
+xticklabels({'0','2','2 \tau_1','6','8','10', '12', '14', '16', '18', '20'})
+yticks(A_label)
+yticklabels({'-100', '-50', '0', '50', '100', '150', '179.7', '200'})
+
 
 function i_L_t_1 = i_L_t_1(t, delta, K_1, K_2, Omega_d, tau_1)
     i_L_t_1 = exp(-((t-2*tau_1) * delta)) .* (K_1 * cos(Omega_d * (t-2*tau_1)) + K_2 * sin(Omega_d * (t-2*tau_1)));

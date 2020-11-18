@@ -25,7 +25,7 @@
 % \usepackage{getlab}
 \usepackage{listings}
 \usepackage{pdfpages}
-\usepackage[straightvoltages, european resistors, european inductors]{circuitikz}
+\usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
 \usetikzlibrary{arrows.meta}
 \tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
 %\usepackage{hyperref}
@@ -164,66 +164,55 @@
 	\begin{center}
 		\begin{circuitikz} [european resistors, scale=1]
 			
-			%			\clip (-2,-5.7) rectangle (12.5, 5);
-			\draw(0,0) to [L=$L$, v<={\color{blue}{$u_{L}$}}, i<={\color{red}{$i_L$}}] (0,4)
+			
+			\draw(0,0) to [L=$L$, v<={\color{blue}{$u_{L}$}}, i<={\color{red}{$i_L(t)$}}] (0,4)
 			to [R=$R_1$, v<={\color{blue}{$u_{R1}$}}] ++ (4,0)
 			to [vsource, v>={\color{blue}{$U_{0}$}}] ++ (0,-4)
 			to [short] ++ (-4,0);
-			\draw[darkspringgreen, thin, <-] (2,2)node{$m_1$}  ++(-60:0.5) arc (-60:170:0.5);
+			%\draw[thin, <-, >=triangle 45] (2,2)node{$i_1$}  ++(-60:0.5) arc (-60:170:0.5);
+			\draw [green,latex-] (2,2) node[above,color=green]{$m_1$} arc (-90:165:5mm);
+			
+			
+			
+			
+			
+			
+			
+%			\clip (-2,-5.7) rectangle (12.5, 5);
+%			
+%			\draw(0,0) to [R=$R_3$, v={\color{blue}{$U_{R3}$}}, i={\color{red}{$I_{R3}$}}, *-*] (4,0);
+%			\draw(4,0) to [R=$R_4$, v={\color{blue}{$U_{R4}$}}, i={\color{red}{$I_{R4}$}}] (4,4);
+%			\draw(4,0) to [R=$R_2$, v<={\color{blue}{$U_{R2}$}}, i<={\color{red}{$I_{R2}$}}] (4,-4);
+%			
+%			
+%			
+%			\draw(0,0) node[label={[font=\footnotesize]-190:n3}] {} to (0,4);
+%			\draw(0,4) to[isource, i<={\color{red}{$I_{S2}$}}, -*] (4,4) node[label={[font=\footnotesize]90:n2}] {};
+%			\draw(4,4) to [R=$R_5$, v={\color{blue}{$U_{R5} = 0\unit{A}$}}, i={\color{red}{$I_{R5} = 0\unit{A}$}}, -o] (8,4);
+%			\draw(8,4) to (10,4);
+%			
+%			\draw(0,0) to[vsource, v<={\color{blue}{$U_{S1}$}}, i<={\color{red}{$I_{S1}^?$}}] (0,-4);
+%			\draw(0,-4) to [R=$R_1$, v={\color{blue}{$U_{R1}$}}, i={\color{red}{$I_{R1}$}}, *-*] (4,-4) node[rground]{};
+%			\draw(4,-4) to [short, -o] (8,-4);
+%			\draw(8,-4) to (10,-4);
+%			\draw(10,-4) to [C, v<={\color{blue}{$u_{C} = 0\unit{A}$}}, i<={\color{red}{$i_{C} = 0\unit{A}$}}] (10,4);
+%			
+%			\draw[FARROW, green!50!black] (-0.2, 0) to[bend left=-90, looseness=2.2] node[below left]{$U_{n3}$} (3.9,-4.2);
+%			\draw[FARROW, green!50!black] (4.1, 3.95) to[bend right=-75, looseness=0.9] node[below right]{$U_{n4}$} (4.4,-3.9);
+%			\draw[FARROW, green!50!black] (4.1, 0) to[bend right=-75, looseness=0.7] node[below right]{$U_{n1}$} (4.4,-3.7);
+%			\draw[FARROW, green!50!black] (0.1, -3.8) to[bend right=-75, looseness=0.5] node[above]{$U_{n2}$} (3.9,-3.7);
+			
+			%\draw [brown] (current bounding box.south west) rectangle (current bounding box.north east);
+			%\draw[gray,step=0.25] (-6,-3) grid (16.5, 11);
 			
 			
 		\end{circuitikz}
 	\end{center}
-	\caption{Netzwerk im Zeitintervall $0 \leq t \leq 2\tau_1$.}
+	\caption{Netzwerk mit allen eingezeichneten Strömen, (Knoten-)spannungen und Knoten}
 	\label{fig:schaltplan_a}
 \end{figure}
 
 \subsection{Aufstellen der DGL mithilfe der allgemeinen Lösungsformel} %David
-
-Da es sich um ein LR-Netzwerk handelt, lässt sich $\tau_1$ folgendermaßen bestimmen:
-
-\begin{equation*}
-\frac{1}{\lambda} = \tau_{1} = \frac{L}{R} = \frac{100 \unit{mH}}{50 \unit{$\Omega$}} = 2 \unit{ms}
-\end{equation*}
-
-Weiters lässt sich durch einsetzen in die allgemeine Lösungsformel für Transiente Vorgänge
-mit einem Energiespeicher der Strom $i_L$ für $0 \leq t \leq 2\tau_1$ ermitteln.\\
-
-Allgemeine Lösungsformel:
-
-\begin{equation*}
-	x(t) = x_f + [ \, x_0 - x_f ] \, \cdot e^{(-\frac{t-t_0}{\tau})}
-\end{equation*}
-
-Das Bauteilgesetz der Spule besagt, dass der Strom eine stetige Größe ist, während die Spannung \glqq Sprünge\grqq{} aufweisen kann. Aufgrund dieser Tatsache, darf man die für obige Lösungsformel benötigten Werte wie folgt annehmen:
-
-\begin{equation*}
-	x_f = 0 \unit{V}
-\end{equation*}
-
-\begin{equation*}
-	x_0 = U_0 = 10 \unit{V}
-\end{equation*}
-
-\begin{equation*}
-	u_{R1}(0) = R_1 * I_{L_0} = 2.5 \unit{V}
-\end{equation*}
-
-Durch anschließendes Einsetzen erhält man:
-
-\begin{equation*}
-	u_L = 0 + [ \, U_0 - u_{R1}(0) - 0 ] \, \cdot e^{(-\frac{t}{\tau_1})} = [ \, 10 \unit{V} - 2.5 \unit{V} ] \, \cdot e^{(-\frac{t}{2 \unit{ms}})}
-\end{equation*}
-
-Masche $m_1$:
-\begin{align*}
-	u_{R_1} &= U_0 - u_L\\
-	R_1 * i_L &= U_0 - u_L\\
-	i_L &= \frac{U_0 - u_L}{R_1} = \frac{U_0 - (U_0 - R_1 \cdot I_{L_0}) \cdot e^{(-\frac{t}{\tau_1})}}{R_1} \\
-	i_L (t = 2 \tau_1) &= \frac{10\unit{V} - (7,5 \cdot e^{(-\frac{t}{2 \unit{ms}})})}{50 \unit{$\Omega$}} = 0,2 \unit{A} - 0,15 \unit{A} \cdot e^{-(\frac{t}{2 \unit{ms}})} \\
-	i_L (t = 2 \tau_1) &= 179,7 \unit{mA}
-\end{align*}
-
 \section{Ermitteln der DGL von $i_L(t)$ für $t > 2\tau_1$}%Matthias
 \subsection{Schaltbild des Netzwerks für $t > 2\tau_1$}%Matthias
 \subsection{Aufstellen der Kirchhoff'schen Knoten- und Maschengleichungen}%Matthias
@@ -234,14 +223,6 @@ Masche $m_1$:
 \subsubsection{Lösen von $K_1$ und $K_2$}%Matthias
 \section{Plots und Simulationen} %David
 \subsection{Matlab-Plot $i_L(t)$} %David
-
-\begin{center}
-
-	\includegraphics[width=0.8\linewidth]{./Assets/ML_Strom_Plot.pdf}
-	\captionof{figure}{Matlab-Plot des Stroms $i_L$}
-	\label{fig:ML_Strom_Plot}
-\end{center}
-
 \subsection{PSpice-Plot $i_L(t)$ und $u_L(t)$} %David
 
 \end{document}

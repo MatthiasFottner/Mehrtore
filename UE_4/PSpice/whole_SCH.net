@@ -5,12 +5,12 @@
 V_U_0         $N_0001 $N_0002 DC 10  
 X_U3         $N_0003 $N_0004 Sw_tClose PARAMS: tClose=4ms ttran=1u Rclosed=0.01
 +  Ropen=1Meg
-X_U1         0 $N_0003 Sw_tClose PARAMS: tClose=4ms ttran=1u Rclosed=0.01
-+  Ropen=1Meg
-X_U2         0 $N_0002 Sw_tOpen PARAMS: tOpen=4ms ttran=1u Rclosed=0.01
-+  Ropen=1Meg
 L_L         $N_0005 0  100mH IC=50mA 
 R_R2         $N_0004 $N_0005  200  
 R_R1         $N_0001 $N_0005  50  
 R_R3         $N_0006 $N_0005  100  
-C_C         $N_0003 $N_0006  10u IC=25V 
+X_U2         0 $N_0002 Sw_tOpen PARAMS: tOpen=4ms ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U1         0 $N_0003 Sw_tClose PARAMS: tClose=4ms ttran=1u Rclosed=0.01
++  Ropen=1Meg
+C_C         $N_0003 $N_0006  10uF IC=25V 

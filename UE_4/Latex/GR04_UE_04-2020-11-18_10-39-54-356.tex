@@ -220,8 +220,8 @@ Masche $m_1$:
 	u_{R_1} &= U_0 - u_L\\
 	R_1 * i_L &= U_0 - u_L\\
 	i_L &= \frac{U_0 - u_L}{R_1} = \frac{U_0 - (U_0 - R_1 \cdot I_{L_0}) \cdot e^{(-\frac{t}{\tau_1})}}{R_1} \\
-	i_L (t = 2 \tau_1) &= \frac{10\unit{V} - (7,5 \cdot e^{(-\frac{t}{2 \unit{ms}})})}{50 \unit{$\Omega$}} = 0,2 \unit{A} - 0,15 \unit{A} \cdot e^{-(\frac{t}{2 \unit{ms}})} \\
-	i_L (t = 2 \tau_1) &= 179,7 \unit{mA}
+	i_L &= \frac{10\unit{V} - (7,5 \cdot e^{(-\frac{t}{2 \unit{ms}})})}{50 \unit{$\Omega$}} = 0,2 \unit{A} - 0,15 \unit{A} \cdot e^{-(\frac{t}{2 \unit{ms}})} \\
+	i_L (t &= 2 \tau_1) = 179,7 \unit{mA}
 \end{align*}
 
 \section{Ermitteln der DGL von $i_L(t)$ für $t > 2\tau_1$}%Matthias
@@ -234,14 +234,6 @@ Masche $m_1$:
 \subsubsection{Lösen von $K_1$ und $K_2$}%Matthias
 \section{Plots und Simulationen} %David
 \subsection{Matlab-Plot $i_L(t)$} %David
-
-\begin{center}
-
-	\includegraphics[width=0.8\linewidth]{./Assets/ML_Strom_Plot.pdf}
-	\captionof{figure}{Matlab-Plot des Stroms $i_L$}
-	\label{fig:ML_Strom_Plot}
-\end{center}
-
 \subsection{PSpice-Plot $i_L(t)$ und $u_L(t)$} %David
 
 \end{document}

@@ -31,7 +31,7 @@ K_2 = ((delta * K_1 - (r2 * (U_C0 + r3 * i_L_t_tilde)) / (r2  * L + r3 * L)) / (
 
 
 t = linspace(0,0.02, 1000000);
-
+t_label = linspace(0,0.101275, 6);
 
 %i_L_t((5*10^(-3)), delta, K_1, K_2, Omega_d, tau_1)
 

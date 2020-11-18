@@ -1,4 +1,4 @@
-*version 9.1 2808946981
+*version 9.1 701064203
 u 86
 C? 2
 R? 4
@@ -23,11 +23,11 @@ connectViaLocalLabels 0
 NoStim4ExtIFPortsWarnings 1
 AutoGenStim4ExtIFPorts 1
 @index
-pageloc 1 0 3527 
+pageloc 1 0 3528 
 @status
-c 120:10:16:22:29:24;1605562164
-n 0 120:10:16:22:29:31;1605562171 e 
-s 2832 120:10:16:22:30:48;1605562248 e 
+c 120:10:16:23:19:29;1605565169
+n 0 120:10:16:23:19:30;1605565170 e 
+s 2832 120:10:18:12:12:31;1605697951 e 
 *page 1 0 970 720 iA
 @ports
 port 47 GND_ANALOG 430 280 h
@@ -42,18 +42,6 @@ a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
 a 0 a 0:13 0 0 0 hln 100 PKGREF=U3
 a 0 ap 9 0 0 20 hln 100 REFDES=U3
 a 0 u 13 13 -2 -4 hln 100 tClose=4ms
-part 8 Sw_tClose 420 280 v
-a 0 sp 0 0 0 24 hln 100 PART=Sw_tClose
-a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
-a 0 a 0:13 0 0 0 hln 100 PKGREF=U1
-a 0 ap 9 0 -26 18 hln 100 REFDES=U1
-a 0 u 13 13 -16 2 hln 100 tClose=4ms
-part 9 Sw_tOpen 450 280 v
-a 0 sp 0 0 0 24 hln 100 PART=Sw_tOpen
-a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
-a 0 a 0:13 0 0 0 hln 100 PKGREF=U2
-a 0 ap 9 0 -26 18 hln 100 REFDES=U2
-a 0 u 13 13 6 56 hln 100 tOpen=4ms
 part 6 L 240 150 d
 a 0 sp 0 0 0 10 hlb 100 PART=L
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=L2012C
@@ -83,14 +71,26 @@ a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 x 0:13 0 0 0 hln 100 PKGREF=R3
 a 0 xp 9 0 15 0 hln 100 REFDES=R3
 a 0 u 13 0 15 25 hln 100 VALUE=100
+part 9 Sw_tOpen 450 280 v
+a 0 sp 0 0 0 24 hln 100 PART=Sw_tOpen
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U2
+a 0 ap 9 0 -26 18 hln 100 REFDES=U2
+a 0 u 13 13 6 56 hln 100 tOpen=4ms
+part 8 Sw_tClose 420 280 v
+a 0 sp 0 0 0 24 hln 100 PART=Sw_tClose
+a 0 s 0:13 0 0 0 hln 100 PKGTYPE=
+a 0 a 0:13 0 0 0 hln 100 PKGREF=U1
+a 0 ap 9 0 -26 18 hln 100 REFDES=U1
+a 0 u 13 13 -16 2 hln 100 tClose=4ms
 part 2 c 360 210 v
 a 0 sp 0 0 0 10 hlb 100 PART=c
 a 0 s 0:13 0 0 0 hln 100 PKGTYPE=CK05
 a 0 s 0:13 0 0 0 hln 100 GATE=
 a 0 x 0:13 0 0 0 hln 100 PKGREF=C
 a 0 xp 9 0 15 0 hln 100 REFDES=C
-a 0 u 13 0 17 35 hln 100 VALUE=10u
 a 0 u 13 13 4 46 hln 100 IC=25V
+a 0 u 13 0 17 35 hln 100 VALUE=10uF
 part 1 titleblk 970 720 h
 a 1 s 13 0 350 10 hcn 100 PAGESIZE=A
 a 1 s 13 0 180 60 hcn 100 PAGETITLE=
@@ -102,10 +102,6 @@ a 0 up 0:33 0 0 0 hln 100 V=
 s 430 120 460 120 40
 s 460 120 460 170 42
 a 0 up 33 0 462 145 hlt 100 V=
-w 32
-a 0 up 0:33 0 0 0 hln 100 V=
-s 460 240 460 210 18
-a 0 up 33 0 462 225 hlt 100 V=
 w 71
 a 0 up 0:33 0 0 0 hln 100 V=
 s 240 120 330 120 22
@@ -128,6 +124,10 @@ a 0 up 33 0 395 239 hct 100 V=
 s 310 220 310 240 31
 s 360 240 430 240 67
 s 360 240 360 210 81
+w 32
+a 0 up 0:33 0 0 0 hln 100 V=
+s 460 240 460 210 18
+a 0 up 33 0 500 209 hlt 100 V=
 @junction
 j 310 180
 + p 10 2
