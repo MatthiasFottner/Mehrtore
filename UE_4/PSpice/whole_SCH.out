@@ -1,5 +1,5 @@
 
-**** 11/18/20 12:12:32 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/18/20 12:28:55 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\PSpice\whole_SCH.sch
 
@@ -72,7 +72,7 @@ C_C             C(1=$N_0003 2=$N_0006 )
 
 .END
 
-**** 11/18/20 12:12:32 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/18/20 12:28:55 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\PSpice\whole_SCH.sch
 
@@ -92,7 +92,7 @@ C_C             C(1=$N_0003 2=$N_0006 )
         VOFF    0               0               0            
 
 
-**** 11/18/20 12:12:32 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/18/20 12:28:55 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\PSpice\whole_SCH.sch
 
@@ -129,7 +129,7 @@ C_C             C(1=$N_0003 2=$N_0006 )
     TOTAL POWER DISSIPATION   5.00E-01  WATTS
 
 
-**** 11/18/20 12:12:32 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/18/20 12:28:55 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\PSpice\whole_SCH.sch
 
@@ -153,7 +153,7 @@ I LOAD       2.50E-05    5.00E-02   -3.25E-05
 V LOAD       2.50E+01    5.00E-04   -3.25E+01 
 R LOAD       1.00E+06    1.00E-02    1.00E+06 
 V CTRL       0.00E+00    1.00E+00    0.00E+00 
-**** 11/18/20 12:12:32 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/18/20 12:28:55 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_4\PSpice\whole_SCH.sch
 
@@ -193,5 +193,5 @@ V CTRL       0.00E+00    1.00E+00    0.00E+00
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .08
+          TOTAL JOB TIME             .13
 
