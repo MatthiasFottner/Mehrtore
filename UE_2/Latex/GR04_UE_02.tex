@@ -19,9 +19,11 @@
 \usepackage{mathtools}
 \usepackage{setspace}
 \usepackage{nicematrix}
+\usepackage{fancyvrb}
 \usepackage{listings}
 \usepackage{pdfpages}
 \usepackage[straightvoltages, european resistors, american inductors]{circuitikz}
+\usepackage{hyperref}
 \usetikzlibrary{arrows.meta}
 \tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
 
@@ -340,7 +342,7 @@ Indem man beide Seiten der Gleichung mit der Inversen $A^{-1}$ multipliziert, ka
 \begin{equation*}
   x = A^{-1} b
 \end{equation*}
-Man erhält mithilfe von Matlab für $x$:
+Man erhält mithilfe von Matlab für $x$ (vgl. Kapitel \ref{sec:console}, Z. 1-9):
 \begin{equation*}
   \renewcommand{\arraystretch}{1.5}
   x = \begin{Bmatrix}
@@ -367,7 +369,9 @@ Man erhält mithilfe von Matlab für $x$:
 \subsection{$U_{Th}$}
 Die Spannung $U_{Th}$ entspricht der Leerlaufspannung an den Klemmen $a$ und $b$ ($U_{ab,LL}$),
 welche der Spannung $U_{R5}$ entspricht (vgl. Abb. \ref{fig:uth}).
-Somit kann $U_{Th}$ mithilfe der gewonnenen Knotenspannungen aus Kapitel \ref{sec:mat} berechnet werden. Es gilt:
+Somit kann $U_{Th}$ mithilfe der gewonnenen Knotenspannungen aus Kapitel \ref{sec:mat} berechnet werden.
+Es gilt (vgl. Kapitel \ref{sec:console}, Z. 12-14):
+
 \begin{equation*}
   U_{Th} = U_{ab,LL} = U_{R5} = U_{n4} - U_{n3} = 20,8772 \unit{V} - 23,1579 \unit{V} = -2,2807 \unit{V}
 \end{equation*}
@@ -467,7 +471,7 @@ ergänzt werden. Insgesamt ergibt sich folgendes Gleichungssystem:
     \end{Bmatrix}}_{b_{IKS}}
 \end{align*}
 
-Bei erneutem Auflösen nach $x_{IKS}$ und Ausrechnen der Gleichung mit Matlab erhält man für $x_{IKS}$:
+Bei erneutem Auflösen nach $x_{IKS}$ und Ausrechnen der Gleichung mit Matlab erhält man für $x_{IKS}$ (vgl. Kapitel \ref{sec:console}, Z. 17-19):
 
 \begin{equation*}
   x_{IKS} = \begin{Bmatrix}
@@ -496,7 +500,7 @@ Der Kurzschlussstrom $I_{KS}$ entspricht somit $571,4 \unit{mA}$.
 \subsection{$R_{Th}$ mithilfe von $U_{Th}$ und $I_{KS}$}\label{sec:var1}
 Der Innenwiderstand $R_{Th}$ der Thevenin-Quelle entspricht dank der Quellenäquivalenz von Norton- und Thevenin-Quelle
 dem Quotienten aus $U_{Th}$ und $I_{KS}$.
-Somit ergibt sich:
+Somit ergibt sich (vgl. Kapitel \ref{sec:console}, Z. 22-24):
 
 \begin{equation*}
   R_{Th} = R_N = \frac{U_{Th}}{I_{KS}} = \frac{-2,2807 \unit{V}}{-0,5714 \unit{A}} = 3,9912 \unit{$\Omega$}
@@ -615,7 +619,7 @@ und man erhält folgende Matrixgleichung:
 \end{figure}
 
 Legt man nun die Testspannung $U_T$ willkürlich auf $1 \unit{V}$ fest, so kann man das Gleichungssystem nach dem
-x-Vektor auflösen und erhält mithilfe Matlabs den Wert des Stromes $I_T^?$.
+x-Vektor auflösen und erhält mithilfe Matlabs den Wert des Stromes $I_T^?$ (vgl. Kapitel \ref{sec:console}, Z. 27-29).
 
 \begin{equation*}
   I_T^? = -0,2505 \unit{A}
@@ -641,7 +645,7 @@ Es lässt sich also folgende Maschengleichung bestimmen:
   U_{RTh} = - U_{T} = -1 \unit{V}
 \end{equation*}
 
-und letztlich der Widerstand $R_{Th}$ mithilfe des ohm'schen Gesetzes:
+und letztlich der Widerstand $R_{Th}$ mithilfe des ohm'schen Gesetzes (vgl. Kapitel \ref{sec:console}, Z. 32-34):
 \begin{equation*}
   R_{Th} = \frac{U_{RTh}}{I_T^?} = \frac{-1 \unit{V}}{-0,2505 \unit{A}} = 3,9912 \unit{$\Omega$}
 \end{equation*}
@@ -693,8 +697,53 @@ Potentialunterschied von $1,284 \unit{V}$ zwischen $a$ und $b$ bei der Thevenin-
 Der Unterschied von $0,004 \unit{V}$ ist auf die Darstellungsungenauigkeit der Zahlen in der Abbildung zurückzuführen.
 Somit können aus Sicht des an den Klemmen angeschlossenen Netzwerkes die beiden Simulationen als identisch betrachtet werden.
 
-\section{Matlab-Simulation}
+\newpage
 
+\section{Matlab-Simulation}
+\subsection{Skript}
 \lstinputlisting[language=Matlab]{./../Matlab/GR04_UE_02.m}
+
+\subsection{Konsolenoutput}\label{sec:console}
+% \begin{Verbatim}[numbers=left, frame=single, fontsize=\small]
+
+
+\begin{lstlisting}[language=Matlab, escapeinside={(*}{*)}]
+x =
+
+    '5.6140 V
+     -0.1754 V
+     23.1579 V
+     20.8772 V
+     0.8772 V
+     -0.9474 A
+     1.5263 A'
+
+
+U_Th =
+
+    '-2.2807 V'
+
+
+I_KS =
+
+    '-0.5714 A'
+
+
+R_Th =
+
+'3.9912 (*$\Omega$*)'
+
+
+I_T =
+
+    '-0.2505 A'
+
+
+R_Th =
+
+'3.9912 (*$\Omega$*)'
+\end{lstlisting}
+% \end{Verbatim}
+
 
 \end{document}

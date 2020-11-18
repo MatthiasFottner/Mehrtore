@@ -1,0 +1,7 @@
+* Schematics Netlist *
+
+
+
+R_R7         $N_0002 $N_0001  20  
+I_IS3         $N_0001 0 DC 0.5  
+R_R6         0 $N_0002  12  
