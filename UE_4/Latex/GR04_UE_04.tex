@@ -197,33 +197,17 @@ Allgemeine Lösungsformel:
 	x(t) = x_f + [ \, x_0 - x_f ] \, \cdot e^{(-\frac{t-t_0}{\tau})}
 \end{equation*}
 
-Das Bauteilgesetz der Spule besagt, dass der Strom eine stetige Größe ist, während die Spannung \glqq Sprünge\grqq{} aufweisen kann. Aufgrund dieser Tatsache, darf man die für obige Lösungsformel benötigten Werte wie folgt annehmen:
-
-\begin{equation*}
-	x_f = 0 \unit{V}
-\end{equation*}
-
-\begin{equation*}
-	x_0 = U_0 = 10 \unit{V}
-\end{equation*}
-
-\begin{equation*}
-	u_{R1}(0) = R_1 * I_{L_0} = 2.5 \unit{V}
-\end{equation*}
+Die Spule entspricht nach $t>5 \tau_{1}$ einem Kurzschluss. Deswegen ergibt sich $x_{f}$ aus dem Strom durch den Widerstand $R_{1}$.
+\begin{align*}
+	x_0 &= i_{L}(t=0) = I_{L_{0}} = 50 \unit{mA} \\
+	x_f &= i_{L}(t\rightarrow\infty) = i_{R1} = \frac{U_{0}}{R_{1}} = 200 \unit{mA}
+\end{align*}
 
 Durch anschließendes Einsetzen erhält man:
 
-\begin{equation*}
-	u_L = 0 + [ \, U_0 - u_{R1}(0) - 0 ] \, \cdot e^{(-\frac{t}{\tau_1})} = [ \, 10 \unit{V} - 2.5 \unit{V} ] \, \cdot e^{(-\frac{t}{2 \unit{ms}})}
-\end{equation*}
-
-Masche $m_1$:
 \begin{align*}
-	u_{R_1} &= U_0 - u_L\\
-	R_1 * i_L &= U_0 - u_L\\
-	i_L &= \frac{U_0 - u_L}{R_1} = \frac{U_0 - (U_0 - R_1 \cdot I_{L_0}) \cdot e^{(-\frac{t}{\tau_1})}}{R_1} \\
-	i_L (t = 2 \tau_1) &= \frac{10\unit{V} - (7,5 \cdot e^{(-\frac{t}{2 \unit{ms}})})}{50 \unit{$\Omega$}} = 0,2 \unit{A} - 0,15 \unit{A} \cdot e^{-(\frac{t}{2 \unit{ms}})} \\
-	i_L (t = 2 \tau_1) &= 179,7 \unit{mA}
+  i_{L}(t) &= 200 \unit{mA} + \left[ 50 \unit{mA} - 200 \unit{mA} \right] \cdot e^{-\frac{t}{2\unit{ms}}} \\
+	i_L (t = 2 \tau_1) &= 200 \unit{mA} + \left[ 50 \unit{mA} - 200 \unit{mA} \right] \cdot e^{-\frac{4 \unit{ms}}{2\unit{ms}}} =  179,7 \unit{mA}
 \end{align*}
 
 

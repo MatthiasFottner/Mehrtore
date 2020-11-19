@@ -4,15 +4,15 @@
 \contentsline {subsection}{\numberline {1.2}Aufstellen der DGL mithilfe der allgemeinen Lösungsformel}{3}%
 \contentsline {section}{\numberline {2}Ermitteln der DGL von $i_L(t)$ für $t > 2\tau _1$}{4}%
 \contentsline {subsection}{\numberline {2.1}Schaltbild des Netzwerks für $t > 2\tau _1$}{4}%
-\contentsline {subsection}{\numberline {2.2}Aufstellen der Kirchhoff'schen Knoten- und Maschengleichungen}{5}%
-\contentsline {subsection}{\numberline {2.3}Herleitung der DGL 2. Ordnung von $i_L(t)$ für $t > 2\tau _1$}{5}%
+\contentsline {subsection}{\numberline {2.2}Aufstellen der Kirchhoff'schen Knoten- und Maschengleichungen}{4}%
+\contentsline {subsection}{\numberline {2.3}Herleitung der DGL 2. Ordnung von $i_L(t)$ für $t > 2\tau _1$}{4}%
 \contentsline {subsection}{\numberline {2.4}Interpretation der Parameter $\delta $, $\omega _0$ und $\Omega _d$}{6}%
 \contentsline {subsection}{\numberline {2.5}Anfangswertproblem}{7}%
 \contentsline {subsubsection}{\numberline {2.5.1}Anfangsbedingungen}{7}%
 \contentsline {subsubsection}{\numberline {2.5.2}Lösen von $K_1$ und $K_2$}{7}%
-\contentsline {section}{\numberline {3}Plots und Simulationen}{9}%
-\contentsline {subsection}{\numberline {3.1}Matlab-Plot $i_L(t)$}{9}%
-\contentsline {subsection}{\numberline {3.2}PSpice-Plot $i_L(t)$ und $u_L(t)$}{10}%
-\contentsline {section}{\numberline {4}Matlab-Simulation}{10}%
-\contentsline {subsection}{\numberline {4.1}Skript}{10}%
-\contentsline {subsection}{\numberline {4.2}Konsolenoutput}{12}%
+\contentsline {section}{\numberline {3}Plots und Simulationen}{8}%
+\contentsline {subsection}{\numberline {3.1}Matlab-Plot $i_L(t)$}{8}%
+\contentsline {subsection}{\numberline {3.2}PSpice-Plot $i_L(t)$ und $u_L(t)$}{9}%
+\contentsline {section}{\numberline {4}Matlab-Simulation}{9}%
+\contentsline {subsection}{\numberline {4.1}Skript}{9}%
+\contentsline {subsection}{\numberline {4.2}Konsolenoutput}{11}%
