@@ -45,7 +45,7 @@ U_S = funcTurnR(U_S, angle(U_S)) * U_S_scaling;
 
 %%Plot
 
-psize = 0.5;
+psize = 0.4;
 
 figure1 = figure(1);
     clf
@@ -59,17 +59,19 @@ figure1 = figure(1);
     xlim([-2.8 2.8])
     ylim([-0.3 4.9])
     
-    scaling_factor = 8;
+    scaling_factor = 9;
     
-    vectorPlot(0, U_R/scaling_factor, '-b', 'U_R', psize);
-    vectorPlot(0, U_L/scaling_factor, '-b', 'U_L', psize);
-    vectorPlot(0, U_X/scaling_factor, '-b', 'U_X', psize);
-    vectorPlot(0, U_C/scaling_factor, '-b', 'U_C', psize);
-    vectorPlot(0, U_S/scaling_factor, '-b', 'U_S', psize);
-    vectorPlot(0, I_C, '-r', 'I_C', psize);
     vectorPlot(0, 2*I_X, '--k', '', psize*0);
     vectorPlot(0, 2*I_C, '--k', '', psize*0);
-    vectorPlot(0, I_X, '-r', 'I_{X}', psize);
-    drawAngle(0.7,atan(imag(I_C)/real(I_C)),(atan(imag(I_C)/real(I_C))+ 18.435/360 * 2 * pi),'18.435°','-k')
-    drawAngle(1,atan(imag(U_X)/real(U_X)),(atan(imag(U_X)/real(U_X))+pi/2),'90°','-k')
-    vectorPlot(0, I_L, '-r', 'I_L = I_R', psize);
+    vectorPlot(0, I_L, '-r', '$\underline{i_L}$ = $\underline{i_R}$', psize);
+    vectorPlot(0, U_R/scaling_factor, '-b', '$\underline{u_R}$', psize);
+    vectorPlot(0, U_L/scaling_factor, '-b', '$\underline{u_L}$', psize);
+    vectorPlot(0, U_X/scaling_factor, '-b', '$\underline{u_X}$', psize);
+    vectorPlot(0, U_C/scaling_factor, '-b', '$\underline{u_C}$', psize);
+    vectorPlot(0, U_S/scaling_factor, '-b', '$\underline{u_S}$', psize);
+    vectorPlot(0, I_C, '-r', '$\underline{i_C}$', psize);
+    
+    vectorPlot(0, I_X, '-r', '$\underline{i_{X}}$', psize);
+    drawAngle(0.7,atan(imag(I_C)/real(I_C)),(atan(imag(I_C)/real(I_C))+ 18.435/360 * 2 * pi),'$18.435^{\circ}$','-k')
+    drawAngle(0.8,atan(imag(U_X)/real(U_X)),(atan(imag(U_X)/real(U_X))+pi/2),'$90^{\circ}$','-k')
+    

@@ -35,7 +35,7 @@ angle = angle(U_X)
 U_S = (U_R + U_L + U_X)/2
 %%Plot
 
-psize = 1.5;
+psize = 1;
 
 figure1 = figure(1);
     clf
@@ -51,12 +51,12 @@ figure1 = figure(1);
     
     scaling_factor = 1.7;
     
-    vectorPlot(0, U_R/scaling_factor, '-b', 'U_R', psize);
-    vectorPlot(0, U_L/scaling_factor, '-b', 'U_L', psize);
-    vectorPlot(0, U_X/scaling_factor, '-b', 'U_X', psize);
-    drawAngle(1,atan(8/4),(atan(8/4)+pi/2),'90°','-k')
-    vectorPlot(0, I_X, '--k', 'I_{X,C}', psize*0);
-    vectorPlot(0, I_L, '-r', 'I_L = I_R', psize);
+    vectorPlot(0, U_R/scaling_factor, '-b', '$\underline{u_R}$', psize);
+    vectorPlot(0, U_L/scaling_factor, '-b', '$\underline{u_L}$', psize);
+    vectorPlot(0, U_X/scaling_factor, '-b', '$\underline{u_X}$', psize);
+    drawAngle(1,atan(8/4),(atan(8/4)+pi/2),'$90^{\circ}$','-k')
+    vectorPlot(0, I_X, '--k', '$\underline{i_{X,C}}$', psize*0);
+    vectorPlot(0, I_L, '-r', '$\underline{i_L}$ = $\underline{i_R}$', psize);
     
 
 
