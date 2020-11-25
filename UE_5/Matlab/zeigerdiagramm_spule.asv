@@ -1,0 +1,51 @@
+clc
+clear all
+
+par = @(a,b) a.*b./(a+b);
+
+funcTurnR = @(z,phi) abs(z) .* exp(1i.*(angle(z)-phi));
+
+% Gegebene Werte
+R = 4;
+C = 50*10^(-6);
+L = 8*10^(-3);
+U_0 = 10;
+w = 1000;
+U_
+
+I_L = 1;
+
+%% Calculation
+Z_C = 1/(1i*w*C);
+Z_L = 1i*w*L;
+
+u_R = R * I_L;
+u_L = Z_L * I_L;
+u_X = u_R + u_L;
+Z_X = u_X * (Z_C / (U_S - U_X) - Z_L/u_L)
+
+I_L = funcTurnR(I_L, angle(I_L))
+u_R = funcTurnR(u_R, angle(I_L))
+u_L = funcTurnR(u_L, angle(I_L))
+u_X = funcTurnR(u_X, angle(I_L))
+%%Plot
+
+psize = 0.5;
+
+figure1 = figure(1);
+    clf
+    s=axes();
+    hold on
+    grid on 
+    box on
+    xlabel('Re')
+    ylabel('Im')
+    axis equal;
+    
+    vectorPlot(0, I_L, '-r', 'I_L = I_R', psize);
+    vectorPlot(0, u_R, '-b', 'U_R', psize);
+    vectorPlot(0, u_L, '-b', 'U_L', psize);
+    vectorPlot(0, u_X, '-b', 'U_X', psize);
+
+
+
