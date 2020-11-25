@@ -1,0 +1,23 @@
+* C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 23 20:23:34 2020
+
+
+
+** Analysis setup **
+.tran 0ns 50ms 0 10u
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END

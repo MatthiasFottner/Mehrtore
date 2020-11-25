@@ -70,7 +70,7 @@ irx=ux/rx;
     
     line = 5*exp(1i*(angle(ic)-pi/4));
     plot([-0*real(line),real(line)],[-0*imag(line),imag(line)],'--k');
-    drawAngle(2,0,-pi/4,'45°','-k')  
+    drawAngle(2,5,-pi/4,'45°','-k')  
     line = 2.8*exp(1i*(angle(ix)));
     plot([real(ir1*10),real(ir1*10)+real(line)],[imag(ir1*10),imag(ir1*10)+imag(line)],'--k');
 

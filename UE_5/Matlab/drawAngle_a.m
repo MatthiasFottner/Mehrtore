@@ -1,4 +1,4 @@
-function [] = drawAngle(radius,phi1,phi2,name,color,aE,aB)
+function [] = drawAngle_a(radius,phi1,phi2,name,color,aE,aB)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -10,7 +10,7 @@ arrow = [-1+0.3i,-1-0.3i,0]./10.*radius;
 
 
 plot(real(points),imag(points),color);
-text((radius* (-cos((phi2-phi1)/2))),(radius*(sin((phi2-phi1)/2))),name,...
+text(0.48, 0.5),name,...
 'BackgroundColor',[1 1 1], ...
 'VerticalAlignment', 'Middle', ...
 'HorizontalAlignment', 'Center', ...
@@ -31,3 +31,4 @@ end
 
 
 end
+
