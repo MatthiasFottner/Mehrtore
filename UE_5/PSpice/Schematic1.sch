@@ -10,7 +10,7 @@ V? 5
 .TRAN 1 0 0 0
 +0 0ns
 +1 50ms
-+3 10u
++3 1u
 @targets
 @attributes
 @translators
@@ -26,8 +26,8 @@ AutoGenStim4ExtIFPorts 1
 @index
 pageloc 1 0 2340 
 @status
-n 0 120:10:26:00:46:11;1606347971 e 
-s 2832 120:10:26:00:58:28;1606348708 e 
+n 0 120:10:26:18:48:17;1606412897 e 
+s 2832 120:10:26:18:48:17;1606412897 e 
 *page 1 0 970 720 iA
 @ports
 port 31 GND_ANALOG 400 300 h

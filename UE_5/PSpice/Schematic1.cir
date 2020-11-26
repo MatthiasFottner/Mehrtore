@@ -1,12 +1,12 @@
 * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
 * Schematics Version 9.1 - Web Update 1
-* Thu Nov 26 00:46:11 2020
+* Thu Nov 26 18:48:17 2020
 
 
 
 ** Analysis setup **
-.tran 0ns 50ms 0 10u
+.tran 0ns 50ms 0 1u
 .OP 
 
 

@@ -1,5 +1,5 @@
 
-**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 18:48:18 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -13,12 +13,12 @@
 
 
 * Schematics Version 9.1 - Web Update 1
-* Thu Nov 26 00:46:11 2020
+* Thu Nov 26 18:48:17 2020
 
 
 
 ** Analysis setup **
-.tran 0ns 50ms 0 10u
+.tran 0ns 50ms 0 1u
 .OP 
 
 
@@ -62,7 +62,7 @@ V_U_S           U_S(+=$N_0003 -=0 )
 
 .END
 
-**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 18:48:18 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -92,7 +92,7 @@ V_U_S           U_S(+=$N_0003 -=0 )
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 18:48:18 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -105,7 +105,7 @@ V_U_S           U_S(+=$N_0003 -=0 )
 
 
 
-**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 18:48:18 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -138,5 +138,5 @@ V_U_S           U_S(+=$N_0003 -=0 )
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .23
+          TOTAL JOB TIME            1.72
 
