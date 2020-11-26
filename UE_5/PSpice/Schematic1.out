@@ -1,5 +1,5 @@
 
-**** 11/23/20 20:23:46 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -13,7 +13,7 @@
 
 
 * Schematics Version 9.1 - Web Update 1
-* Mon Nov 23 20:23:34 2020
+* Thu Nov 26 00:46:11 2020
 
 
 
@@ -32,12 +32,12 @@
 
 
 
-R_R1         $N_0002 $N_0001  4  
-C_C1         $N_0003 $N_0002  50uF IC=0 
-V_V4         0 $N_0003  
-+SIN 0 10V 159Hz 0 0 0
-L_L1         $N_0001 0  8mH IC=0 
-C_Cx         $N_0002 0  83.3uF IC=0 
+L_L         $N_0001 0  8mH IC=0 
+R_R         $N_0002 $N_0001  4  
+C_C_X         $N_0002 0  83.3uF IC=0 
+C_C         $N_0003 $N_0002  50uF IC=0 
+V_U_S         $N_0003 0  
++SIN 0 10 159Hz 0 0 0
 
 **** RESUMING Schematic1.cir ****
 .INC "Schematic1.als"
@@ -48,11 +48,11 @@ C_Cx         $N_0002 0  83.3uF IC=0
 * Schematics Aliases *
 
 .ALIASES
-R_R1            R1(1=$N_0002 2=$N_0001 )
-C_C1            C1(1=$N_0003 2=$N_0002 )
-V_V4            V4(+=0 -=$N_0003 )
-L_L1            L1(1=$N_0001 2=0 )
-C_Cx            Cx(1=$N_0002 2=0 )
+L_L             L(1=$N_0001 2=0 )
+R_R             R(1=$N_0002 2=$N_0001 )
+C_C_X           C_X(1=$N_0002 2=0 )
+C_C             C(1=$N_0003 2=$N_0002 )
+V_U_S           U_S(+=$N_0003 -=0 )
 .ENDALIASES
 
 
@@ -62,7 +62,7 @@ C_Cx            Cx(1=$N_0002 2=0 )
 
 .END
 
-**** 11/23/20 20:23:46 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -87,12 +87,12 @@ C_Cx            Cx(1=$N_0002 2=0 )
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V4         0.000E+00
+    V_U_S        0.000E+00
 
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
 
-**** 11/23/20 20:23:46 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -105,7 +105,7 @@ C_Cx            Cx(1=$N_0002 2=0 )
 
 
 
-**** 11/23/20 20:23:46 *********** Evaluation PSpice (Nov 1999) **************
+**** 11/26/20 00:58:28 *********** Evaluation PSpice (Nov 1999) **************
 
  * C:\Users\David\Documents\Studium\GitHub\UE Elektrische Netzwerke und Mehrtore\Mehrtore\UE_5\PSpice\Schematic1.sch
 
@@ -130,7 +130,7 @@ C_Cx            Cx(1=$N_0002 2=0 )
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V4         0.000E+00
+    V_U_S        0.000E+00
 
     TOTAL POWER DISSIPATION   0.00E+00  WATTS
 
@@ -138,5 +138,5 @@ C_Cx            Cx(1=$N_0002 2=0 )
 
           JOB CONCLUDED
 
-          TOTAL JOB TIME             .25
+          TOTAL JOB TIME             .23
 

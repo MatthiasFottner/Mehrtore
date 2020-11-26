@@ -27,7 +27,7 @@ AutoGenStim4ExtIFPorts 1
 pageloc 1 0 2340 
 @status
 n 0 120:10:26:00:46:11;1606347971 e 
-s 2832 120:10:26:00:58:28;1606348708 e 
+s 0 120:10:26:00:46:12;1606347972 e 
 *page 1 0 970 720 iA
 @ports
 port 31 GND_ANALOG 400 300 h

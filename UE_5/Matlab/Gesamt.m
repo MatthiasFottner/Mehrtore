@@ -56,8 +56,8 @@ figure1 = figure(1);
     xlabel('Re')
     ylabel('Im')
     axis equal;
-    xlim([-2.8 2.8])
-    ylim([-0.3 4.9])
+    xlim([-0.7 1.2])
+    ylim([-0.8 1])
     
     scaling_factor = 9;
     
@@ -74,4 +74,6 @@ figure1 = figure(1);
     vectorPlot(0, I_X, '-r', '$\underline{i_{X}}$', psize);
     drawAngle(0.7,atan(imag(I_C)/real(I_C)),(atan(imag(I_C)/real(I_C))+ 18.435/360 * 2 * pi),'$18.435^{\circ}$','-k')
     drawAngle(0.8,atan(imag(U_X)/real(U_X)),(atan(imag(U_X)/real(U_X))+pi/2),'$90^{\circ}$','-k')
+    
+    %axis equal
     
