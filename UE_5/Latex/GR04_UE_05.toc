@@ -1,0 +1,16 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Zeichnen der beiden maßstabsgetreuen Zeigerdiagramme}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}bei angenommener Spule}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}bei angenommenem Kondensator}{4}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Bestimmen der Übertragungsfunktion}{5}{section.2}%
+\contentsline {section}{\numberline {3}Bestimmen aller Spannungen und Ströme}{6}{section.3}%
+\contentsline {section}{\numberline {4}Mögliche Bauteilkombinationen als Lösung}{8}{section.4}%
+\contentsline {section}{\numberline {5}Matlab-Plots}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Zeigerdiagramm mit Kondensator als nun bekanntes Element}{9}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Matlab-Skripten}{10}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Skript zu Kondensator als unbekanntes Element}{10}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Skript zu Spule als unbekanntes Element}{11}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Skript zu Kondensator als nun bekanntes Element}{12}{subsection.6.3}%
+\contentsline {section}{\numberline {7}PSpice-Simulation}{14}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Schaltbild}{14}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Plot}{14}{subsection.7.2}%
