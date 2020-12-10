@@ -1,0 +1,10 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Numerische Bestimmung der Fourierreihenkoeffizienten von $u_{in}(t)$}{3}{section.1}%
+\contentsline {section}{\numberline {2}Plot der ersten 5 Schwingungen}{4}{section.2}%
+\contentsline {section}{\numberline {3}Plot der ersten 250 Wellen}{5}{section.3}%
+\contentsline {section}{\numberline {4}Bestimmen der Induktivität $L$}{5}{section.4}%
+\contentsline {section}{\numberline {5}Bestimmen des Ausgangssignals $u_{out}(t)$}{7}{section.5}%
+\contentsline {section}{\numberline {6}Python-Skripte}{8}{section.6}%
+\contentsline {subsection}{\numberline {6.1}plot\_1.py}{8}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}plot\_2.py}{10}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}plot\_3.py}{12}{subsection.6.3}%
