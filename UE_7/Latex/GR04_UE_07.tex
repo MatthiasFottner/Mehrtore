@@ -1,0 +1,336 @@
+% Created 2020-10-25 So 23:03
+% Intended LaTeX compiler: pdflatex
+\UseRawInputEncoding
+
+\documentclass[11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usepackage{trfsigns}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{MnSymbol}
+\usepackage{mathtools}
+\usepackage{setspace}
+\usepackage{nicematrix}
+\usepackage{empheq}
+\usepackage{pdfpages}
+% \usepackage{getlab}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage[straightvoltages, european resistors, european inductors]{circuitikz}
+\usetikzlibrary{arrows.meta}
+\tikzset{FARROW/.style={arrows={-Triangle[angle=45:2.0mm]}}}
+% \usepackage{varwidth}
+% \usepackage{hyperref}
+
+
+\definecolor{darkspringgreen}{rgb}{0.09, 0.45, 0.27}    % Farbe für die Kommentare bei Listings
+% \lstset{
+%   language= Matlab,                     % Setzt die Sprache
+%   basicstyle=\scriptsize\ttfamily,     % Setzt den Standardstil
+%   % keywordstyle=\color{red}\bfseries,    % Setzt den Stil für Schlüsselwörter
+%   identifierstyle=\color{blue},        % Identifier bekommen keine gesonderte formatierung
+%   commentstyle=\color{darkspringgreen},        % Stil für Kommentare
+%   stringstyle=\ttfamily,             % Stil für Strings (gekennzeichnet mit "String")
+%   breaklines=true,             % Zeilen werden umgebrochen
+%   numbers=left,                 % Zeilennummern links
+%   numberstyle=\tiny,             % Stil für die Seitennummern
+%   frame=single,                 % Rahmen
+%   % backgroundcolor=\color{myGrey},     % Hintergrundfarbe
+%   % caption={Java-Code},             % Caption
+%   tabsize=2                % Größe der Tabulatoren
+% }
+
+
+
+\newcommand{\GETHeader}[6]{%
+  \begin{titlepage}
+    \pagestyle{empty} \enlargethispage*{25cm}\samepage{
+      \vspace*{-2.5cm}
+      \begin{center}
+        %
+        \begin{tabular}[b]{lr}
+          %
+          \hspace*{-1.5cm}
+          \begin{tabular}{p{3.8cm}}
+            \includegraphics[width=3.8cm]{./Figures/TUGraz}
+          \end{tabular}
+          %
+          \hspace*{-1cm}
+          %
+          %
+          \begin{tabular}{p{13.8cm}}
+            \begin{flushright}
+              \large
+              Institut für Grundlagen und Theorie der Elektrotechnik\\
+              ~\\
+            \end{flushright}
+          \end{tabular}
+        \end{tabular}
+
+        \vspace*{2.2cm}
+        %
+        \Huge {Elektrische Netzwerke und Mehrtore \\ Übung\\} %
+        \vspace*{.5cm} \Large{ Wintersemester 2020\\}
+        %
+        \vspace*{1.5cm}
+
+        \Huge{\textbf{#1}\\}
+
+        %
+        % \vspace*{0.8cm} \Large{Übungsdatum: {#2}\\}
+        %
+        \vspace*{1cm} \vfill
+        %
+        \Large{Gruppe: {#2}\\} \vspace*{0.5cm}%
+
+
+        % \Large{Protokollführer(in): {#3}\\} \vspace*{1cm}
+
+        \Large{Gruppenteilnehmer:\\} \vspace*{.1cm}
+        % Name der beteiligten Studierenden
+        \Large{#3} \vspace{1cm}
+        %
+        %
+        \Large{Vortragende: #4\\} \vspace*{.1cm}   %\vspace*{1.5cm}
+        % \Large{Betreuer(in): #6\\}
+        \vspace*{1.5cm}
+        %
+        \Large{#5, am #6}
+      \end{center}}%
+    %
+    \clearpage
+  \end{titlepage}}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+
+
+
+
+
+\begin{document}
+
+\GETHeader                                                                              %  Bitte Ausfüllen!!!
+% ----------------------------
+{Protokoll Übung 7: \\ Laplace Transformation}                         %  Übungstitel
+% ----------------------------
+% {25. Mai 2020}                                                                  %  Übungsdatum
+% ----------------------------
+{04}                                                                   %  Gruppen-Nr.
+% ----------------------------
+% {Matthias Fottner}                                                                      % Name des Protokollführers oder der Protokollführerin
+% ----------------------------
+{
+  \begin{center}
+    \begin{minipage}{0.28\linewidth}
+      1. Matthias Fottner\\
+      2. David Keller\\
+      3. Moritz Woltron
+    \end{minipage}
+  \end{center}
+}
+% ----------------------------
+{Helena Grabner}                                                                     %  Laborleiter(in)
+% {Übung 2}                                                               %  Betreuer(in)
+% ----------------------------
+{Graz}                                                                                  %  Ort der Protokollerstellung
+{\today}                                                              %  Datum Protokollerstellung
+
+
+\newcommand{\unit}[1]{\,\text{#1}}
+
+\newcommand{\vlaplace}[1][]{\mbox{\setlength{\unitlength}{0.1em}%
+    \begin{picture}(10,20)%
+      \put(3,2){\circle{4}}%
+      \put(3,4){\line(0,1){12}}%
+      \put(3,18){\circle*{4}}%
+      \put(10,7){#1}
+    \end{picture}%
+  }%
+}%
+
+\newcommand{\vLaplace}[1][]{\mbox{\setlength{\unitlength}{0.1em}%
+    \begin{picture}(10,20)%
+      \put(3,2){\circle*{4}}%
+      \put(3,4){\line(0,1){12}}%
+      \put(3,18){\circle{4}}%
+      \put(10,7){#1}
+    \end{picture}%
+  }%
+}%
+
+
+\tableofcontents
+
+\newpage
+
+
+\allowdisplaybreaks
+
+\setlength{\jot}{10pt}
+
+
+\section{Transformation der Quellspannung in den s-Bereich}
+\begin{align}
+  \begin{split}
+  u(t) &= U_{0} \cdot \sigma(t-T_{1}) - U_{0} \cdot \sigma(t-T_{2}) \\
+  &\vLaplace \\
+  U(s) &= U_{0} \cdot \frac{1}{s} \left( e^{-s \cdot T_{1}} - e^{-s \cdot T_{2}}\right)
+  \end{split}
+\end{align}
+
+\section{Transformation der Schaltung in den s-Bereich}
+\section{Herleitung der Gleichung für den Strom $I_{L}(s)$}
+Maschengleichungen:
+\begin{align}
+  &\text{$m_{1}$:}&U_{L}(s) + U_{R3}(s) - U_{R2}(s) &= 0 \label{eq:m1}\\
+  &\text{$m_{2}$:}&U_{R1}(s) + U_{R2}(s) - U(s) &= 0 \label{eq:m2}
+\end{align}
+Knotengleichung:
+\begin{align}\label{eq:k1}
+  &\text{$k_{1}$:}&I_{L}(s) + I_{R2}(s) - I_{R1}(s) &= 0
+\end{align}
+Um die Gleichung für $I_{L}(s)$ zu erhalten, kann zuerst die Knotengleichung aus Gleichung~\ref{eq:k1} hergenommen werden:
+\begin{align}\label{eq:initIL}
+  \begin{split}
+  I_{L}(s) + I_{R2}(s) - I_{R1}(s) &= 0 \\
+  I_{L}(s) + \frac{{\color{blue}{U_{R2}(s)}}}{R_{2}} - \frac{{\color{darkspringgreen}{U_{R1}(s)}}}{R_{1}}&= 0
+  \end{split}
+\end{align}
+$U_{R2}$ kann nun aus der Maschengleichung $m_{1}$ (Gleichung~\ref{eq:m1}) errechnet werden. Dabei hilft das Gesetz der Reihenschaltung ($I_{L}(s) = I_{R3}(s)$).
+{\color{blue}{
+    \begin{align}\label{eq:ur3}
+      \begin{split}
+        U_{R2} &= s\cdot L \cdot I_{L}(s) + U_{R3} \\
+        &= s \cdot L \cdot I_{L}(s) + R_{3}\cdot I_{L}(s) \\
+        &=I_{L}(s) \left( s\cdot L + R_{3}\right)
+      \end{split}
+    \end{align}}}
+Aus der Maschengleichung $m_{2}$ (Glg.~\ref{eq:m2}) und dem Wert für $U_{R2}$ (Glg.~\ref{eq:ur3}) erhält man für $U_{R1}$:
+\begin{align}
+  \begin{split}
+    U_{R1} &= U(s) - U_{R2} \\
+    &= U(s) - I_{L}(s)\left( s\cdot L + R_{3}\right)
+  \end{split}
+\end{align}
+Da nun alle Ausdrücke aus Gleichung~\ref{eq:initIL} durch Ausdrücke von $I_{L}(s)$ ersetzt werden können, kann nun nach $I_{L}(s)$ aufgelöst werden:
+\begin{align}
+  \begin{split}
+    I_{L}(s) &= \frac{U(s) - s L I_{L}(s) - I_{L}(s) R_{3}}{R_{1}} - \frac{s L  I_{L}(s) + I_{L}(s)  R_{3}}{R_{2}} \\
+    &= \frac{U(s) R_{2} - s L I_{L}(s) R_{2} - I_{L}(s) R_{3} R_{2} - s L  I_{L}(s)  R_{1} - I_{L}(s)  R_{3} R_{1}}{R_{1} R_{2}}\\
+    &= I_{L}(s) \frac{-s L  R_{2} - R_{3} R_{2} - s L  R_{1} - R_{3} R_{1}}{R_{1} R_{2}} + \frac{U(s) R_{2}}{R_{1} R_{2}} \\
+    \frac{U(s)}{R_{1}} &= I_{L}(s) - I_{L}(s)\frac{-s L  R_{2} - R_{3} R_{2} - s L  R_{1} - R_{3} R_{1}}{R_{1} R_{2}} \\
+    \frac{U(s)}{R_{1}} &=  I_{L}(s) \left(1 + \frac{s L  R_{2} + R_{3} R_{2} + s L  R_{1} + R_{3} R_{1}}{R_{1} R_{2}}\right) \\
+    I_{L}(s) &= \frac{U(s)}{R_{1} \left( 1 + \frac{s L  R_{2} + R_{3} R_{2} + s L  R_{1} + R_{3} R_{1}}{R_{1} R_{2}} \right)} \cdot {\color{darkspringgreen}{\frac{R_{1}R_{2}}{R_{1}R_{2}}}} \\
+    &= \frac{R_{2}U(s)}{R_{1}R_{2} + s L  R_{2} + R_{3} R_{2} + s L  R_{1} + R_{3} R_{1}}\\
+    &= \frac{R_{2}U(s)}{s L  (R_{2}+ R_{1}) + R_{1}R_{2} + R_{3}R_{2} + R_{3} R_{1}}\\
+    &= \frac{R_{2}}{L(R_{2} + R_{1})} \cdot \frac{U(s)}{s + \frac{R_{1}R_{2} + R_{3}R_{2} + R_{3}R_{1}}{L(R_{2} + R_{1})}}
+  \end{split}
+\end{align}
+
+mit $\displaystyle U(s) = U_{0} \frac{1}{s} \left(e^{-sT_{1}} - e^{-sT_{2}} \right)$:
+\begin{align}\label{eq:IL}
+  \begin{split}
+    I_{L}(s) = \frac{R_{2}U_{0}}{L(R_{1} + R_{2})} \cdot \frac{e^{-sT_{1}} - e^{-sT_{2}}}{s\left( s + \frac{R_{1}R_{2} + R_{3}R_{2} + R_{3}R_{1}}{L(R_{2} + R_{1})}\right)}
+  \end{split}
+\end{align}
+\section{Bestimmen der Gleichung für die Spannung $U_{L}(s)$}
+Aus dem Bauteilgesetz der Spule und dem Differentiationssatz im Zeitbereich erhält man:
+\begin{align}
+  \begin{split}
+    u_{L}(t) &= L i_{L}(t)' \\
+    &\vLaplace \\
+    U_{L}(s) &= sLI_{L}(s) - \underbrace{i_{L}(t=0)}_{=0}
+  \end{split}
+\end{align}
+Aus Gleichung~\ref{eq:IL} kann nun der Ausdruck für $I_{L}(s)$ übernommen werden:
+\begin{align}
+  \begin{split}
+    U_{L}(s) &= \frac{sLR_{2}U_{0}}{L(R_{1} + R_{2})} \cdot \frac{e^{-sT_{1}} - e^{-sT_{2}}}{s\left( s + \underbrace{\frac{R_{1}R_{2} + R_{3}R_{2} + R_{3}R_{1}}{L(R_{2} + R_{1})}}_{{=:a}}\right)} \\
+    &= \frac{R_{2}U_{0}}{R_{1} + R_{2}}\left( \frac{e^{-sT_{1}} - e^{-sT_{2}}}{s + a}\right) \\
+  \end{split}
+\end{align}
+\section{Rücktransformation von $I_{L}(s)$ und $U_{L}(s)$}
+\subsection{Rücktransformation $I_{L}(s)$}
+\begin{align}
+  \begin{split}
+    I_{L}(s) &= \underbrace{\frac{R_{2}U_{0}}{L(R_{1} + R_{2})}}_{=:b} \cdot \frac{e^{-sT_{1}} - e^{-sT_{2}}}{s\left( s + \underbrace{\frac{R_{1}R_{2} + R_{3}R_{2} + R_{3}R_{1}}{L(R_{2} + R_{1})}}_{=:a}\right)} \\
+    &= b \cdot \frac{e^{-sT_{1}} - e^{-sT_{2}}}{s\left( s + a\right)} \\
+  \end{split}
+\end{align}
+Um $I_{L}(s)$ mit gegebenen Transformationspaaren zurückzutransformieren, muss zuerst eine Partialbruchzerlegung durchgeführt werden:
+\begin{align}
+  \begin{split}
+    \frac{1}{s(s+a)} &= \frac{A}{s} + \frac{B}{s+a} \\[20pt]
+    A &= \frac{1}{s+a}\ \Bigg|_{s=0} = \frac{1}{a} \\
+    B &= \frac{1}{s}\ \Bigg|_{s=-a} = -\frac{1}{a}
+  \end{split}
+\end{align}
+Somit erhält man:
+\begin{align}
+  \begin{split}
+    I_{L}(s) &= b \cdot \left(e^{-sT_{1}} - e^{-sT_{2}}\right) \left( \frac{1}{a\cdot s} - \frac{1}{a(s+a)}\right) \\
+    &= \frac{b}{a} \cdot \left(e^{-sT_{1}} - e^{-sT_{2}}\right) \left( \frac{1}{s} - \frac{1}{s+a}\right) \\
+    &\vlaplace \\
+    i_{L}(t) &= \frac{b}{a}\left( \sigma(t-T_{1}) - \sigma(t-T_{1})e^{-a(t-T_{1})} - \sigma(t-T_{2}) + \sigma(t-T_{2})e^{-a(t-T_{2})}\right)
+  \end{split}
+\end{align}
+\subsection{Rücktransformation $U_{L}(s)$}
+\begin{align}
+  \begin{split}
+    U_{L}(s) &= \underbrace{\frac{R_{2}U_{0}}{R_{1} + R_{2}}}_{=:c}\left( \frac{e^{-sT_{1}} - e^{-sT_{2}}}{s + a}\right) \\
+    &= c \left( \frac{e^{-sT_{1}} - e^{-sT_{2}}}{s + a}\right) \\
+    &\vlaplace \\
+    u_{L}(t) &= c \left( \sigma(t-T_{1}) e^{-a(t-T_{1})} - \sigma(t-T_{2})e^{-a(t-T_{2})}\right)
+  \end{split}
+\end{align}
+\subsection{Bestimmen der Zeitkonstante $\tau$}
+Die Zeitkonstante $\tau$ ist aus den Ergebnissen für $u_{L}$ und $i_{L}$ ersichtlich.
+Dabei handelt es sich um den Kehrbruch des Faktors $a$ in den Exponentialfunktionen.
+Es gilt:
+\begin{align}
+  \label{eq:tau}
+  \begin{split}
+    \tau &= \frac{1}{a} = \frac{1}{\frac{R_{1}R_{2} + R_{3}R_{2} + R_{3}R_{1}}{L(R_{2} + R_{1})}} \\
+    &= \frac{L(R_{2} + R_{1})}{R_{1}R_{2} + R_{3}R_{2} + R_{3}R_{1}} \\
+    &= 436,364 \unit{$\upmu$s}
+  \end{split}
+\end{align}
+\end{document}

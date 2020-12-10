@@ -1,0 +1,9 @@
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Transformation der Quellspannung in den s-Bereich}{3}%
+\contentsline {section}{\numberline {2}Transformation der Schaltung in den s-Bereich}{3}%
+\contentsline {section}{\numberline {3}Herleitung der Gleichung für den Strom $I_{L}(s)$}{3}%
+\contentsline {section}{\numberline {4}Bestimmen der Gleichung für die Spannung $U_{L}(s)$}{5}%
+\contentsline {section}{\numberline {5}Rücktransformation von $I_{L}(s)$ und $U_{L}(s)$}{5}%
+\contentsline {subsection}{\numberline {5.1}Rücktransformation $I_{L}(s)$}{5}%
+\contentsline {subsection}{\numberline {5.2}Rücktransformation $U_{L}(s)$}{6}%
+\contentsline {subsection}{\numberline {5.3}Bestimmen der Zeitkonstante $\tau $}{7}%
